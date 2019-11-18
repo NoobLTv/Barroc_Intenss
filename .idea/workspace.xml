@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7994a27-0d98-4dec-a376-331c334df848" name="Default Changelist" comment="">
+<<<<<<< Updated upstream
       <change afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,6 +17,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+<<<<<<< Updated upstream
   </component>
   <component name="FileEditorManager">
     <leaf>
@@ -51,6 +57,11 @@
         <option value="CSS File" />
       </list>
     </option>
+=======
+    <execution>
+      <executable />
+    </execution>
+>>>>>>> Stashed changes
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -155,97 +166,13 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1TmdPo1GZXMsK0njNTdXmT3zQY2" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Barroc_Intenss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Barroc_Intenss" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Barroc_Intenss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Barroc_Intenss" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Barroc_Intenss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Barroc_Intenss" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Barroc_Intenss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Barroc_Intenss" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
-              <item name="cache" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Barroc_Intenss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Barroc_Intenss" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Barroc_Intenss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Barroc_Intenss" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Barroc_Intenss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Barroc_Intenss" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Barroc_Intenss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Barroc_Intenss" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Barroc_Intenss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Barroc_Intenss" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Barroc_Intenss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Barroc_Intenss" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Barroc_Intenss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Barroc_Intenss" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Barroc_Intenss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Barroc_Intenss" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Barroc_Intenss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Barroc_Intenss" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../laravel2019/githubwebshop/laravel_webshop_2019-master" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../laravel2019/laravel_webshop_2019" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -281,10 +208,12 @@
       <updated>1574068922098</updated>
       <workItem from="1574068925293" duration="20000" />
       <workItem from="1574069186851" duration="256000" />
-      <workItem from="1574078545173" duration="1114000" />
+      <workItem from="1574078545173" duration="1276000" />
+      <workItem from="1574079834556" duration="1881000" />
     </task>
     <servers />
   </component>
+<<<<<<< Updated upstream
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="2094000" />
   </component>
@@ -314,6 +243,8 @@
       <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
+=======
+>>>>>>> Stashed changes
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -323,12 +254,6 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
@@ -350,6 +275,7 @@
       </map>
     </option>
   </component>
+<<<<<<< Updated upstream
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/bootstrap/app.php">
       <provider selected="true" editor-type-id="text-editor" />
@@ -384,4 +310,6 @@
       </provider>
     </entry>
   </component>
+=======
+>>>>>>> Stashed changes
 </project>
