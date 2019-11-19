@@ -69,6 +69,33 @@ display: flex;
     height: 60vh;
 }
 
+.remarkslabel {
+    font-size: 20px;
+}
+
+.pricelabel {
+    font-size: 20px;
+}
+
+.priceinput {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding-right: 100px;
+}
+
+.offerinput {
+    margin-top: 20px;
+}
+
+.remarkstextarea {
+    margin-top: 10px;
+    width: 330px;
+    height: 100px;
+}
+
+.offer {
+    background: #ffffff;
+}
 
 .masthead {
     height: 100vh;

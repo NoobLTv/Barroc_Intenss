@@ -9,40 +9,19 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
-    <style>
-        .remarkslabel {
-            font-size: 20px;
-        }
-
-        .pricelabel {
-            font-size: 20px;
-        }
-
-        .priceinput {
-            margin-bottom: 20px;
-            margin-left: 20px;
-            padding-right: 100px;
-        }
-
-        .offerinput {
-            margin-top: 20px;
-        }
-
-        .remarkstextarea {
-            margin-top: 10px;
-            width: 330px;
-            height: 100px;
-        }
-
-    </style>
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 
 </head>
-<body>
-<div class="flex-center position-ref full-height">
+<body class="offer">
+
+<header>
     <div class="content">
         <div class="title m-b-md">
             <h2>Offerte aanmaken</h2>
         </div>
+    </div>
+</header>
 
         <form action="{{ route('offer.store') }}" method="POST">
             @csrf
@@ -59,8 +38,6 @@
                 <input class="offerinput" type="submit" value="Verzenden">
             </div>
         </form>
-    </div>
-</div>
 
 </body>
 </html>
