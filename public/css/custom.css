@@ -1,0 +1,77 @@
+.js-cookie-consent {
+position: absolute;
+top: 0px;
+padding: 10px;
+text-align: center;
+    align-items: center;
+z-index: 9999;
+width: 100%;
+background-color: #fffacc;
+border: solid 1px;
+display: flex;
+    justify-content: center;
+}
+.cookie-consent__message {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.js-cookie-consent-agree {
+    align-items: center;
+    text-align: center;
+}
+.privacy-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin-right: 7px;
+    color: #3490dc;
+    text-decoration: underline;
+}
+.privacy-button:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: #2d73b1;
+}
+.privacy-button:focus {
+    outline: 0;
+}
+
+.main-logo {
+    height: 80%;
+    width: 80%;
+}
+
+.mt-em {
+    background-color: rgba(0,2,2,0.3);
+    font-size: 50px;
+    color: white;
+    transition: 0.1s;
+    animation: fade-in-top 1.5s ease 0.25s;
+    animation-fill-mode: both;
+}
+
+.masthead {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url("../storage/img/coffee_wallpaper.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animaties */
+@keyframes fade-in-top{
+    0%{
+        transform: rotate(0deg) scale(1) translateY(-200px);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(0deg) scale(1) translateY(0);
+        opacity: 1;
+    }
+}
