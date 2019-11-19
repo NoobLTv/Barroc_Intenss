@@ -81,33 +81,87 @@
     <div class="second-page">
         <div class="container">
             <div class="">
-                <h3 class="flex-center mt-5">OVER ONS</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                <h3 class="flex-center mt-5 mb-5">OVER ONS</h3>
+                <img class="logo-overons" src="storage/img/logo1_groot.png" alt="">
+                <p class="text-center">Lorem ipsum dolor sit amet, consectetur lorem adipisicing
                     elit. Alias, amet
                     architecto asperiores aspernatur consectetur cumque deserunt dolorem enim
-                    exercitationem magnam maiores porro quam quos reprehenderit saepe sint, suscipit temporibus, voluptatibus!</p>
+                    exercitationem magnam maiores porro quam quos reprehenderit saepe sint, suscipit temporibus, voluptatibus!
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab doloribus, eos. Animi iste neque officiis.
+                    Deleniti dignissimos ea eum explicabo Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eum odit quisquam. Alias aspernatur atque aut cumque earum eius incidunt nemo velit? Hic laudantium nostrum odit? Fugiat non quod tempore?
+                    illum, maxime minus quisquam quo sint ullam unde ut, vitae!</p>
             </div>
         </div>
     </div>
 
     <div class="third-page">
         <div class="container">
-            <h3>PRODUCTEN</h3>
+            <h3 class="flex-center">PRODUCTEN</h3>
+            <div class="left-color-home"></div>
+            <img class="img-home" src="storage/img/bit-deluxe.png" alt="">
+            <div class="right-color-home"></div>
+            <img class="img-home" src="storage/img/bit-light.png" alt="">
         </div>
     </div>
 
     <div class="fourth-page">
         <div class="container">
-            <h3>OFFERTEN</h3>
+            <h3 class="flex-center mt-5">CONTACT US</h3>
         </div>
     </div>
 
-    <div class="five-page">
+    <footer class="site-footer">
         <div class="container">
-            <h3>CONTACT US</h3>
-        </div>
-    </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h6>Wie wij zijn</h6>
+                    <p class="text-justify">BarrocIntens.com <i>CODE WANTS TO BE SIMPLE </i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores dicta fuga laboriosam non recusandae reprehenderit. Animi enim eveniet facere iste nemo odio omnis optio perferendis reiciendis repellat reprehenderit, similique?.</p>
+                </div>
 
+                <div class="col-xs-6 col-md-3">
+                    <h6>Pagina's</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Sales</a></li>
+                        <li><a href="#">Maintenance</a></li>
+                        <li><a href="#">..</a></li>
+                        <li><a href="#">..</a></li>
+                        <li><a href="#">..</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Meer</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Over ons</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Bijdragen</a></li>
+                        <li><a href="#">Extra Info</a></li>
+                        <li><a href="#">Home Pagina</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2019 All Rights Reserved by
+                        <a href="#">Barroc Intense</a>.
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>

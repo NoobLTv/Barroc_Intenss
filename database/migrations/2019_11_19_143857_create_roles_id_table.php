@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLeaseTypesTable extends Migration
+class CreateRolesIdTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreateLeaseTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('lease_types', function (Blueprint $table) {
+        Schema::create('roles_id', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('role');
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ class CreateLeaseTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lease_types');
+        Schema::dropIfExists('roles_id');
     }
 }

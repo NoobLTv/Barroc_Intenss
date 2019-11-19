@@ -11,11 +11,11 @@ class users extends Seeder
      */
     public function run()
     {
-        \App\User::insert([
-            'email'=> 'sales@sales.com',
-            'name'=> 'sales',
-            'password'=> 'Sales123!',
+//        \App\User::insert([
+//            'email'=> 'sales@sales.com',
+//            'name'=> 'sales',
+//            'password'=> 'Sales123!',
 
-        ]);
+//        ]);
     }
 }
