@@ -41,17 +41,21 @@ class QuotationsController extends Controller
 
         $this->validate($request, [
             'price' => 'required|numeric',
-            'remarks' => 'required|max:50'
+            'remarks' => 'required|max:50',
         ]);
 
         quotations::insert([
             'price' => $request->price,
-            'remarks' => $request->remarks
+            'remarks' => $request->remarks,
+            'sales_id' => '9',
+            'customer_id' => '10',
+            'must_still_approve' => 0,
+            'approved' => 0
         ]);
 
         //\Mail::to( \Auth::user() )->send( new \App\Mail\TestMail($request->name) );
         //return ( new \App\Mail\TestMail($request->name) )->render();
-        return redirect()->route('Sales.offer');
+        return redirect()->route('offer.create');
     }
 
     /**
