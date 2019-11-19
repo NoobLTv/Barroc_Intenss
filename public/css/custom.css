@@ -8,3 +8,21 @@ position: absolute;
     background-color: #fffacc;
     border: solid 1px;
 }
+
+.mt-em {
+    background-color: rgba(0,2,2,0.3);
+    font-size: 50px;
+    color: white;
+}
+
+.masthead {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url("../storage/img/coffee_wallpaper.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

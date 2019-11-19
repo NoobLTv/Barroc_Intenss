@@ -74,17 +74,41 @@
 <body>
 
 
-<div class="flex-center position-ref full-height">
-
-
-    <div class="container">
-        <div class="title m-b-md">
-            Coming soon...
-        </div>
-
-
+    <div class="first-page masthead">
+        <h1 class="text-center mt-em">WELCOME BY BARROC INTENSE</h1>
     </div>
-</div>
+
+    <div class="second-page">
+        <div class="container">
+            <div class="">
+                <h3 class="flex-center mt-5">OVER ONS</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Alias, amet
+                    architecto asperiores aspernatur consectetur cumque deserunt dolorem enim
+                    exercitationem magnam maiores porro quam quos reprehenderit saepe sint, suscipit temporibus, voluptatibus!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="third-page">
+        <div class="container">
+            <h3>PRODUCTEN</h3>
+        </div>
+    </div>
+
+    <div class="fourth-page">
+        <div class="container">
+            <h3>OFFERTEN</h3>
+        </div>
+    </div>
+
+    <div class="five-page">
+        <div class="container">
+            <h3>CONTACT US</h3>
+        </div>
+    </div>
+
+
 </body>
 </html>
 
