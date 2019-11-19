@@ -1,12 +1,47 @@
 .js-cookie-consent {
 position: absolute;
-    top: 0px;
-    padding: 10px;
+top: 0px;
+padding: 10px;
+text-align: center;
+    align-items: center;
+z-index: 9999;
+width: 100%;
+background-color: #fffacc;
+border: solid 1px;
+display: flex;
+    justify-content: center;
+}
+.cookie-consent__message {
+    display: flex;
     text-align: center;
-    z-index: 9999;
-    width: 100%;
-    background-color: #fffacc;
-    border: solid 1px;
+    align-items: center;
+}
+
+.js-cookie-consent-agree {
+    align-items: center;
+    text-align: center;
+}
+.privacy-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin-right: 7px;
+    color: #3490dc;
+    text-decoration: underline;
+}
+.privacy-button:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: #2d73b1;
+}
+.privacy-button:focus {
+    outline: 0;
+}
+
+
+.main-logo {
+    height: 80%;
+    width: 80%;
 }
 
 .mt-em {
