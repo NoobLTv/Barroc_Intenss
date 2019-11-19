@@ -38,7 +38,6 @@ display: flex;
     outline: 0;
 }
 
-
 .main-logo {
     height: 80%;
     width: 80%;
@@ -48,6 +47,9 @@ display: flex;
     background-color: rgba(0,2,2,0.3);
     font-size: 50px;
     color: white;
+    transition: 0.1s;
+    animation: fade-in-top 1.5s ease 0.25s;
+    animation-fill-mode: both;
 }
 
 .masthead {
@@ -60,4 +62,16 @@ display: flex;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Animaties */
+@keyframes fade-in-top{
+    0%{
+        transform: rotate(0deg) scale(1) translateY(-200px);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(0deg) scale(1) translateY(0);
+        opacity: 1;
+    }
 }
