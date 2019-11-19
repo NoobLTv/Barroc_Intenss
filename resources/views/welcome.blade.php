@@ -81,30 +81,38 @@
     <div class="second-page">
         <div class="container">
             <div class="">
-                <h3 class="flex-center mt-5">OVER ONS</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                <h3 class="flex-center mt-5 mb-5">OVER ONS</h3>
+                <img class="logo-overons" src="storage/img/logo1_groot.png" alt="">
+                <p class="text-center">Lorem ipsum dolor sit amet, consectetur lorem adipisicing
                     elit. Alias, amet
                     architecto asperiores aspernatur consectetur cumque deserunt dolorem enim
-                    exercitationem magnam maiores porro quam quos reprehenderit saepe sint, suscipit temporibus, voluptatibus!</p>
+                    exercitationem magnam maiores porro quam quos reprehenderit saepe sint, suscipit temporibus, voluptatibus!
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab doloribus, eos. Animi iste neque officiis.
+                    Deleniti dignissimos ea eum explicabo Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eum odit quisquam. Alias aspernatur atque aut cumque earum eius incidunt nemo velit? Hic laudantium nostrum odit? Fugiat non quod tempore?
+                    illum, maxime minus quisquam quo sint ullam unde ut, vitae!</p>
             </div>
         </div>
     </div>
 
     <div class="third-page">
         <div class="container">
-            <h3>PRODUCTEN</h3>
+            <h3 class="flex-center">PRODUCTEN</h3>
+            <div class="left-color-home"></div>
+            <img class="img-home" src="storage/img/bit-deluxe.png" alt="">
+            <div class="right-color-home"></div>
+            <img class="img-home" src="storage/img/bit-light.png" alt="">
         </div>
     </div>
 
     <div class="fourth-page">
         <div class="container">
-            <h3>OFFERTEN</h3>
+            <h3 class="flex-center mt-5">OFFERTEN</h3>
         </div>
     </div>
 
     <div class="five-page">
         <div class="container">
-            <h3>CONTACT US</h3>
+            <h3 class="flex-center mt-5">CONTACT US</h3>
         </div>
     </div>
 

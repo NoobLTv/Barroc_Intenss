@@ -52,6 +52,24 @@ display: flex;
     animation-fill-mode: both;
 }
 
+.logo-overons{
+    float: left;
+    height: 200px;
+}
+
+.img-home{
+    width: 500px;
+}
+
+.img-home-left{
+    float: right;
+}
+
+.second-page{
+    height: 60vh;
+}
+
+
 .masthead {
     height: 100vh;
     min-height: 500px;
