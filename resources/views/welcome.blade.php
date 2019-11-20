@@ -97,11 +97,33 @@
     <div class="third-page">
         <div class="container">
             <h3 class="flex-center">PRODUCTEN</h3>
-            <div class="left-color-home"></div>
-            <img class="img-home" src="storage/img/bit-deluxe.png" alt="">
-            <div class="right-color-home"></div>
-            <img class="img-home" src="storage/img/bit-light.png" alt="">
-        </div>
+
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <img class="img-home" src="storage/img/bit-deluxe.png" alt="">
+                </div>
+                <div class="col-xs-6 col-md-6 margin-top-product mp-em">
+                    <h6 class=" mt-2">Koffie Machine delux</h6>
+                    <p class="mp-text">Lorem ipsum dolor
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae dicta dignissimos, doloribus exercitationem in
+                        nam neque officia reprehenderit similique tenetur. Accusantium cum eum, fugit laudantium nam numquam officiis perspiciatis veritatis?
+                        sit amet, consectetur adipisicing elit. At atque aut, consequuntur deleniti distinctio dolore eius enim explicabo harum libero modi numquam o
+                        dio officiis optio perspiciatis porro quia quibusdam quidem..</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 col-md-6 margin-top-product mp-em">
+                    <h6 class=" mt-2">Koffie Machine Light</h6>
+                    <p class="mp-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut dolorem, ea harum illum ipsum iusto laborum nisi officia
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dicta dolorem dolores doloribus, impedit ipsum magnam, molestias nostrum, obcaecati officiis placeat quaerat quisquam similique sit vel voluptas? Eos, facere!
+                        placeat, quam suscipit ullam. Deserunt eaque eveniet excepturi porro quibusdam sit.</p>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <img class="img-home" src="storage/img/bit-light.png" alt="">
+                </div>
+            </div>
+
     </div>
 
     <div class="fourth-page">
@@ -114,24 +136,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-6">
-                    <h6>Wie wij zijn</h6>
-                    <p class="text-justify">BarrocIntens.com <i>CODE WANTS TO BE SIMPLE </i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores dicta fuga laboriosam non recusandae reprehenderit. Animi enim eveniet facere iste nemo odio omnis optio perferendis reiciendis repellat reprehenderit, similique?.</p>
+                    <h6 class="white mt-2">Wie wij zijn</h6>
+                    <p class="text-justify white">BarrocIntens.com <i>CODE WANTS TO BE SIMPLE </i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores dicta fuga laboriosam non recusandae reprehenderit. Animi enim eveniet facere iste nemo odio omnis optio perferendis reiciendis repellat reprehenderit, similique?.</p>
                 </div>
 
                 <div class="col-xs-6 col-md-3">
-                    <h6>Pagina's</h6>
+                    <h6 class="white mt-2">Pagina's</h6>
                     <ul class="footer-links">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Sales</a></li>
                         <li><a href="#">Maintenance</a></li>
-                        <li><a href="#">..</a></li>
-                        <li><a href="#">..</a></li>
-                        <li><a href="#">..</a></li>
                     </ul>
                 </div>
 
                 <div class="col-xs-6 col-md-3">
-                    <h6>Meer</h6>
+                    <h6 class="white mt-2">Meer</h6>
                     <ul class="footer-links">
                         <li><a href="#">Over ons</a></li>
                         <li><a href="#">Contact</a></li>
@@ -141,25 +160,15 @@
                     </ul>
                 </div>
             </div>
-            <hr>
+            <hr class="white-line">
         </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-sm-6 col-xs-12">
-                    <p class="copyright-text">Copyright &copy; 2019 All Rights Reserved by
+                    <p class="copyright-text white">Copyright &copy; 2019 All Rights Reserved by
                         <a href="#">Barroc Intense</a>.
                     </p>
                 </div>
-
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <ul class="social-icons">
-                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
-                </div>
-            </div>
         </div>
     </footer>
 

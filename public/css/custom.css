@@ -52,6 +52,20 @@ display: flex;
     animation-fill-mode: both;
 }
 
+.mp-em{
+    color: white;
+    transition: 0.1s;
+    animation: fade-in-top 1.5s ease 0.25s;
+    animation-fill-mode: both;
+    background-color: rgba(0,2,2,0.3);
+    text-align: center;
+}
+
+.mp-text{
+    text-align: center;
+    justify-content: center;
+}
+
 .logo-overons{
     float: left;
     height: 200px;
@@ -60,6 +74,7 @@ display: flex;
 .img-home{
     width: 500px;
 }
+
 
 .img-home-left{
     float: right;
@@ -76,6 +91,7 @@ display: flex;
 .pricelabel {
     font-size: 20px;
 }
+
 
 .priceinput {
     margin-bottom: 20px;
@@ -95,6 +111,25 @@ display: flex;
 
 .offer {
     background: #ffffff;
+}
+.margin-top-product{
+    margin-top: 5em;
+}
+
+.white{
+    color: white;
+}
+
+.white-line{
+    background-color: white;
+}
+
+.site-footer{
+    background-color: #212121;
+}
+
+.third-page{
+    height: 120vh;
 }
 
 .masthead {
