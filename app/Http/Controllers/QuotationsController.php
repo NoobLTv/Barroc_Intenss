@@ -16,7 +16,7 @@ class QuotationsController extends Controller
     {
         //
 
-        return "dit is de index!";
+
     }
 
     /**
@@ -44,7 +44,7 @@ class QuotationsController extends Controller
             'remarks' => 'required|max:50',
         ]);
 
-        quotations::insert([
+        Quotations::insert([
             'price' => $request->price,
             'remarks' => $request->remarks,
             'sales_id' => '9',

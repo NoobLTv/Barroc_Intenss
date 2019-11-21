@@ -112,6 +112,49 @@ display: flex;
 .offer {
     background: #ffffff;
 }
+
+.disapprovedlabel {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.approvedlabel {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+input.checkboxapproved {
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.approvedbuttons {
+    display: flex;
+}
+
+input.checkboxdisapproved{
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.bkrchecktext {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.offerchecklabel {
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: 20px;
+}
+
 .margin-top-product{
     margin-top: 5em;
 }
