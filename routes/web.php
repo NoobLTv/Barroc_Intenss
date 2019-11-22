@@ -18,7 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::post('welcome/submit', function () {
-  return Request::all();
+  return (new App\Mail\sale);
 })->name('contact-form-submit');
 
 Route::get('/home', 'HomeController@index')->name('home');
