@@ -24,5 +24,6 @@ Route::post('welcome/submit', function () {
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('privacy', 'privacyController');
 Route::resource('offer', 'QuotationsController');
+Route::resource('Sales', 'salesController');
 Route::resource('offercheck', 'OfferCheckController');
 
