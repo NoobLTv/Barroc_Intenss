@@ -48,23 +48,24 @@
                     <ul class="navbar-nav ml-auto">
                         @auth()
                             @if(Auth::user()->role_id == 1)
-                                <li><a href="{{route('Supplies.index')}}">Supplies</a></li>
+                                <li><a class="nav-link" href="{{route('Supplies.index')}}">Supplies</a></li>
                             @elseif(Auth::user()->role_id == 2)
-                                <li><a href="{{route('Sales.index')}}">Sales</a></li>
-                                <li><a href="">Klantgegevens</a></li>
-                                <li><a href="{{route('register')}}">Registreer Klant</a></li>
+                                <li><a class="nav-link"href="{{route('Sales.index')}}">Sales</a></li>
+                                <li><a class="nav-link"href="">Klantgegevens</a></li>
+                                <li><a class="nav-link"href="{{route('register')}}">Registreer Klant</a></li>
                             @elseif(Auth::user()->role_id == 3)
-                                <li><a href="{{route('Maintenance.index')}}">Maintenance</a></li>
+                                <li><a class="nav-link"href="{{route('Maintenance.index')}}">Maintenance</a></li>
                             @elseif(Auth::user()->role_id == 4)
-                                <li><a href="{{route('Finance.index')}}">Finance</a></li>
+                                <li><a class="nav-link"href="{{route('Finance.index')}}">Finance</a></li>
                             @elseif(Auth::user()->role_id == 5)
-                                <li><a href="{{route('')}}">Customer</a></li>
+                                <li><a class="nav-link"href="{{route('')}}">Customer</a></li>
                             @elseif(Auth::user()->role_id == 6)
-                                <li><a href="">Supplies</a></li>
-                                <li><a href="">Sales</a></li>
-                                <li><a href="">Maintenance</a></li>
-                                <li><a href="">Finance</a></li>
-                                <li><a href="">Klantgegevens</a></li>
+                                <li><a class="nav-link"href="{{route('Supplies.index')}}">Supplies</a></li>
+                                <li><a class="nav-link"href="{{route('Sales.index')}}">Sales</a></li>
+                                <li><a class="nav-link"href="{{route('Maintenance.index')}}">Maintenance</a></li>
+                                <li><a class="nav-link"href="{{route('Finance.index')}}">Finance</a></li>
+                                <li><a class="nav-link"href="">Customers</a></li>
+                                <li><a class="nav-link"href="{{route('register')}}">Registreer Medewerker</a></li>
                             @endif
                         @endauth
 

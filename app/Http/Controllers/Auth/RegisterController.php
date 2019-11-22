@@ -28,6 +28,13 @@ class RegisterController extends Controller
      *
      * @var string
      */
+
+
+    public function index()
+    {
+        return view('password.register');
+    }
+
     protected $redirectTo = '/home';
 
     /**
@@ -37,7 +44,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('auth');
     }
 
     /**

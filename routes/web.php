@@ -25,5 +25,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('privacy', 'privacyController');
 Route::resource('offer', 'QuotationsController');
 Route::resource('Sales', 'salesController');
+Route::resource('Finance', 'financeController');
+Route::resource('Maintenance', 'maintenanceController');
+Route::resource('Supplies', 'suppliesController');
 Route::resource('offercheck', 'OfferCheckController');
+Route::resource('password', 'RegisterController');
 
