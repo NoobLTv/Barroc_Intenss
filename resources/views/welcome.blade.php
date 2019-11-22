@@ -132,7 +132,7 @@
             <h3 class="flex-center mt-5 white">CONTACT US</h3>
 
             <div class="form-group">
-                <form method="post" action="{{ url('/welcome') }}">
+                <form method="post" action="{{ route('contact-form-submit') }}">
                     @csrf
                     <label class="white"for="name">Name</label>
                     <input class="form-control" type="text" name="name" required>

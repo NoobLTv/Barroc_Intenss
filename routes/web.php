@@ -17,6 +17,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::post('welcome/submit', function () {
+  return Request::all();
+})->name('contact-form-submit');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('privacy', 'privacyController');
