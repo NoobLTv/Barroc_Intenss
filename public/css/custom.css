@@ -163,6 +163,10 @@ input.checkboxdisapproved{
     color: white;
 }
 
+.black{
+    color: black;
+}
+
 .white-line{
     background-color: white;
 }
@@ -179,6 +183,18 @@ input.checkboxdisapproved{
     height: 100vh;
     min-height: 500px;
     background-image: url("../storage/img/coffee_wallpaper.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fourth-page{
+    height: 5vh;
+    min-height: 500px;
+    background-image: url("../storage/img/blueasy3.jpg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

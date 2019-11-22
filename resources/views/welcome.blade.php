@@ -126,11 +126,35 @@
 
     </div>
 
-    <div class="fourth-page">
+    <div class="fourth-page mt-3">
         <div class="container">
-            <h3 class="flex-center mt-5">CONTACT US</h3>
+
+            <h3 class="flex-center mt-5 white">CONTACT US</h3>
+
+            <div class="form-group">
+                <form method="post" action="{{ url('/welcome') }}">
+                    @csrf
+                    <label class="white"for="name">Name</label>
+                    <input class="form-control" type="text" name="name" required>
+
+                    <label class="white"for="email">Email</label>
+                    <input class="form-control" type="email" name="email" required>
+
+                    <label class="white" for="companyname">Company name</label>
+                    <input class="form-control" type="text" name="description" required>
+
+                    <label class="white" for="">description</label>
+                    <textarea class="form-control" required></textarea>
+
+                    <input required class="btn btn-primary mt-3" required type="submit" value="Verstuur">
+
+                </form>
+            </div>
+
         </div>
     </div>
+
+
 
     <footer class="site-footer">
         <div class="container">
