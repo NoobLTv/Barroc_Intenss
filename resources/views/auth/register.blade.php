@@ -60,19 +60,27 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
+                        @if (Auth::user()->role_id == 2)
+                            <div class="form-group row">
+                                <label for="role_id" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
 
-                        <div class="form-group row">
-                            <label for="role_id" class="col-md-4 col-form-label text-md-right">{{ __('Roles') }}</label>
-
-                            <div class="col-md-6">
-                                <select name="role_id" required >
-                                    @foreach(\App\Role::all() as $role)
-                                        <option value="{{ $role->id }}">{{ $role->role }}</option>
-                                    @endforeach
-
-                                </select>
+                                <div class="col-md-6">
+                                    <p>Customer</p>
+                                </div>
                             </div>
-                        </div>
+                        @else
+                            <div class="form-group row">
+                                <label for="role_id" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
+
+                                <div class="col-md-6">
+                                    <select name="role_id" required >
+                                            @foreach(\App\Role::all() as $role)
+                                                <option value="{{ $role->id }}">{{ $role->role }}</option>
+                                            @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        @endif
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
