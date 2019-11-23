@@ -26,7 +26,36 @@
 <form action="{{ route('offercheck.store') }}" method="POST">
     @csrf
     <div>
-        <label class="offerchecklabel">Offerte 1:</label>
+        <label class="offerchecklabel">Offertes:</label>
+    </div>
+    <div>
+        @foreach($quotations as $quotation)
+            {{ $quotation->id }}: {{ $quotation->price }} <form>
+
+                <input type="submit">
+            </form>
+        @endforeach
+
+    </div>
+
+    <!-- <div>
+        <ul>
+            @foreach($quotations as $quotation)
+
+
+                <li> <a href="{{ route('offercheck.show', $quotation->id ) }}"> </a> {{ $quotation->id }} </li>
+            @endforeach
+        </ul>
+    </div> -->
+    <div>
+        <label class="offerchecklabel">Offertes goedkeuren of afkeuren:</label>
+    </div>
+    <div>
+        <select class="selectquotations" name="quotations_id">
+            @foreach($quotations as $quotation)
+                <option value="{{ $quotation->id }}"> </option>
+            @endforeach
+        </select>
     </div>
     <div class="approved">
         <div class="approvedbuttons">

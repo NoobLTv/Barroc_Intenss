@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Quotation;
 use App\OfferCheck;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class OfferCheckController extends Controller
      */
     public function index()
     {
-        //
+        return view('Finance.index');
     }
 
     /**
@@ -24,7 +25,15 @@ class OfferCheckController extends Controller
      */
     public function create()
     {
-        return view('Finance.offercheck');
+
+        // $categories = Category::all();
+        // roles = Role::all();
+       // dd($roles);
+
+        $quotations = Quotation::all();
+        // dd($quotations);
+
+        return view('Finance.offercheck', ['quotations'=> $quotations]);
     }
 
     /**
@@ -51,7 +60,7 @@ class OfferCheckController extends Controller
      */
     public function show(OfferCheck $offerCheck)
     {
-        //
+        return view('Finance.show');
     }
 
     /**

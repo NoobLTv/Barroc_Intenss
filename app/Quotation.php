@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class quotations extends Model
+class Quotation extends Model
 {
 
 }

@@ -44,11 +44,13 @@ class QuotationsController extends Controller
             'remarks' => 'required|max:50',
         ]);
 
+        //return $request->all();
+
         Quotations::insert([
             'price' => $request->price,
             'remarks' => $request->remarks,
-            'sales_id' => '9',
-            'customer_id' => '10',
+            'sales_id' => $request->sales_id,
+            'customer_id' => $request->customer_id,
             'must_still_approve' => 0,
             'approved' => 0
         ]);
@@ -66,9 +68,7 @@ class QuotationsController extends Controller
      */
     public function show(quotations $quotations)
     {
-        //
 
-        return "Dit is de show";
     }
 
     /**
@@ -79,9 +79,7 @@ class QuotationsController extends Controller
      */
     public function edit(quotations $quotations)
     {
-        //
 
-        return "Dit is de edit";
     }
 
     /**
@@ -93,8 +91,7 @@ class QuotationsController extends Controller
      */
     public function update(Request $request, quotations $quotations)
     {
-        //
-        return "Dit is de update";
+
     }
 
     /**
@@ -105,7 +102,6 @@ class QuotationsController extends Controller
      */
     public function destroy(quotations $quotations)
     {
-        //
-        return "Dit is de destroy";
+
     }
 }

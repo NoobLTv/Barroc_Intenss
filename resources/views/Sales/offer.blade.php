@@ -18,15 +18,43 @@
 <header>
     <div class="content">
         <div class="title m-b-md">
-            <h2>Offerte aanmaken</h2>
+            <h2 class="offerlabel">Offerte aanmaken</h2>
         </div>
     </div>
 </header>
 
-        <form action="{{ route('offer.store') }}" method="POST">
+        <form class="offerform" action="{{ route('offer.store') }}" method="POST">
             @csrf
             <div>
-                <label class="pricelabel">Prijs:<input class="priceinput" type="text" name="price"></label>
+                <label class="pricelabel">Salesmedewerker:</label>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-6">
+                        <select name="sales_id">
+                            @foreach(\App\User::select('name' ,'id')->where('role_id', '2')->get() as $name)
+                                <option value="{{ $name->id }}">{{ $name->name }}</option>
+                            @endforeach
+                        </select>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <label class="pricelabel">Klant:</label>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <select name="customer_id">
+                        @foreach(\App\User::select('name', 'id')->where('role_id', '5')->get() as $name)
+                            <option value="{{ $name->id }}">{{ $name->name }}</option>
+                        @endforeach
+                        </select>
+                </div>
+            </div>
+            <div>
+                <label class="pricelabel">Prijs:</label>
+            </div>
+            <div>
+                <input class="priceinput" type="text" name="price">
             </div>
             <div>
                 <label class="remarkslabel">Opmerkingen:</label>
