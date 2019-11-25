@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Quotation;
+use App\workorder;
 use Illuminate\Http\Request;
 
-class QuotationsController extends Controller
+class WorkorderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,6 @@ class QuotationsController extends Controller
     public function index()
     {
         //
-
-
     }
 
     /**
@@ -26,8 +24,7 @@ class QuotationsController extends Controller
      */
     public function create()
     {
-        // return "Dit is de create";
-        return view('Sales.offer');
+        return view('Maintenance.workorder');
     }
 
     /**
@@ -38,70 +35,75 @@ class QuotationsController extends Controller
      */
     public function store(Request $request)
     {
-
         $this->validate($request, [
-            'price' => 'required|numeric',
-            'remarks' => 'required|max:255',
+            'bonnumber' => 'required|numeric',
+            'project' => 'required|max:50',
+            'mechanic' => 'required|max:50',
+            'agreements' => 'required|max:50',
+            'dateworkorders' => 'required|max:50',
+            'failure address' => 'required|max:50',
+            'remarksworkorders' => 'required|max:50'
         ]);
 
         //return $request->all();
 
         Quotation::insert([
-            'price' => $request->price,
-            'remarks' => $request->remarks,
-            'sales_id' => $request->sales_id,
-            'customer_id' => $request->customer_id,
-            'must_still_approve' => 0,
-            'approved' => 0
+            'bonnumber' => $request-> bonnumber,
+            'project' => $request-> project,
+            'mechanic' => $request-> mechanic,
+            'agreements' => $request-> agreements,
+            'dateworkorders' => $request-> dateworkorders,
+            'failureaddress' => $request-> failureaddress,
+            'remarksworkorders' => $request-> remarksworkorders,
         ]);
 
         //\Mail::to( \Auth::user() )->send( new \App\Mail\TestMail($request->name) );
         //return ( new \App\Mail\TestMail($request->name) )->render();
-        return redirect()->route('offer.create');
+        return redirect()->route('workorder.create');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\quotations  $quotations
+     * @param  \App\workorder  $workorder
      * @return \Illuminate\Http\Response
      */
-    public function show(quotations $quotations)
+    public function show(workorder $workorder)
     {
-
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\quotations  $quotations
+     * @param  \App\workorder  $workorder
      * @return \Illuminate\Http\Response
      */
-    public function edit(quotations $quotations)
+    public function edit(workorder $workorder)
     {
-
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\quotations  $quotations
+     * @param  \App\workorder  $workorder
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, quotations $quotations)
+    public function update(Request $request, workorder $workorder)
     {
-
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\quotations  $quotations
+     * @param  \App\workorder  $workorder
      * @return \Illuminate\Http\Response
      */
-    public function destroy(quotations $quotations)
+    public function destroy(workorder $workorder)
     {
-
+        //
     }
 }

@@ -206,8 +206,23 @@ input.checkboxdisapproved{
     background-color: #212121;
 }
 
+.maintenance {
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .third-page{
     height: 120vh;
+}
+
+.workorder {
+    background: #ffffff;
+}
+
+.workordertext {
+    padding-left: 20px;
+    padding-top: 20px;
 }
 
 .masthead {
