@@ -58,13 +58,13 @@
                             @elseif(Auth::user()->role_id == 4)
                                 <li><a class="nav-link"href="{{route('Finance.index')}}">Finance</a></li>
                             @elseif(Auth::user()->role_id == 5)
-                                <li><a class="nav-link"href="{{route('')}}">Customer</a></li>
+                                <li><a class="nav-link"href="{{route('Customer.index')}}">Customer</a></li>
                             @elseif(Auth::user()->role_id == 6)
                                 <li><a class="nav-link"href="{{route('Supplies.index')}}">Supplies</a></li>
                                 <li><a class="nav-link"href="{{route('Sales.index')}}">Sales</a></li>
                                 <li><a class="nav-link"href="{{route('Maintenance.index')}}">Maintenance</a></li>
                                 <li><a class="nav-link"href="{{route('Finance.index')}}">Finance</a></li>
-                                <li><a class="nav-link"href="">Customers</a></li>
+                                <li><a class="nav-link"href="{{route('Customer.index')}}">Customers</a></li>
                                 <li><a class="nav-link"href="{{route('register')}}">Registreer Medewerker</a></li>
                             @endif
                         @endauth

@@ -28,6 +28,7 @@ Route::resource('Sales', 'salesController')-> middleware(\App\Http\Middleware\Ch
 Route::resource('Finance', 'financeController');
 Route::resource('Maintenance', 'maintenanceController');
 Route::resource('Supplies', 'suppliesController');
+Route::resource('Customer', 'customerController');
 Route::resource('offercheck', 'OfferCheckController');
 Route::resource('password', 'RegisterController');
 
