@@ -13,8 +13,10 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
+                    <h2>Goededag: {{ Auth::user()->name }}</h2>
+                    <p>Welkom bij het online portaal van Barroc Intense.<p>
+                    <p>U kunt bovenaan in de taakbalk alle verwijzingen vinden naar wat u zoekt.</p>
+                    <p></p>
                 </div>
             </div>
         </div>
