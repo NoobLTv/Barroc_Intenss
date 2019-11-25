@@ -91,6 +91,7 @@ display: flex;
 
 .pricelabel {
     font-size: 20px;
+    padding-top: 20px;
 }
 
 .priceinput {
@@ -210,6 +211,15 @@ input.checkboxdisapproved{
     padding-left: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.customerlabel {
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.saleslabel {
+    font-size: 20px;
 }
 
 .third-page{

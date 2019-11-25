@@ -16,39 +16,32 @@
 <body class="offer">
 
 <header>
-    <div class="content">
-        <div class="title m-b-md">
-            <h2 class="offerlabel">Offerte aanmaken</h2>
-        </div>
+    <div>
+        <h2 class="offerlabel">Prijsopgave aanmaken</h2>
     </div>
 </header>
 
         <form class="offerform" action="{{ route('offer.store') }}" method="POST">
             @csrf
             <div>
-                <label class="pricelabel">Salesmedewerker:</label>
-            </div>
-            <div class="form-group row">
-                <div class="col-md-6">
-                        <select name="sales_id">
-                            @foreach(\App\User::select('name' ,'id')->where('role_id', '2')->get() as $name)
-                                <option value="{{ $name->id }}">{{ $name->name }}</option>
-                            @endforeach
-                        </select>
-                    </select>
-                </div>
+                <label class="saleslabel">Salesmedewerker:</label>
             </div>
             <div>
-                <label class="pricelabel">Klant:</label>
+                <select name="sales_id">
+                    @foreach(\App\User::select('name' ,'id')->where('role_id', '2')->get() as $name)
+                        <option value="{{ $name->id }}">{{ $name->name }}</option>
+                    @endforeach
+                </select>
             </div>
-            <div class="form-group row">
-                <div class="col-md-6">
-                    <select name="customer_id">
-                        @foreach(\App\User::select('name', 'id')->where('role_id', '5')->get() as $name)
-                            <option value="{{ $name->id }}">{{ $name->name }}</option>
-                        @endforeach
-                        </select>
-                </div>
+            <div>
+                <label class="customerlabel">Klant:</label>
+            </div>
+            <div>
+                <select name="customer_id">
+                    @foreach(\App\User::select('name', 'id')->where('role_id', '5')->get() as $name)
+                        <option value="{{ $name->id }}">{{ $name->name }}</option>
+                    @endforeach
+                </select>
             </div>
             <div>
                 <label class="pricelabel">Prijs:</label>

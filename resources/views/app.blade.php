@@ -53,7 +53,7 @@
                                 <li><a class="nav-link"href="{{route('Sales.index')}}">Sales</a></li>
                                 <li><a class="nav-link"href="">Klantgegevens</a></li>
                                 <li><a class="nav-link"href="{{route('register')}}">Registreer Klant</a></li>
-                                <li><a class="nav-link"href="{{route('register')}}">Prijsopgave aanmaken</a></li>
+                                <li><a class="nav-link"href="{{route('offer.create')}}">Prijsopgave aanmaken</a></li>
                             @elseif(Auth::user()->role_id == 3)
                                 <li><a class="nav-link"href="{{route('Maintenance.index')}}">Maintenance</a></li>
                             @elseif(Auth::user()->role_id == 4)
