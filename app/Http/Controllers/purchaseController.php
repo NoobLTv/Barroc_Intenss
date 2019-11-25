@@ -13,7 +13,7 @@ class purchaseController extends Controller
      */
     public function index()
     {
-        //
+        return view('Purchase.index');
     }
 
     /**

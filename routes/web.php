@@ -32,3 +32,4 @@ Route::resource('Customer', 'customerController');
 Route::resource('offercheck', 'OfferCheckController');
 Route::resource('password', 'RegisterController');
 Route::resource('workorder', 'WorkorderController');
+Route::resource('Purchase', 'purchaseController');
