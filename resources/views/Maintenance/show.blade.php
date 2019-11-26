@@ -27,8 +27,7 @@
 </header>
 
 <main>
-    <a class="offercheckpage" href="{{ route('workorder.create') }}">Werkbonnen invullen</a>
-    <a class="offercheckpage" href="{{ route('Maintenance.show') }}">Storing aanvragen bekijken</a>
+    <h1>Storing aanvragen bekijken</h1>
 </main>
 
 </body>

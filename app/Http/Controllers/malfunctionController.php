@@ -34,7 +34,15 @@ class malfunctionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        \App\malfunction::insert([
+            'name'          => $request->name,
+            'email'         => $request->email,
+            'company_name'  => $request->companyname,
+            'description'   => $request->description,
+
+        ]);
+
+        return ( new \App\Mail\SendMalfunction($request) )-> render();
     }
 
     /**
