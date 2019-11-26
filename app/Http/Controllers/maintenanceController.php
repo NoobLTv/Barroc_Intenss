@@ -13,7 +13,7 @@ class maintenanceController extends Controller
      */
     public function index()
     {
-        return view('Maintenance.index');
+        return 'hoi';
     }
 
     /**

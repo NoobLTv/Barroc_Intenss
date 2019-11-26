@@ -22,12 +22,13 @@
 
 <header>
     <div>
-        <h1 class="maintenance">Maintenance</h1>
+        <h1 class="maintenance">Storings aanvragen bekijken</h1>
     </div>
 </header>
 
 <main>
-    <h1>Storing aanvragen bekijken</h1>
+
+
 </main>
 
 </body>
