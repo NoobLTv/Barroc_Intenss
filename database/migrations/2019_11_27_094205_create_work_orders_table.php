@@ -17,7 +17,6 @@ class CreateWorkOrdersTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('maintenance_id');
             $table->unsignedBigInteger('lease_id');
-            $table->unsignedBigInteger('workordersproducts_id');
             $table->integer('bonnumber');
             $table->string('malfunction');
             $table->string('mechanic');
@@ -33,10 +32,6 @@ class CreateWorkOrdersTable extends Migration
             $table->foreign('lease_id')
                 ->references('id')
                 ->on('leases');
-
-            $table->foreign('workordersproducts_id')
-                ->references('id')
-                ->on('workordersproducts');
         });
     }
 
