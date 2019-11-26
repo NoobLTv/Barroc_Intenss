@@ -73,7 +73,12 @@
     </style>
 </head>
 <body>
-<h1>Magazijn</h1>
+
+    <div class="purchase-first">
+        <div class="container">
+            <h1 class="text-center mt-5">Magazijn</h1>
+        </div>
+    </div>
 
 </body>
 </html>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePurchasesTable extends Migration
+class CreateMalfunctionTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,18 @@ class CreatePurchasesTable extends Migration
      */
     public function up()
     {
-        Schema::create('purchases', function (Blueprint $table) {
+        Schema::create('malfunctions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id');
             $table->string('name');
-            $table->integer('units');
-            $table->boolean('available');
+            $table->string('email', 128)->unique();
+            $table->timestamp('company_name');
+            $table->string('description');
+            $table->rememberToken();
             $table->timestamps();
 
-            $table->foreign('user_id')
-                ->references('id')
-                ->on('users');
+
+
+
         });
     }
 
@@ -34,6 +35,6 @@ class CreatePurchasesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('purchases');
+        Schema::dropIfExists('malfunction');
     }
 }

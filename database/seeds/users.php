@@ -11,11 +11,40 @@ class users extends Seeder
      */
     public function run()
     {
-//        \App\User::insert([
-//            'email'=> 'sales@sales.com',
-//            'name'=> 'sales',
-//            'password'=> 'Sales123!',
+        \App\User::insert([
+            'email'=> 'ceo@barroc.nl',
+            'name'=> 'ceo',
+            'password'=> Hash::make('barroc123'),
+            'role_id'    => 6
+        ]);
 
-//        ]);
+        \App\User::insert([
+            'email'=> 'sales@barroc.nl',
+            'name'=> 'sales',
+            'password'=> Hash::make('barroc123'),
+            'role_id'    => 2
+        ]);
+
+        \App\User::insert([
+            'email'=> 'finance@barroc.nl',
+            'name'=> 'finance',
+            'password'=> Hash::make('barroc123'),
+            'role_id'    => 4
+        ]);
+
+        \App\User::insert([
+            'email'=> 'supplies@barroc.nl',
+            'name'=> 'supplies',
+            'password'=> Hash::make('barroc123'),
+            'role_id'    => 1
+        ]);
+
+        \App\User::insert([
+            'email'=> 'maintenance@barroc.nl',
+            'name'=> 'maintenance',
+            'password'=> Hash::make('barroc123'),
+            'role_id'    => 3
+        ]);
+
     }
 }

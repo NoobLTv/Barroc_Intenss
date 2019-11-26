@@ -48,24 +48,36 @@
                     <ul class="navbar-nav ml-auto">
                         @auth()
                             @if(Auth::user()->role_id == 1)
-                                <li><a class="nav-link" href="{{route('Supplies.index')}}">Supplies</a></li>
+                                <li><a class="nav-link" href="{{route('Supplies.index')}}">Onderdelen</a></li>
+
+
                             @elseif(Auth::user()->role_id == 2)
                                 <li><a class="nav-link"href="{{route('Sales.index')}}">Sales</a></li>
                                 <li><a class="nav-link"href="">Klantgegevens</a></li>
                                 <li><a class="nav-link"href="{{route('register')}}">Registreer Klant</a></li>
                                 <li><a class="nav-link"href="{{route('offer.create')}}">Prijsopgave aanmaken</a></li>
+
+
                             @elseif(Auth::user()->role_id == 3)
                                 <li><a class="nav-link"href="{{route('Maintenance.index')}}">Maintenance</a></li>
+                                <li><a class="nav-link"href="{{route('Maintenance.show')}}">Storingen bekijken</a></li>
+
+
                             @elseif(Auth::user()->role_id == 4)
-                                <li><a class="nav-link"href="{{route('Finance.index')}}">Finance</a></li>
+                                <li><a class="nav-link"href="{{route('Finance.index')}}">Financien</a></li>
+
+
                             @elseif(Auth::user()->role_id == 5)
-                                <li><a class="nav-link"href="{{route('Customer.index')}}">Customer</a></li>
+                                <li><a class="nav-link"href="{{route('Customer.index')}}">Klant</a></li>
+                                <li><a class="nav-link"href="{{route('Malfunction.index')}}">Storing melden?</a></li>
+
+
                             @elseif(Auth::user()->role_id == 6)
-                                <li><a class="nav-link"href="{{route('Supplies.index')}}">Supplies</a></li>
+                                <li><a class="nav-link"href="{{route('Supplies.index')}}">Onderdelen</a></li>
                                 <li><a class="nav-link"href="{{route('Sales.index')}}">Sales</a></li>
                                 <li><a class="nav-link"href="{{route('Maintenance.index')}}">Maintenance</a></li>
-                                <li><a class="nav-link"href="{{route('Finance.index')}}">Finance</a></li>
-                                <li><a class="nav-link"href="{{route('Customer.index')}}">Customers</a></li>
+                                <li><a class="nav-link"href="{{route('Finance.index')}}">Financien</a></li>
+                                <li><a class="nav-link"href="{{route('Customer.index')}}">Klant</a></li>
                                 <li><a class="nav-link"href="{{route('register')}}">Registreer Medewerker</a></li>
                             @endif
                         @endauth

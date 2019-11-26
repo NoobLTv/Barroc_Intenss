@@ -21,6 +21,10 @@ Route::post('welcome/submit', function () {
   return (new App\Mail\sale);
 })->name('contact-form-submit');
 
+Route::post('malfunction/submit', function () {
+    return (new App\Mail\SendMalfunction());
+})->name('malfunction-submit');
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('privacy', 'privacyController');
 Route::resource('offer', 'QuotationsController');
@@ -28,6 +32,7 @@ Route::resource('Sales', 'salesController')-> middleware(\App\Http\Middleware\Ch
 Route::resource('Finance', 'financeController');
 Route::resource('Maintenance', 'maintenanceController');
 Route::resource('Supplies', 'suppliesController');
+Route::resource('Malfunction', 'malfunctionController');
 Route::resource('Customer', 'customerController');
 Route::resource('offercheck', 'OfferCheckController');
 Route::resource('password', 'RegisterController');
