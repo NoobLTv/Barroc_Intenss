@@ -16,7 +16,7 @@ class CreateWorkordersproductsTable extends Migration
         Schema::create('workordersproduct', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('workorder_id');
-            $table->string('supply_id');
+            $table->unsignedBigInteger('supply_id');
             $table->integer('amount');
             $table->timestamps();
 
