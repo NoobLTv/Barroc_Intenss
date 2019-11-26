@@ -28,6 +28,8 @@
 
 <main>
     <a class="offercheckpage" href="{{ route('workorder.create') }}">Werkbonnen invullen</a>
+    <a class="offercheckpage" href="{{ route('scheduleafault.create') }}">Storingsaanvragen inplannen</a>
+    <a class="offercheckpage" href="{{ route('scheduleafaultshow.index') }}">Ingeplande storingsaanvragen bekijken</a>
 </main>
 
 </body>
