@@ -16,13 +16,17 @@ class CreateWorkordersproductsTable extends Migration
         Schema::create('workordersproduct', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('workorder_id');
-            $table->string('product_name');
+            $table->string('supply_id');
             $table->integer('amount');
             $table->timestamps();
 
             $table->foreign('workorder_id')
                 ->references('id')
                 ->on('work_orders');
+
+            $table->foreign('supply_id')
+                ->references('id')
+                ->on('supplies');
         });
     }
 

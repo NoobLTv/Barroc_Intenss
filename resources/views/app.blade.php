@@ -61,6 +61,11 @@
                             @elseif(Auth::user()->role_id == 3)
                                 <li><a class="nav-link"href="{{route('Maintenance.index')}}">Maintenance</a></li>
                                 <li><a class="nav-link"href="">Storingen bekijken</a></li>
+                                <a class="nav-link" href="{{ route('workorder.create') }}">Werkbonnen invullen</a>
+                                <a class="nav-link" href="{{ route('scheduleafault.create') }}">Storingsaanvragen inplannen</a>
+                                <a class="nav-link" href="{{ route('scheduleafaultshow.index') }}">Ingeplande storingsaanvragen bekijken</a>
+                                <li><a class="nav-link"href="">Maintenance</a></li>
+                                <li><a class="nav-link"href="{{route('MalfunctionView.index')}}">Storingen bekijken</a></li>
 
 
                             @elseif(Auth::user()->role_id == 4)

@@ -30,12 +30,6 @@
 <form class="offerform" action="{{ route('workorder.store') }}" method="POST">
     @csrf
     <div>
-        <label class="receiptnumberlabel">Bonnummer:</label>
-    </div>
-    <div>
-        <input class="priceinput" type="text" name="bonnumber">
-    </div>
-    <div>
         <label class="pricelabel">Storingsaanvragen:</label>
     </div>
     <div>

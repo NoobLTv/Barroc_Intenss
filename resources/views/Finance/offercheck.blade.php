@@ -38,7 +38,7 @@
 
     </div>
 
-    <!-- <div>
+    <div>
         <ul>
             @foreach($quotations as $quotation)
 
@@ -46,7 +46,7 @@
                 <li> <a href="{{ route('offercheck.show', $quotation->id ) }}"> </a> {{ $quotation->id }} </li>
             @endforeach
         </ul>
-    </div> -->
+    </div>
     <div>
         <label class="offerchecklabel">Offertes goedkeuren of afkeuren:</label>
     </div>
