@@ -90,10 +90,10 @@
                 <input class="form-control" type="email" name="email" required>
 
                 <label class="black" for="companyname">Bedrijfsnaam</label>
-                <input class="form-control" type="text" name="description" required>
+                <input class="form-control" type="text" name="companyname" required>
 
                 <label class="black" for="description">Klachtomschrijving</label>
-                <textarea class="form-control" required></textarea>
+                <textarea class="form-control" name="description" required></textarea>
 
                 <input required class="btn btn-primary mt-3" required type="submit" value="Verstuur">
 
