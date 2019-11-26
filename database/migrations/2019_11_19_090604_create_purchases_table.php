@@ -17,6 +17,7 @@ class CreatePurchasesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->string('name');
+            $table->decimal('price');
             $table->integer('units');
             $table->boolean('available');
             $table->timestamps();

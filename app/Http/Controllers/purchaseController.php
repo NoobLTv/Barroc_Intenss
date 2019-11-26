@@ -2,10 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\purchases;
 use Illuminate\Http\Request;
 
 class purchaseController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +19,8 @@ class purchaseController extends Controller
      */
     public function index()
     {
-        return view('Purchase.index');
+        $purchases = purchases::paginate(20);
+        return view('Purchase.index', ['purchase' => $purchases]);
     }
 
     /**
@@ -56,7 +63,7 @@ class purchaseController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('Purchase.edit');
     }
 
     /**

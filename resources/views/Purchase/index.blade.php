@@ -77,6 +77,9 @@
     <div class="purchase-first">
         <div class="container">
             <h1 class="text-center mt-5">Magazijn</h1>
+            @foreach($purchase as $purchase)
+                <li><a href="{{route('Purchase.edit', $purchase->id)}}"> {{$purchase->name}} {{$purchase->price}} {{$purchase->units}} {{$purchase->available}}</a></li>
+            @endforeach
         </div>
     </div>
 
