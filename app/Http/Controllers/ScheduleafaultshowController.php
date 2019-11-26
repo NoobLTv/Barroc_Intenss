@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Malfunction;
 use Illuminate\Http\Request;
 
-class malfunctionController extends Controller
+class ScheduleafaultshowController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,8 @@ class malfunctionController extends Controller
      */
     public function index()
     {
-        return view('Customer.malfunction');
+        $malfunctions = Malfunction::all();
+        return view('Maintenance.scheduleafaultshow', ['malfunctions' => $malfunctions ]);
     }
 
     /**
@@ -34,35 +36,27 @@ class malfunctionController extends Controller
      */
     public function store(Request $request)
     {
-        \App\malfunction::insert([
-            'name'          => $request->name,
-            'email'         => $request->email,
-            'company_name'  => $request->companyname,
-            'description'   => $request->description,
-
-        ]);
-
-        return ( new \App\Mail\SendMalfunction($request) )-> render();
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\scheduleafaultshow  $scheduleafaultshow
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(scheduleafaultshow $scheduleafaultshow)
     {
-        //
+
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\scheduleafaultshow  $scheduleafaultshow
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(scheduleafaultshow $scheduleafaultshow)
     {
         //
     }
@@ -71,10 +65,10 @@ class malfunctionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\scheduleafaultshow  $scheduleafaultshow
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, scheduleafaultshow $scheduleafaultshow)
     {
         //
     }
@@ -82,10 +76,10 @@ class malfunctionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\scheduleafaultshow  $scheduleafaultshow
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(scheduleafaultshow $scheduleafaultshow)
     {
         //
     }

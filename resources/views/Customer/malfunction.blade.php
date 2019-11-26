@@ -72,16 +72,16 @@
     </style>
 </head>
 <body>
-<h1>Storing melden</h1>
+<h1 class="flex-center mt-5 black">Storing melden</h1>
 
-<h2>Onze excuses dat u problemen ondervindt met ons product, onderstaand kan u uw contact informatie en klachtomschrijving invullen en wij zullen zo snel mogelijk de aanvraag verwerken.</h2>
+<h2 class="flex-center mt-4 black">Onze excuses dat u problemen ondervindt met ons product.</h2>
+<h4 class="flex-center mt-4 black">Onderstaand kan u uw contact informatie en klachtomschrijving invullen en wij zullen zo snel mogelijk de aanvraag verwerken.</h4>
 
     <div class="container">
 
-        <h3 class="flex-center mt-5 black">CONTACT US</h3>
 
         <div class="form-group">
-            <form method="post" action="{{ route('malfunction-submit') }}">
+            <form method="post" action="{{route('Malfunction.store')}}">
                 @csrf
                 <label class="black"for="name">Naam</label>
                 <input class="form-control" type="text" name="name" required>
@@ -92,7 +92,7 @@
                 <label class="black" for="companyname">Bedrijfsnaam</label>
                 <input class="form-control" type="text" name="description" required>
 
-                <label class="black" for="">Klachtomschrijving</label>
+                <label class="black" for="description">Klachtomschrijving</label>
                 <textarea class="form-control" required></textarea>
 
                 <input required class="btn btn-primary mt-3" required type="submit" value="Verstuur">
@@ -107,3 +107,6 @@
 </html>
 
 @endsection
+
+
+
