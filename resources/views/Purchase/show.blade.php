@@ -1,7 +1,7 @@
 @extends ('app')
 
 @section('content')
-        <!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -73,7 +73,12 @@
     </style>
 </head>
 <body>
-<h1>Magazijn</h1>
+
+<div class="purchase-first">
+    <div class="container">
+        <h1 class="text-center mt-5">Magazijn</h1>
+    </div>
+</div>
 
 </body>
 </html>

@@ -73,7 +73,22 @@
     </style>
 </head>
 <body>
-<h1>Magazijn</h1>
+
+<div class="purchase-first">
+    <div class="container">
+        <h1 class="text-center mt-5">Edit Magazijn</h1>
+
+        <form action="" method="post">
+            @csrf
+
+            <div class="form-group">
+                <label for="">Name-Product</label>
+                <input type="text">
+            </div>
+
+        </form>
+    </div>
+</div>
 
 </body>
 </html>
