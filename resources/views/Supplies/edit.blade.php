@@ -1,7 +1,6 @@
-@extends ('app')
-
+@extends('app')
 @section('content')
-        <!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -73,31 +72,8 @@
     </style>
 </head>
 <body>
-
-<div class="purchase-first">
-    <div class="container">
-        <h1 class="text-center mt-5">Edit Magazijn</h1>
-
-        <form action="" method="post">
-            @csrf
-
-            <div class="form-group">
-                <label for="">supply name</label>
-                <input type="text" name=""  value="{{ $supply_id->supply }}">
-            </div>
-
-            <div class="form-group">
-                <label for="">prijs</label>
-                <input type="text" name="" value="">
-            </div>
-
-
-        </form>
-    </div>
-</div>
-
+<h1>Supplies</h1>
 </body>
 </html>
-
 
 @endsection

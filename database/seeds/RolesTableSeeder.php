@@ -14,6 +14,7 @@ class RolesTableSeeder extends Seeder
         \App\Role::insert([
            'role'=> 'Supplies'
         ]);
+
         \App\Role::insert([
             'role'=> 'Sales'
         ]);

@@ -2,10 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\supplies;
 use Illuminate\Http\Request;
 
 class suppliesController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +19,9 @@ class suppliesController extends Controller
      */
     public function index()
     {
-        return view('Supplies.index');
+        //
+        $supplises = supplies::paginate(20);
+        return view('Supplies.index', ['supplises' => $supplises]);
     }
 
     /**

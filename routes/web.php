@@ -37,7 +37,7 @@ Route::resource('Customer', 'customerController');
 Route::resource('offercheck', 'OfferCheckController');
 Route::resource('password', 'RegisterController');
 Route::resource('workorder', 'WorkorderController');
-Route::resource('Purchase', 'purchaseController');
+Route::resource('Supplies', 'suppliesController');
 
 Route::resource('scheduleafault', 'ScheduleafaultController');
 Route::resource('scheduleafaultshow', 'ScheduleafaultshowController');

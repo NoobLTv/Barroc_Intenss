@@ -72,7 +72,15 @@
     </style>
 </head>
 <body>
-<h1>Supplies</h1>
+
+    <div class="supplies-first">
+        <div class="container">
+            <h1 class="text-center">Supplies</h1>
+            @foreach($supplises as $supplies)
+                <li><a href="{{route('Supplies.edit', $supplies->id)}}"> {{$supplies->name}} {{$supplies->price}} {{$supplies->units}} {{$supplies->available}}</a></li>
+            @endforeach
+        </div>
+    </div>
 
 </body>
 </html>
