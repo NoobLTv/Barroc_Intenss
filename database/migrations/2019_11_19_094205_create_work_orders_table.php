@@ -17,6 +17,13 @@ class CreateWorkOrdersTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('maintenance_id');
             $table->unsignedBigInteger('lease_id');
+            $table->integer('bonnumber');
+            $table->string('project');
+            $table->string('mechanic');
+            $table->string('agreements');
+            $table->date('dateworkorders');
+            $table->string('failureaddress');
+            $table->string('remarksworkorders');
             $table->timestamps();
 
             $table->foreign('maintenance_id')

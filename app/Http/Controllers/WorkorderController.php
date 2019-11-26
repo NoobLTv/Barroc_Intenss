@@ -47,7 +47,7 @@ class WorkorderController extends Controller
 
         //return $request->all();
 
-        Quotation::insert([
+        Workorder::insert([
             'bonnumber' => $request-> bonnumber,
             'project' => $request-> project,
             'mechanic' => $request-> mechanic,

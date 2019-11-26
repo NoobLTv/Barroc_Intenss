@@ -18,6 +18,9 @@
 </head>
 <body class="workorder">
 
+@extends('app')
+@section('content')
+
 <header>
     <div>
         <h1 class="workordertext">Werkbonnen aanmaken</h1>
@@ -27,22 +30,45 @@
 <form class="offerform" action="{{ route('workorder.store') }}" method="POST">
     @csrf
     <div>
-        <label class="pricelabel">Bonnummer:</label>
+        <label class="receiptnumberlabel">Bonnummer:</label>
     </div>
     <div>
         <input class="priceinput" type="text" name="bonnumber">
     </div>
     <div>
-        <label class="pricelabel">Project:</label>
+        <label class="pricelabel">Storingsaanvragen:</label>
     </div>
     <div>
-        <input class="priceinput" type="text" name="project">
+        <select name="malfunction">
+            @foreach(\App\User::select('name', 'id')->where('role_id', '5')->get() as $name)
+                <option value="{{ $name->id }}">{{ $name->name }}</option>
+            @endforeach
+        </select>
     </div>
     <div>
         <label class="pricelabel">Monteur:</label>
     </div>
     <div>
         <input class="priceinput" type="text" name="mechanic">
+    </div>
+    <div>
+        <label class="productslabel">Producten:</label>
+    </div>
+    <div>
+        <select name="products">
+            @foreach(\App\User::select('name', 'id')->where('role_id', '5')->get() as $name)
+                <option value="{{ $name->id }}">{{ $name->name }} </option>
+            @endforeach
+        </select>
+    </div>
+    <div>
+        <label class="amountlabel">Aantal:</label>
+    </div>
+    <div>
+        <input class="amountinput" type="text" name="amount">
+    </div>
+    <div>
+        <input name="plusbutton" class="plusbutton" type="submit" value="+">
     </div>
     <div>
         <label class="pricelabel">Afspraak gemaakt met:</label>
@@ -69,14 +95,13 @@
         <textarea class="remarkstextarea" name="remarksworkorders"></textarea>
     </div>
     <div>
-        <input class="offerinput" type="submit" value="Verzenden">
+        <input name="workorders" class="workorderinput" type="submit" value="Verzenden">
     </div>
 </form>
 
-</body>
-</html>
-
+@endsection
 
 </body>
 </html>
+
 
