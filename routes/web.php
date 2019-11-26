@@ -31,6 +31,7 @@ Route::resource('offer', 'QuotationsController');
 Route::resource('Sales', 'salesController')-> middleware(\App\Http\Middleware\CheckRole::class);
 Route::resource('Finance', 'financeController');
 Route::resource('Maintenance', 'maintenanceController');
+Route::resource('MalfunctionView', 'malfunctionviewController');
 Route::resource('Supplies', 'suppliesController');
 Route::resource('Malfunction', 'malfunctionController');
 Route::resource('Customer', 'customerController');

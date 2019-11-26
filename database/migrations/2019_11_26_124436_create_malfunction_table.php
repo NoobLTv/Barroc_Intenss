@@ -17,7 +17,7 @@ class CreateMalfunctionTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('email', 128)->unique();
-            $table->timestamp('company_name');
+            $table->string('company_name');
             $table->string('description');
             $table->rememberToken();
             $table->timestamps();

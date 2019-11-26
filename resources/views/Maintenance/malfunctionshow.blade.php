@@ -21,18 +21,16 @@
 <body>
 
 <header>
-    <div>
-        <h1 class="maintenance">Maintenance</h1>
-    </div>
+
 </header>
 
+    <p>Naam: {{$malfunctions->name}}</p>
+    <p>Bedrijf: {{$malfunctions->company_name}}</p>
+    <p>Beschrijving: {{$malfunctions->description}}</p>
+
+
 <main>
-    <a class="offercheckpage" href="{{ route('workorder.create') }}">Werkbonnen invullen</a>
 
-    <a class="offercheckpage" href="{{ route('scheduleafault.create') }}">Storingsaanvragen inplannen</a>
-    <a class="offercheckpage" href="{{ route('scheduleafaultshow.index') }}">Ingeplande storingsaanvragen bekijken</a>
-
-    <a class="offercheckpage" href="{{ route('Maintenance.index') }}">Storing aanvragen bekijken</a>
 
 </main>
 

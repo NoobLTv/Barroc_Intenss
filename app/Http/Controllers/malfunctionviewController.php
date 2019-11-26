@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Malfunction;
 use Illuminate\Http\Request;
 
-class maintenanceController extends Controller
+class malfunctionviewController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,8 @@ class maintenanceController extends Controller
      */
     public function index()
     {
-
+        $malfunctions = Malfunction::all();
+        return view('Maintenance/malfunctionview', ['malfunctions' => $malfunctions]);
     }
 
     /**
@@ -45,7 +47,9 @@ class maintenanceController extends Controller
      */
     public function show($id)
     {
-        //
+        $malfunctions = Malfunction::find($id);
+
+        return view('Maintenance/malfunctionshow', ['malfunctions' => $malfunctions]);
     }
 
     /**

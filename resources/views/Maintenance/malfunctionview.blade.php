@@ -23,6 +23,13 @@
 <header>
     <div>
         <h1 class="maintenance">Storings aanvragen bekijken</h1>
+
+        <ul>
+        @foreach($malfunctions as $malfunction)
+
+                <li><a href="{{route('MalfunctionView.show', $malfunction ->id)}}"> {{$malfunction->name}}</a> </li>
+        @endforeach
+        </ul>
     </div>
 </header>
 
