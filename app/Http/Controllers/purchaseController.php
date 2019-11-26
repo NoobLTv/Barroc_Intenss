@@ -56,7 +56,7 @@ class purchaseController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('Purchase.edit');
     }
 
     /**

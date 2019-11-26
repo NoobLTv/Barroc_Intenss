@@ -82,9 +82,15 @@
             @csrf
 
             <div class="form-group">
-                <label for="">Name-Product</label>
-                <input type="text">
+                <label for="">supply name</label>
+                <input type="text" name=""  value="{{ $supply_id->supply }}">
             </div>
+
+            <div class="form-group">
+                <label for="">prijs</label>
+                <input type="text" name="" value="">
+            </div>
+
 
         </form>
     </div>
