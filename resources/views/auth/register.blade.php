@@ -66,6 +66,7 @@
 
                                 <div class="col-md-6">
                                     <p>Customer</p>
+                                    <input type="hidden" name="role_id" value="5">
                                 </div>
                             </div>
                         @else
