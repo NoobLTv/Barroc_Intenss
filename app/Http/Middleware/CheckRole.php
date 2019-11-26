@@ -20,7 +20,7 @@ class CheckRole
 
         if (Auth::check()){
             $role_id = Auth::user()->role_id;
-            if ($role_id != 1){
+            if ($role_id != 2){
                 return redirect($tooshame);
             }
         }
@@ -29,6 +29,6 @@ class CheckRole
         }
 
         return $next($request);
-        
+
     }
 }
