@@ -34,7 +34,7 @@
         </div>
         <div>
             <select name="malfunction">
-                @foreach(\App\User::select('name', 'id')->where('role_id', '5')->get() as $name)
+                @foreach(\App\Malfunction::select('name', 'id')->where('role_id', '5')->get() as $name)
                     <option value="{{ $name->id }}">{{ $name->name }}</option>
                 @endforeach
             </select>

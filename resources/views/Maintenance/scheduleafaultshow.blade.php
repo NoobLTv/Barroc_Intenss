@@ -33,9 +33,9 @@
             <label class="pricelabel">Storingsaanvragen:</label>
         </div>
         <div>
-            <select name="products">
-                @foreach(\App\User::select('name', 'id')->where('role_id', '5')->get() as $name)
-                    <option value="{{ $name->id }}">{{ $name->name }} </option>
+            <select name="malfunction">
+                @foreach(\App\Malfunction::select('name', 'id')->where('role_id', '5')->get() as $name)
+                    <option value="{{ $name->id }}">{{ $name->name }}</option>
                 @endforeach
             </select>
         </div>
