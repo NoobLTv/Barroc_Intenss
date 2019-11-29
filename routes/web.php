@@ -42,3 +42,4 @@ Route::resource('Supplies', 'suppliesController');
 
 Route::resource('scheduleafault', 'ScheduleafaultController');
 Route::resource('scheduleafaultshow', 'ScheduleafaultshowController');
+
