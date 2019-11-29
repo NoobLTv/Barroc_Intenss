@@ -127,11 +127,6 @@
                 </table>
         </div>
     </div>
-
-    <div class="button">
-        <button>{{route('purchase')}}</button>
-    </div>
-
 </body>
 </html>
 
