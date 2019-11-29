@@ -14,28 +14,31 @@ class suppliesController extends Controller
     }
 
     public function filter(Request $request){
+
         $btn = $_POST['submitbtn'];
         if($btn == "clear"){
-            $supplises = supplies::all();
-            return view('supplies.index', ['supplies' => $supplises]);
+            $supplies = supplies::all();
+            return view('supplies.index', ['supplies' => $supplies]);
         }
 
         $name = $request->input('name');
-        $supplises = supplies::where('name')
+        $supplies = supplies::where('name')
             ->orWhere('name', 'like', '%' . $name . '%')->get();
+
 
         $checkbox_stock = $request->input('enough', false);
         if($checkbox_stock == 'to-little'){
-            $supplises = supplies::where('available')
-                ->onWhere('available' , '>', 3)->get();
+
+            $supplies = supplies::where('units')
+                ->orWhere('units' , '<', 3)->get();
+
         }
 
         if($checkbox_stock == 'enough'){
-            $supplises = supplies::where('available')
-                ->orWhere('available', '>', 3)->get();
+            $supplies = supplies::where('units')
+                ->orWhere('units', '>', 3)->get();
         }
-
-        return view('supplies.index', ['supplies' => $supplises]);
+        return view('supplies.index', ['supplies' => $supplies]);
     }
 
 
@@ -47,7 +50,7 @@ class suppliesController extends Controller
     public function index()
     {
         //
-        $supplies = supplies::paginate(10);
+        $supplies = supplies::all();
         return view('Supplies.index', ['supplies' => $supplies]);
     }
 

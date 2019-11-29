@@ -86,8 +86,8 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="text">
-                    <input type="text">
+                    <input type="radio" value="enough" name="enough"> Beschikbaar
+                    <input type="radio" value="to-little" name="enough"> Niet Beschikbaar
                 </div>
 
                 <div class="form-group">
@@ -124,8 +124,7 @@
                 @endforeach
 
                 </tbody>
-
-            </table>
+                </table>
         </div>
     </div>
 
