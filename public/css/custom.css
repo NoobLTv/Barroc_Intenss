@@ -80,6 +80,10 @@ display: flex;
     float: right;
 }
 
+.liststyle{
+    list-style: none;
+}
+
 .second-page{
     height: 60vh;
 }

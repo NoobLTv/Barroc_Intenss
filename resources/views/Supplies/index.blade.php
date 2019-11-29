@@ -75,10 +75,39 @@
 
     <div class="supplies-first">
         <div class="container">
-            <h1 class="text-center">Supplies</h1>
-            @foreach($supplises as $supplies)
-                <li><a href="{{route('Supplies.edit', $supplies->id)}}"> {{$supplies->name}} {{$supplies->price}} {{$supplies->units}} {{$supplies->available}}</a></li>
-            @endforeach
+            <h1 class="text-center mb-4 mt-4">Supplies</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Naam</th>
+                        <th scope="col">Prijs</th>
+                        <th scope="col">Voorraad</th>
+                        <th scope="col">Beschikbaar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach($supplises as $supplies)
+                    <tr>
+                        <th scope="row">{{$supplies->id}}</th>
+                        <td><a href="{{route('Supplies.edit', $supplies->id)}}">{{$supplies->name}}</a></td>
+                        <td>{{$supplies->price}}</td>
+                        <td>{{$supplies->units}}
+                        </td>
+                        <td>
+                            @if($supplies->available === 1)
+                                beschikbaar
+                             @else
+                                niet beschikbaar
+                             @endif
+                        </td>
+                    </tr>
+                @endforeach
+
+                </tbody>
+
+            </table>
+            {{$supplises->links()}}
         </div>
     </div>
 

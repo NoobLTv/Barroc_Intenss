@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class purchaseSeeder extends Seeder
+class suppliesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,7 @@ class purchaseSeeder extends Seeder
      */
     public function run()
     {
+        //
         \App\supplies::insert([
             'name' => 'Rubber (10mm)',
             'price' => 00.39,
@@ -21,8 +22,8 @@ class purchaseSeeder extends Seeder
         \App\supplies::insert([
             'name' => 'Rubber (10mm)',
             'price' => 00.45,
-            'units' => 100,
-            'available' => true
+            'units' => 0,
+            'available' => false
         ]);
 
         \App\supplies::insert([
@@ -124,5 +125,3 @@ class purchaseSeeder extends Seeder
         ]);
     }
 }
-
-

@@ -20,7 +20,7 @@ class suppliesController extends Controller
     public function index()
     {
         //
-        $supplises = supplies::paginate(20);
+        $supplises = supplies::paginate(10);
         return view('Supplies.index', ['supplises' => $supplises]);
     }
 
@@ -64,7 +64,9 @@ class suppliesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $supplises = supplies::find($id);
+
+        return view('Supplies.edit', ['supplises' => $supplises]);
     }
 
     /**
@@ -76,7 +78,15 @@ class suppliesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $supplises = supplies::find($id);
+
+        $supplises->update([
+            'name'      =>$request->name,
+            'price'     =>$request->price,
+            'units'     =>$request->units
+        ]);
+
+        return redirect()->route('Supplies.index');
     }
 
     /**

@@ -72,7 +72,35 @@
     </style>
 </head>
 <body>
-<h1>Supplies</h1>
+
+    <div class="supplies-edit-first">
+        <div class="container">
+            <h1 class="text-center mb-4 mt-4">Supplies Edit</h1>
+            <form action="{{ route('Supplies.update', $supplises->id) }}" method="post">
+                @method('PUT')
+                @csrf
+
+                <div class="form-group">
+                    <label for="">Name Product:</label>
+                    <input name="name" type="text" value="{{$supplises->name}}">
+                </div>
+
+                <div class="form-group">
+                    <label for="">Price Product:</label>
+                    <input name="price" type="number" value="{{$supplises->price}}">
+                </div>
+
+                <div class="form-group">
+                    <label for="">Units Product:</label>
+                    <input name="units" type="number" value="{{$supplises->units}}">
+                </div>
+
+                <input type="submit" value="Edit product">
+
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>
 
