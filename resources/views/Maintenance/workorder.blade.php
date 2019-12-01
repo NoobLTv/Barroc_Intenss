@@ -30,12 +30,32 @@
 <form class="offerform" action="{{ route('workorder.store') }}" method="POST">
     @csrf
     <div>
+        <label class="pricelabel">Maintenancemedewerker:</label>
+    </div>
+    <div>
+        <select name="maintenance_id">
+            @foreach(\App\User::select('name', 'id')->where('role_id', '3')->get() as $name)
+                <option value="{{ $name->id }}">{{ $name->name }}</option>
+            @endforeach
+        </select>
+    </div>
+    <div>
+        <label class="pricelabel">lease_id:</label>
+    </div>
+    <div>
+        <select name="lease_id">
+            @foreach(\App\lease::select('id')->get() as $name)
+                <option value="{{ $name->id }}">{{ $name->id }}</option>
+            @endforeach
+        </select>
+    </div>
+    <div>
         <label class="pricelabel">Storingsaanvragen:</label>
     </div>
     <div>
-        <select name="malfunction">
-            @foreach(\App\User::select('name', 'id')->where('role_id', '5')->get() as $name)
-                <option value="{{ $name->id }}">{{ $name->name }}</option>
+        <select name="malfunction_id">
+            @foreach(\App\Malfunction::select('id')->get() as $name)
+                <option value="{{ $name->id }}">{{ $name->id }}</option>
             @endforeach
         </select>
     </div>
@@ -49,20 +69,12 @@
         <label class="productslabel">Producten:</label>
     </div>
     <div>
-        <select name="products">
-            @foreach(\App\User::select('name', 'id')->where('role_id', '5')->get() as $name)
-                <option value="{{ $name->id }}">{{ $name->name }} </option>
-            @endforeach
-        </select>
-    </div>
-    <div>
-        <label class="amountlabel">Aantal:</label>
-    </div>
-    <div>
-        <input class="amountinput" type="text" name="amount">
-    </div>
-    <div>
-        <input name="plusbutton" class="plusbutton" type="submit" value="+">
+        @foreach(\App\supplies::select('name', 'id')->get() as $name)
+            <ul class="listsupplies">
+                <li class="supplieslist"><input class="checkboxsupplies" type="checkbox" name="supply_id" value="{{ $name->id }}"> <label class="supplieslabel"> {{ $name->name }} </label> </li>
+                <input class="amountinput" type="number" name="amount">
+            </ul>
+        @endforeach
     </div>
     <div>
         <label class="pricelabel">Afspraak gemaakt met:</label>
@@ -74,7 +86,7 @@
         <label class="pricelabel">Datum:</label>
     </div>
     <div>
-        <input class="priceinput" type="text" name="dateworkorders">
+        <input class="priceinput" type="date" name="dateworkorders">
     </div>
     <div>
         <label class="pricelabel">Storingadres:</label>
@@ -89,7 +101,7 @@
         <textarea class="remarkstextarea" name="remarksworkorders"></textarea>
     </div>
     <div>
-        <input name="workorders" class="workorderinput" type="submit" value="Verzenden">
+        <input name="workorderbutton" class="workorderinput" type="submit" value="Verzenden">
     </div>
 </form>
 

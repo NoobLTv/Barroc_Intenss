@@ -1,6 +1,4 @@
-@extends('app')
-@section('content')
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -20,23 +18,18 @@
 </head>
 <body>
 
+@extends('app')
+@section('content')
+
 <header>
     <div>
         <h1 class="maintenance">Maintenance</h1>
     </div>
 </header>
 
-<main>
-    <a class="offercheckpage" href="{{ route('workorder.create') }}">Werkbonnen invullen</a>
-
-    <a class="offercheckpage" href="{{ route('scheduleafault.create') }}">Storingsaanvragen inplannen</a>
-    <a class="offercheckpage" href="{{ route('scheduleafaultshow.index') }}">Ingeplande storingsaanvragen bekijken</a>
-
-    <a class="offercheckpage" href="{{ route('Maintenance.index') }}">Storing aanvragen bekijken</a>
-
-</main>
+@endsection
 
 </body>
 </html>
 
-@endsection
+

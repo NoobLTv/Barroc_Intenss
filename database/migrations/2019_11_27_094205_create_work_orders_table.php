@@ -19,16 +19,17 @@ class CreateWorkOrdersTable extends Migration
             $table->unsignedBigInteger('lease_id');
             $table->unsignedBigInteger('malfunction_id');
             $table->string('mechanic');
+            $table->string('agreements');
             $table->date('dateworkorders');
             $table->string('failureaddress');
             $table->string('remarksworkorders');
             $table->timestamps();
 
-            /*
+
             $table->foreign('maintenance_id')
                 ->references('id')
                 ->on('users');
-*/
+
             $table->foreign('lease_id')
                 ->references('id')
                 ->on('leases');

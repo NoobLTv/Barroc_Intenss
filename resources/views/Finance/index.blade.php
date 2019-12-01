@@ -23,13 +23,9 @@
 
 <header>
     <div>
-        <h1 class="financetext">Finance</h1>
+        <h1 class="financetext">Financiën</h1>
     </div>
 </header>
-
-    <main>
-        <a class="offercheckpage" href="{{ route('offercheck.create') }}">BKRPagina</a>
-    </main>
 
 @endsection
 

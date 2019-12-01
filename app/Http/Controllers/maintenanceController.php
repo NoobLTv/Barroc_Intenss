@@ -13,7 +13,7 @@ class maintenanceController extends Controller
      */
     public function index()
     {
-
+        return view('Maintenance.index');
     }
 
     /**
@@ -34,7 +34,7 @@ class maintenanceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**

@@ -145,6 +145,11 @@ display: flex;
     background: #ffffff;
 }
 
+.salestext {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
 .disapprovedlabel {
     font-size: 20px;
     display: flex;
@@ -155,6 +160,11 @@ display: flex;
     font-size: 20px;
     display: flex;
     align-items: center;
+}
+
+.customertext {
+    padding-top: 20px;
+    padding-left: 20px;
 }
 
 .productslabel {
@@ -178,6 +188,26 @@ input.checkboxdisapproved{
     height: 40px;
     margin-left: 20px;
     margin-right: 20px;
+}
+
+input.checkboxsupplies {
+    width: 20px;
+    height: 20px;
+}
+
+.supplieslist {
+    list-style: none;
+    display: flex;
+    justify-items: center;
+}
+
+.supplieslabel {
+    padding-left: 10px;
+}
+
+.listsupplies {
+    padding: 0;
+    margin: 0;
 }
 
 .bkrchecktext {
@@ -244,7 +274,7 @@ input.checkboxdisapproved{
 }
 
 .amountinput {
-    margin-bottom: 5px;
+    margin-bottom: 25px;
 }
 
 .plusbutton {

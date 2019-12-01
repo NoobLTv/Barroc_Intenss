@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\workorder;
+use App\Workorder;
+use App\workproduct;
 use Illuminate\Http\Request;
 
 class WorkorderController extends Controller
@@ -14,7 +15,7 @@ class WorkorderController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -33,34 +34,68 @@ class WorkorderController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store( Request $request)
     {
-        $this->validate($request, [
-            'bonnumber' => 'required|numeric',
-            'project' => 'required|max:50',
-            'mechanic' => 'required|max:50',
-            'agreements' => 'required|max:50',
-            'dateworkorders' => 'required|max:50',
-            'failure address' => 'required|max:50',
-            'remarksworkorders' => 'required|max:50'
-        ]);
+        //if( $request->submit == "workorderbutton")
+        //{
 
-        //return $request->all();
+        /*
+            $this->validate($request, [
+                'mechanic' => 'required|max:150',
+                'agreements' => 'required|max:150',
+                'dateworkorders' => 'required|max:150',
+                'failure address' => 'required|max:150',
+                'remarksworkorders' => 'required|max:150'
+            ]);
+        */
+            // dd('tussen validate & insert');
 
-        Workorder::insert([
-            'bonnumber' => $request-> bonnumber,
-            'project' => $request-> project,
-            'mechanic' => $request-> mechanic,
-            'agreements' => $request-> agreements,
-            'dateworkorders' => $request-> dateworkorders,
-            'failureaddress' => $request-> failureaddress,
-            'remarksworkorders' => $request-> remarksworkorders,
-        ]);
+            Workorder::insert([
+                'maintenance_id' => $request-> maintenance_id,
+                'lease_id' => $request-> lease_id,
+                'malfunction_id' => $request-> malfunction_id,
+                'mechanic' => $request-> mechanic,
+                'agreements' => $request-> agreements,
+                'dateworkorders' => $request-> dateworkorders,
+                'failureaddress' => $request-> failureaddress,
+                'remarksworkorders' => $request-> remarksworkorders,
+            ]);
 
-        //\Mail::to( \Auth::user() )->send( new \App\Mail\TestMail($request->name) );
+
+        // aparte insert voor supplies
+
+        //$workorders = Workorder::all();
+        //$workproduct = \App\Workorder::findOrFail($workorders['workorder_id']);
+
+        //if ($request->input('amount' || $request->input('supply_id'))
+        //{
+            workproduct::insert([
+                'supply_id' => $request->supply_id,
+                'amount' => $request->amount,
+            ]);
+        //});
+
+
+
+        //
+
+        //\Mail::to( \Auth::user() )->send( new \App\Mail\maintenance($request->name) );
+        //return ( new \App\Mail\maintenance($request) )-> render();
         //return ( new \App\Mail\TestMail($request->name) )->render();
+
+        //dd($request);
+        //die;
+
         return redirect()->route('workorder.create');
+
+
+
+        //}
+        //else if($request->submit == "plusbutton") {
+
+        //}
     }
+
 
     /**
      * Display the specified resource.

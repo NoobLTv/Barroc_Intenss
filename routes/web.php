@@ -39,6 +39,5 @@ Route::resource('offercheck', 'OfferCheckController');
 Route::resource('password', 'RegisterController');
 Route::resource('workorder', 'WorkorderController');
 Route::resource('Supplies', 'suppliesController');
-
 Route::resource('scheduleafault', 'ScheduleafaultController');
 Route::resource('scheduleafaultshow', 'ScheduleafaultshowController');
