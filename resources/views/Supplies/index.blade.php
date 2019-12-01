@@ -76,6 +76,25 @@
     <div class="supplies-first">
         <div class="container">
             <h1 class="text-center mb-4 mt-4">Supplies</h1>
+
+            <form action="{{route('supplies.filter')}}" method="post">
+                @csrf
+                <div class="form-group">
+                    <input type="text" name="name">
+                    <input type="submit" name="submitbtn" value="search">
+                    <input type="submit" name="submitbtn" value="clear">
+                </div>
+
+                <div class="form-group">
+                    <input type="radio" value="enough" name="enough"> Beschikbaar
+                    <input type="radio" value="to-little" name="enough"> Niet Beschikbaar
+                </div>
+
+                <div class="form-group">
+                </div>
+
+            </form>
+
             <table class="table">
                 <thead>
                     <tr>
@@ -87,15 +106,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                @foreach($supplises as $supplies)
+                @foreach($supplies as $supply)
                     <tr>
-                        <th scope="row">{{$supplies->id}}</th>
-                        <td><a href="{{route('Supplies.edit', $supplies->id)}}">{{$supplies->name}}</a></td>
-                        <td>{{$supplies->price}}</td>
-                        <td>{{$supplies->units}}
+                        <th scope="row">{{$supply->id}}</th>
+                        <td><a href="{{route('Supplies.edit', $supply->id)}}">{{$supply->name}}</a></td>
+                        <td>{{$supply->price}}</td>
+                        <td>{{$supply->units}}
                         </td>
                         <td>
-                            @if($supplies->available === 1)
+                            @if($supply->available === 1)
                                 beschikbaar
                              @else
                                 niet beschikbaar
@@ -105,11 +124,10 @@
                 @endforeach
 
                 </tbody>
-
-            </table>
-            {{$supplises->links()}}
+                </table>
         </div>
     </div>
+
 
 </body>
 </html>

@@ -25,6 +25,8 @@ Route::post('malfunction/submit', function () {
     return (new App\Mail\SendMalfunction());
 })->name('malfunction-submit');
 
+Route::post('supplies.filter', 'suppliesController@filter')->name('supplies.filter');
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('privacy', 'privacyController');
 Route::resource('offer', 'QuotationsController');
@@ -41,3 +43,4 @@ Route::resource('workorder', 'WorkorderController');
 Route::resource('Supplies', 'suppliesController');
 Route::resource('scheduleafault', 'ScheduleafaultController');
 Route::resource('scheduleafaultshow', 'ScheduleafaultshowController');
+

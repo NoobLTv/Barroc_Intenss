@@ -12,6 +12,36 @@ class suppliesController extends Controller
     {
         $this->middleware('auth');
     }
+
+    public function filter(Request $request){
+
+        $btn = $_POST['submitbtn'];
+        if($btn == "clear"){
+            $supplies = supplies::all();
+            return view('supplies.index', ['supplies' => $supplies]);
+        }
+
+        $name = $request->input('name');
+        $supplies = supplies::where('name')
+            ->orWhere('name', 'like', '%' . $name . '%')->get();
+
+
+        $checkbox_stock = $request->input('enough', false);
+        if($checkbox_stock == 'to-little'){
+
+            $supplies = supplies::where('units')
+                ->orWhere('units' , '<', 3)->get();
+
+        }
+
+        if($checkbox_stock == 'enough'){
+            $supplies = supplies::where('units')
+                ->orWhere('units', '>', 3)->get();
+        }
+        return view('supplies.index', ['supplies' => $supplies]);
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -20,8 +50,8 @@ class suppliesController extends Controller
     public function index()
     {
         //
-        $supplises = supplies::paginate(10);
-        return view('Supplies.index', ['supplises' => $supplises]);
+        $supplies = supplies::all();
+        return view('Supplies.index', ['supplies' => $supplies]);
     }
 
     /**
