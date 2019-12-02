@@ -195,6 +195,11 @@ input.checkboxsupplies {
     height: 20px;
 }
 
+.companynameselect {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
 .supplieslist {
     list-style: none;
     display: flex;

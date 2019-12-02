@@ -29,8 +29,8 @@
         <label class="offerchecklabel">Bedrijven:</label>
     </div>
     <div>
-        <select name="companyname">
-            @foreach(\App\Companyname::select('name', 'id')->get() as $name)
+        <select class="companynameselect" name="companyname">
+            @foreach(\App\Companyname::select('companyname', 'id')->get() as $name)
                 <option value="{{ $name->id }}">{{ $name->name }}</option>
             @endforeach
         </select>

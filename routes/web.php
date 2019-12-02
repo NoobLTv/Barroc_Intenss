@@ -44,5 +44,6 @@ Route::resource('Supplies', 'suppliesController');
 Route::resource('scheduleafault', 'ScheduleafaultController');
 Route::resource('scheduleafaultshow', 'ScheduleafaultshowController');
 Route::resource('bkrcheck', 'BkrCheckController');
+Route::resource('lease', 'LeaseController');
 
 
