@@ -18,7 +18,7 @@
 <header>
     <div class="content">
         <div class="title m-b-md">
-            <h2 class="bkrchecktext">De bkr check</h2>
+            <h2 class="bkrchecktext">Een prijsopgave omzetten naar een offerte</h2>
         </div>
     </div>
 </header>
