@@ -1,14 +1,12 @@
-<Window x:Class="barroc.MainWindow"
+﻿<Window x:Class="barroc.facturenAanmaken"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:barroc"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <StackPanel>
-        <StackPanel>
-            <Button x:Name="facturenAanmaken" Height="59" Click="facturenAanmaken_Click">Facturen Aanmaken</Button>
-        </StackPanel>
-    </StackPanel>
+        Title="facturenAanmaken" Height="450" Width="800">
+    <Grid>
+        
+    </Grid>
 </Window>
