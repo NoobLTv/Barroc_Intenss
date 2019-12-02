@@ -69,7 +69,7 @@
                             @elseif(Auth::user()->role_id == 4)
                                 <li><a class="nav-link"href="{{route('Finance.index')}}">Financiën</a></li>
                                 <li><a class="nav-link" href="{{ route('offercheck.create') }}">Prijsopgave omzetten naar offerte</a></li>
-                                <li><a class="nav-link" href="">BKR Pagina</a></li>
+                                <li><a class="nav-link" href="{{ route ('bkrcheck.create') }}">BKR Pagina</a></li>
 
 
 
