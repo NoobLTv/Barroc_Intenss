@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,25 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace barroc
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for facturenAanmaken.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class facturenAanmaken : Window
     {
-        public MainWindow()
+        public facturenAanmaken()
         {
             InitializeComponent();
-        }
-
-        private void facturenAanmaken_Click(object sender, RoutedEventArgs e)
-        {
-            facturenAanmaken factuur = new facturenAanmaken();
-            factuur.Show();
         }
     }
 }
