@@ -50,6 +50,16 @@
             </select>
         </div>
         <div>
+            <label class="pricelabel">Contract type:(maandelijks of periodieke)</label>
+        </div>
+        <div>
+            <select name="lease_type_id">
+                @foreach(\App\LeaseType::select('leasetype', 'id')->get() as $name)
+                    <option value="{{ $name->id }}">{{ $name->leasetype }}</option>
+                @endforeach
+            </select>
+        </div>
+        <div>
             <label class="pricelabel">Startdatum:</label>
         </div>
         <div>

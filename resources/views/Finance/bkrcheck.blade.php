@@ -15,6 +15,9 @@
 </head>
 <body class="offer">
 
+@extends('app')
+@section('content')
+
 <header>
     <div class="content">
         <div class="title m-b-md">
@@ -23,15 +26,25 @@
     </div>
 </header>
 
-<form action="" method="POST">
+<form action="{{ route('bkrcheck.store') }}" method="POST">
     @csrf
+    <div>
+        <label class="customerbkrchecklabel">Klant:</label>
+    </div>
+    <div>
+        <select class="customerselect" name="user_id">
+            @foreach(\App\User::select('name', 'id')->where('role_id', '5')->get() as $name)
+                <option value="{{ $name->id }}">{{ $name->name }}</option>
+            @endforeach
+        </select>
+    </div>
     <div>
         <label class="offerchecklabel">Bedrijven:</label>
     </div>
     <div>
         <select class="companynameselect" name="companyname">
             @foreach(\App\Companyname::select('companyname', 'id')->get() as $name)
-                <option value="{{ $name->id }}">{{ $name->name }}</option>
+                <option value="{{ $name->id }}">{{ $name->companyname }}</option>
             @endforeach
         </select>
     </div>
@@ -44,7 +57,12 @@
             <label class="disapprovedlabel"><input class="checkboxdisapproved" type="checkbox" name="disapprovedcheckbox">Afkeuren</label>
         </div>
     </div>
+    <div>
+        <input name="bkrbutton" class="bkrinput" type="submit" value="Verzenden">
+    </div>
 </form>
+
+@endsection
 
 </body>
 </html>

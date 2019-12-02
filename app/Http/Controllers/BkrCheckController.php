@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Companyname;
+use App\Workorder;
 use Illuminate\Http\Request;
 
 class BkrCheckController extends Controller
@@ -35,8 +36,36 @@ class BkrCheckController extends Controller
      */
     public function store(Request $request)
     {
+        if ($request->input ('approvedcheckbox'))
+        {
+            $this->validate($request, [
+                'companyname' => 'required|max:150'
+            ]);
 
-        return redirect()->route('bkrcheck.create');
+            Companyname::insert([
+                'user_id' => $request-> user_id,
+                'companyname' => $request-> companyname,
+                'must_still_approve' => 1,
+                'approved' => 1
+            ]);
+
+            return redirect()->route('bkrcheck.create');
+        }
+        else if ($request->input ('disapprovedcheckbox'))
+        {
+            $this->validate($request, [
+                'companyname' => 'required|max:150'
+            ]);
+
+            Companyname::insert([
+                'user_id' => $request-> user_id,
+                'companyname' => $request-> companyname,
+                'must_still_approve' => 1,
+                'approved' => 0
+            ]);
+
+            return redirect()->route('bkrcheck.create');
+        }
     }
 
     /**

@@ -200,6 +200,20 @@ input.checkboxsupplies {
     margin-bottom: 20px;
 }
 
+.bkrinput {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.customerselect {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.customerbkrchecklabel {
+    margin-left: 20px;
+}
+
 .supplieslist {
     list-style: none;
     display: flex;
