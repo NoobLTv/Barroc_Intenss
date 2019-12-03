@@ -1,0 +1,16 @@
+C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\barroc.csprojAssemblyReference.cache
+C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\facturenAanmaken.g.cs
+C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\MainWindow.g.cs
+C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\App.g.cs
+C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\barroc_MarkupCompile.cache
+C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\barroc_MarkupCompile.lref
+C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\bin\Debug\barroc.exe.config
+C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\bin\Debug\barroc.exe
+C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\bin\Debug\barroc.pdb
+C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\MainWindow.baml
+C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\facturenAanmaken.baml
+C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\barroc.g.resources
+C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\barroc.Properties.Resources.resources
+C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\barroc.csproj.GenerateResource.cache
+C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\barroc.exe
+C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\barroc.pdb
