@@ -145,9 +145,24 @@ display: flex;
     background: #ffffff;
 }
 
+.offerselect {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
 .salestext {
     padding-left: 20px;
     padding-top: 20px;
+}
+
+.salesselect {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.remarkselect {
+    margin-left: 20px;
+    margin-bottom: 40px;
 }
 
 .disapprovedlabel {

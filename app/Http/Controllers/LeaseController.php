@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Companyname;
 use App\lease;
+use App\LeaseRules;
 use Illuminate\Http\Request;
 
 class LeaseController extends Controller
@@ -35,6 +37,40 @@ class LeaseController extends Controller
      */
     public function store(Request $request)
     {
+
+        // dd($request);
+        //$this->validate($request, [
+            //'connectioncosts' => 'required|numeric',
+            //'noticeperiod' => 'required|numeric'
+        //]);
+
+        // dd($request->amount);
+
+        $leaseId = lease::insertGetId([
+            'lease_type_id' => $request-> lease_type_id,
+            'customer_id' => $request-> customer_id,
+            'finance_id' => $request-> finance_id,
+            'startdate' => $request-> startdate,
+            'enddate' => $request-> enddate,
+            'connectioncosts' => $request-> connectioncosts,
+            'noticeperiod' => $request-> noticeperiod,
+        ]);
+
+        foreach($request->amount as $leaseSupplyId => $amountOrdered ) {
+
+            //echo $leaseSupplyId . "is " . $amountOrdered . "x besteld. <br>";
+
+            if ($amountOrdered != null ) {
+                LeaseRules::insert ([
+                    'lease_id' => $leaseId,
+                    'leasesupplies_id' => $leaseSupplyId,
+                    'amount' => $amountOrdered,
+                ]);
+            }
+        }
+
+        //dd();
+
         return redirect()->route('lease.create');
     }
 

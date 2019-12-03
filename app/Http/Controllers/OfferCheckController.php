@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Companyname;
 use App\Quotation;
 use App\OfferCheck;
 use Illuminate\Http\Request;
@@ -44,12 +45,32 @@ class OfferCheckController extends Controller
      */
     public function store(Request $request)
     {
-        OfferCheck::insert([
-            'must_still_approve' => 1,
-            'approved' => 1
-        ]);
+        if ($request->input ('approvedcheckbox'))
+        {
+            Quotation::insert([
+                'sales_id' => $request-> sales_id,
+                'customer_id' => $request-> customer_id,
+                'price' => $request-> price,
+                'remarks' => $request-> remarks,
+                'must_still_approve' => 1,
+                'approved' => 1
+            ]);
 
-        return redirect()->route('offercheck.create');
+            return redirect()->route('offercheck.create');
+        }
+        else if ($request->input ('disapprovedcheckbox'))
+        {
+            Quotation::insert([
+                'sales_id' => $request-> sales_id,
+                'customer_id' => $request-> customer_id,
+                'price' => $request-> price,
+                'remarks' => $request-> remarks,
+                'must_still_approve' => 1,
+                'approved' => 0
+            ]);
+
+            return redirect()->route('offercheck.create');
+        }
     }
 
     /**

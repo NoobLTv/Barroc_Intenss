@@ -12,30 +12,46 @@ class CompanyTableSeeder extends Seeder
     public function run()
     {
         \App\Companyname::insert([
-            'user_id' => '7',
             'companyname' => 'progamesapps',
+            'address' => 'terheijdenseweg 350',
+            'city' => 'Breda',
+            "postalcode" => '4826 AA',
+            'telephonenumber' => '076 573 34 44',
+            'mail' => ' radiuscollege@rocwb.nl',
             'must_still_approve' => 0,
             'approved' => 0,
         ]);
 
         \App\Companyname::insert([
-            'user_id' => '8',
             'companyname' => 'gamesapps',
+            'address' => 'terheijdenseweg 350',
+            'city' => 'Breda',
+            "postalcode" => '4826 AA',
+            'telephonenumber' => '076 573 34 44',
+            'mail' => ' radiuscollege@rocwb.nl',
             'must_still_approve' => 0,
             'approved' => 0,
         ]);
 
         \App\Companyname::insert([
-            'user_id' => '9',
             'companyname' => 'appgames',
+            'address' => 'terheijdenseweg 350',
+            'city' => 'Breda',
+            "postalcode" => '4826 AA',
+            'telephonenumber' => '076 573 34 44',
+            'mail' => ' radiuscollege@rocwb.nl',
             'must_still_approve' => 0,
             'approved' => 0,
         ]);
 
 
         \App\Companyname::insert([
-            'user_id' => '10',
             'companyname' => 'gamesstudio',
+            'address' => 'terheijdenseweg 350',
+            'city' => 'Breda',
+            "postalcode" => '4826 AA',
+            'telephonenumber' => '076 573 34 44',
+            'mail' => ' radiuscollege@rocwb.nl',
             'must_still_approve' => 0,
             'approved' => 0,
         ]);

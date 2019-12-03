@@ -15,6 +15,9 @@
 </head>
 <body class="offer">
 
+@extends('app')
+@section('content')
+
 <header>
     <div class="content">
         <div class="title m-b-md">
@@ -26,34 +29,52 @@
 <form action="{{ route('offercheck.store') }}" method="POST">
     @csrf
     <div>
-        <label class="offerchecklabel">Offertes:</label>
+        <label class="offerchecklabel">Salesmedewerker:</label>
     </div>
     <div>
-        @foreach($quotations as $quotation)
-            {{ $quotation->id }}: {{ $quotation->price }} <form>
-
-                <input type="submit">
-            </form>
-        @endforeach
-
-    </div>
-
-    <div>
-        <ul>
-            @foreach($quotations as $quotation)
-
-
-                <li> <a href="{{ route('offercheck.show', $quotation->id ) }}"> </a> {{ $quotation->id }} </li>
+        <select class="salesselect" name="sales_id">
+            @foreach(\App\User::select('name' ,'id')->where('role_id', '2')->get() as $name)
+                <option value="{{ $name->id }}">{{ $name->name }}</option>
             @endforeach
-        </ul>
+        </select>
     </div>
     <div>
-        <label class="offerchecklabel">Offertes goedkeuren of afkeuren:</label>
+        <label class="offerchecklabel">Klant:</label>
     </div>
     <div>
-        <select class="selectquotations" name="quotations_id">
-            @foreach($quotations as $quotation)
-                <option value="{{ $quotation->id }}"> </option>
+        <select class="salesselect" name="customer_id">
+            @foreach(\App\User::select('name' ,'id')->where('role_id', '5')->get() as $name)
+                <option value="{{ $name->id }}">{{ $name->name }}</option>
+            @endforeach
+        </select>
+    </div>
+    <div>
+        <label class="offerchecklabel">Prijsopgave:</label>
+    </div>
+    <div>
+        <select class="offerselect" name="qutations">
+            @foreach(\App\Quotation::select('price', 'id', 'remarks')->get() as $name)
+                <option value="{{ $name->id }}">{{ $name->id }}, € {{ $name->price }} en {{ $name->remarks }}</option>
+            @endforeach
+        </select>
+    </div>
+    <div>
+        <label class="offerchecklabel">Prijs van de prijsopgave:</label>
+    </div>
+    <div>
+        <select class="offerselect" name="price">
+            @foreach(\App\Quotation::select('price', 'id')->get() as $name)
+                <option value="{{ $name->price }}"> € {{ $name->price }}</option>
+            @endforeach
+        </select>
+    </div>
+    <div>
+        <label class="offerchecklabel">Omschrijving van de prijsopgave:</label>
+    </div>
+    <div>
+        <select class="remarkselect" name="remarks">
+            @foreach(\App\Quotation::select('remarks', 'id')->get() as $name)
+                <option value="{{ $name->id }}"> {{ $name->remarks }}</option>
             @endforeach
         </select>
     </div>
@@ -63,7 +84,12 @@
             <label class="disapprovedlabel"><input class="checkboxdisapproved" type="checkbox" name="disapprovedcheckbox">Afkeuren</label>
         </div>
     </div>
+    <div>
+        <input name="bkrbutton" class="bkrinput" type="submit" value="Verzenden">
+    </div>
 </form>
+
+@endsection
 
 </body>
 </html>

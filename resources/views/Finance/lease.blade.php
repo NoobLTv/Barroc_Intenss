@@ -30,6 +30,16 @@
     <form class="offerform" action="{{ route('lease.store') }}" method="POST">
         @csrf
         <div>
+            <label class="pricelabel">Financiënmedewerker:</label>
+        </div>
+        <div>
+            <select name="finance_id">
+                @foreach(\App\User::select('name', 'id')->where('role_id', '4')->get() as $name)
+                    <option value="{{ $name->id }}">{{ $name->name }}</option>
+                @endforeach
+            </select>
+        </div>
+        <div>
             <label class="pricelabel">Klant:</label>
         </div>
         <div>
@@ -39,54 +49,56 @@
                 @endforeach
             </select>
         </div>
-        <div>
-            <label class="pricelabel">Product:</label>
-        </div>
-        <div>
-            <select name="supply_id">
-                @foreach(\App\Supplies::select('name', 'id')->get() as $name)
-                    <option value="{{ $name->id }}">{{ $name->name }}</option>
+            <div>
+                <label class="productslabel">Producten:</label>
+            </div>
+            <div>
+                @foreach(\App\LeaseSupplies::select('name', 'id')->get() as $name)
+                    <ul class="listsupplies">
+                        <li class="supplieslist">
+                            <input class="checkboxsupplies" type="checkbox" id="leaseSuppliesId[{{ $name->id }}]" value="{{ $name->id }}" name="leasesupplies_id[{{ $name->id }}]"> <label class="supplieslabel"> {{ $name->name }} </label> </li>
+                        <input class="amountinput" type="number" id="leaseSuppliesAmount[{{ $name->id }}]" name="amount[{{ $name->id }}]">
+                    </ul>
                 @endforeach
-            </select>
-        </div>
-        <div>
-            <label class="pricelabel">Contract type:(maandelijks of periodieke)</label>
-        </div>
-        <div>
-            <select name="lease_type_id">
-                @foreach(\App\LeaseType::select('leasetype', 'id')->get() as $name)
-                    <option value="{{ $name->id }}">{{ $name->leasetype }}</option>
-                @endforeach
-            </select>
-        </div>
-        <div>
-            <label class="pricelabel">Startdatum:</label>
-        </div>
-        <div>
-            <input class="priceinput" type="date" name="startdate">
-        </div>
-        <div>
-            <label class="pricelabel">einddatum:</label>
-        </div>
-        <div>
-            <input class="priceinput" type="date" name="enddate">
-        </div>
-        <div>
-            <label class="pricelabel">Aansluitkosten:</label>
-        </div>
-        <div>
-            <input class="priceinput" type="number" step=".01" name="connectioncosts">
-        </div>
-        <div>
-            <label class="pricelabel">Opzegtermijn:</label>
-        </div>
-        <div>
-            <input class="priceinput" type="text" name="noticeperiod">
-        </div>
-        <div>
-            <input name="leasebutton" class="workorderinput" type="submit" value="Verzenden">
-        </div>
-    </form>
+            </div>
+            <div>
+                <label class="pricelabel">Contract type:(maandelijks of periodieke)</label>
+            </div>
+            <div>
+                <select name="lease_type_id">
+                    @foreach(\App\LeaseType::select('leasetype', 'id')->get() as $name)
+                        <option value="{{ $name->id }}">{{ $name->leasetype }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div>
+                <label class="pricelabel">Startdatum:</label>
+            </div>
+            <div>
+                <input class="priceinput" type="date" name="startdate">
+            </div>
+            <div>
+                <label class="pricelabel">einddatum:</label>
+            </div>
+            <div>
+                <input class="priceinput" type="date" name="enddate">
+            </div>
+            <div>
+                <label class="pricelabel">Aansluitkosten:</label>
+            </div>
+            <div>
+                <input class="priceinput" type="number" step=".01" name="connectioncosts">
+            </div>
+            <div>
+                <label class="pricelabel">Opzegtermijn:</label>
+            </div>
+            <div>
+                <input class="priceinput" type="date" name="noticeperiod">
+            </div>
+            <div>
+                <input name="leasebutton" class="workorderinput" type="submit" value="Verzenden">
+            </div>
+        </form>
 
 @endsection
 

@@ -16,16 +16,17 @@ class CreateLeaseRulesTable extends Migration
         Schema::create('lease_rules', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('lease_id');
-            $table->unsignedBigInteger('supply_id');
+            $table->unsignedBigInteger('leasesupplies_id');
+            $table->integer('amount');
             $table->timestamps();
 
             $table->foreign('lease_id')
                 ->references('id')
                 ->on('leases');
 
-            $table->foreign('supply_id')
+            $table->foreign('leasesupplies_id')
                 ->references('id')
-                ->on('supplies');
+                ->on('leasesupplies');
         });
     }
 

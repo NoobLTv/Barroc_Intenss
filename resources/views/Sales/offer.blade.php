@@ -15,6 +15,9 @@
 </head>
 <body class="offer">
 
+@extends('app')
+@section('content')
+
 <header>
     <div>
         <h2 class="offerlabel">Prijsopgave aanmaken</h2>
@@ -59,6 +62,8 @@
                 <input class="offerinput" type="submit" value="Verzenden">
             </div>
         </form>
+
+@endsection
 
 </body>
 </html>
