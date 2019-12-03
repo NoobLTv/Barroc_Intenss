@@ -13,6 +13,7 @@
             <TextBox x:Name="nameTextBox" Margin="10,0,128,0"></TextBox>
             <Label>Prijs</Label>
             <TextBox x:Name="priceTextBox" Margin="10,0,128,0" PreviewTextInput="priceTextBox_PreviewTextInput"/>
+            <Label></Label>
         </StackPanel>
     </StackPanel>
 </Window>
