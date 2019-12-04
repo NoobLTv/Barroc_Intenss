@@ -39,6 +39,7 @@ Route::resource('Malfunction', 'malfunctionController');
 Route::resource('Customer', 'customerController');
 Route::resource('offercheck', 'OfferCheckController');
 Route::resource('password', 'RegisterController');
+Route::resource('Customerdetail', 'customerdetailController');
 Route::resource('workorder', 'WorkorderController');
 Route::resource('Supplies', 'suppliesController');
 Route::resource('scheduleafault', 'ScheduleafaultController');

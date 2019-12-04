@@ -19,10 +19,51 @@
 
 </head>
 <body>
-<h1 class="customertext">Customer Panel</h1>
+<br>
+<h1 class="text-center">Klantgegevens doorgeven</h1>
+<br>
 
-<p class="customertext">Customer Details <p>
-<p><p>
+@if ( $user->CustomerDetail == null)
+
+<div class="card text-center">
+    <div class="card-body">
+        <h5 class="card-title">Gegevens doorgeven</h5>
+        <p class="card-text">Geef hier uw gegevens door zodat wij u altijd kunnen blijven bereiken.</p>
+        <a href="{{route('Customerdetail.create')}}" class="btn btn-primary">Klik hier</a>
+    </div>
+</div>
+@else
+    <br>
+    <br>
+    <div class="card text-center">
+        <div class="card-body">
+            <h5 class="card-title">Gegevens wijzigen</h5>
+            <p class="card-text">Wijzig hier uw gegevens zodat wij u altijd kunnen blijven bereiken.</p>
+            <a href="{{route('Customerdetail.edit', auth()->user()->id)}}" class="btn btn-primary">Klik hier</a>
+        </div>
+    </div>
+@endif
+<br>
+<br>
+
+<div class="card text-center">
+    <div class="card-body">
+        <h5 class="card-title">Leasecontract inzien</h5>
+        <p class="card-text">Zie hier lease contract gegevens.</p>
+        <a href="" class="btn btn-primary">Klik hier</a>
+    </div>
+</div>
+<br>
+<br>
+<div class="card text-center">
+    <div class="card-body">
+        <h5 class="card-title">Factuurgegevens inzien</h5>
+        <p class="card-text">Bekijk hier al uw facturen en zie welke nog open staan ja of nee.</p>
+        <a href="" class="btn btn-primary">Klik hier</a>
+    </div>
+</div>
+
+
 
 </body>
 </html>

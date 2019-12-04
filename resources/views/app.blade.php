@@ -47,44 +47,44 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         @auth()
+
+{{--            Supplies                  --}}
                             @if(Auth::user()->role_id == 1)
                                 <li><a class="nav-link" href="{{route('Supplies.index')}}">Onderdelen</a></li>
 
 
+{{--            Sales                    --}}
                             @elseif(Auth::user()->role_id == 2)
-                                <li><a class="nav-link"href="{{route('Sales.index')}}">Sales</a></li>
-                                <li><a class="nav-link"href="">Klantgegevens</a></li>
                                 <li><a class="nav-link"href="{{route('register')}}">Registreer Klant</a></li>
                                 <li><a class="nav-link"href="{{route('offer.create')}}">Prijsopgave aanmaken</a></li>
 
-
+{{--            Maintenance                    --}}
                             @elseif(Auth::user()->role_id == 3)
-                                <li><a class="nav-link"href="{{route('Maintenance.index')}}">Maintenance</a></li>
                                 <li><a class="nav-link" href="{{ route('workorder.create') }}">Werkbonnen invullen</a></li>
                                 <li><a class="nav-link" href="{{ route('scheduleafault.create') }}">Storingsaanvragen inplannen</a></li>
                                 <li><a class="nav-link" href="{{ route('scheduleafaultshow.index') }}">Ingeplande storingsaanvragen bekijken</a></li>
                                 <li><a class="nav-link"href="{{route('MalfunctionView.index')}}">Storingen bekijken</a></li>
 
-
+{{--            Finance                    --}}
                             @elseif(Auth::user()->role_id == 4)
-                                <li><a class="nav-link"href="{{route('Finance.index')}}">Financiën</a></li>
                                 <li><a class="nav-link" href="{{ route('offercheck.create') }}">Prijsopgave omzetten naar offerte</a></li>
+<<<<<<< Updated upstream
                                 <li><a class="nav-link" href="{{ route ('bkrcheck.create') }}">BKR Pagina</a></li>
                                 <li><a class="nav-link" href="{{ route ('lease.create') }}">Contract aanmaken</a></li>
 
 
+=======
+                                <li><a class="nav-link" href="https://www.bkr.nl/">BKR Pagina</a></li>
+>>>>>>> Stashed changes
 
+{{--            CEO                    --}}
                             @elseif(Auth::user()->role_id == 5)
-                                <li><a class="nav-link"href="{{route('Customer.index')}}">Klant</a></li>
+                                <li><a class="nav-link"href="{{route('Customerdetail.index')}}">Klantgegevens</a></li>
                                 <li><a class="nav-link"href="{{route('Malfunction.index')}}">Storing melden?</a></li>
 
 
                             @elseif(Auth::user()->role_id == 6)
-                                <li><a class="nav-link"href="{{route('Supplies.index')}}">Onderdelen</a></li>
-                                <li><a class="nav-link"href="{{route('Sales.index')}}">Sales</a></li>
-                                <li><a class="nav-link"href="{{route('Maintenance.index')}}">Maintenance</a></li>
-                                <li><a class="nav-link"href="{{route('Finance.index')}}">Financien</a></li>
-                                <li><a class="nav-link"href="{{route('Customer.index')}}">Klant</a></li>
+                                <li><a class="nav-link"href="">Inkoop aanvragen</a></li>
                                 <li><a class="nav-link"href="{{route('register')}}">Registreer Medewerker</a></li>
                             @endif
                         @endauth
