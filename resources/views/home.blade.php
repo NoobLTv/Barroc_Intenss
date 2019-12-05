@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <h2>Goededag {{ Auth::user()->name }},</h2>
+                    <h2>Goedendag {{ Auth::user()->name }},</h2>
                     <p>Welkom bij het online portaal van Barroc Intense.<p>
                     <p>U kunt bovenaan in de taakbalk alle verwijzingen vinden naar wat u zoekt.</p>
                     <p></p>

@@ -25,10 +25,6 @@ class CreateCompanydetailsTable extends Migration
             $table->boolean('must_still_approve');
             $table->boolean('approved');
             $table->timestamps();
-
-            $table->foreign('user_id')
-                ->references('id')
-                ->on('users');
         });
     }
 
