@@ -56,7 +56,7 @@
                 @foreach(\App\LeaseSupplies::select('name', 'id')->get() as $name)
                     <ul class="listsupplies">
                         <li class="supplieslist">
-                            <input class="checkboxsupplies" type="checkbox" id="leaseSuppliesId[{{ $name->id }}]" value="{{ $name->id }}" name="leasesupplies_id[{{ $name->id }}]"> <label class="supplieslabel"> {{ $name->name }} </label> </li>
+                            <label class="supplieslabel"> {{ $name->name }} </label> </li>
                         <input class="amountinput" type="number" id="leaseSuppliesAmount[{{ $name->id }}]" name="amount[{{ $name->id }}]">
                     </ul>
                 @endforeach
