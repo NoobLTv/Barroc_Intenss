@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\LeaseRules;
 use App\Workorder;
 use App\workproduct;
 use Illuminate\Http\Request;
@@ -50,7 +51,7 @@ class WorkorderController extends Controller
         */
             // dd('tussen validate & insert');
 
-            Workorder::insert([
+        $workerorderId = Workorder::insertGetId([
                 'maintenance_id' => $request-> maintenance_id,
                 'lease_id' => $request-> lease_id,
                 'malfunction_id' => $request-> malfunction_id,
@@ -61,34 +62,27 @@ class WorkorderController extends Controller
                 'remarksworkorders' => $request-> remarksworkorders,
             ]);
 
-
         // aparte insert voor supplies
 
-        //$workorders = Workorder::all();
-        //$workproduct = \App\Workorder::findOrFail($workorders['workorder_id']);
+            foreach ($request->amount as $WorkProductSupplyId => $WorkProductSuppliesAmount) {
 
-        //if ($request->input('amount' || $request->input('supply_id'))
-        //{
-            workproduct::insert([
-                'supply_id' => $request->supply_id,
-                'amount' => $request->amount,
-            ]);
-        //});
+                //dd($request->amount);
+
+                //echo $WorkProductSupplyId . "is " . $WorkProductSuppliesAmount . "x besteld. <br>";
+
+                if ($WorkProductSuppliesAmount != null ) {
+                    
+                    workproduct::insert ([
+                        'workorder_id' => $workerorderId,
+                        'supply_id' => $WorkProductSupplyId,
+                        'amount' => $WorkProductSuppliesAmount,
+                    ]);
+                }
+            }
 
 
-
-        //
-
-        //\Mail::to( \Auth::user() )->send( new \App\Mail\maintenance($request->name) );
-        //return ( new \App\Mail\maintenance($request) )-> render();
-        //return ( new \App\Mail\TestMail($request->name) )->render();
-
-        //dd($request);
-        //die;
 
         return redirect()->route('workorder.create');
-
-
 
         //}
         //else if($request->submit == "plusbutton") {
