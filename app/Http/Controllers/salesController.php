@@ -35,13 +35,21 @@ class salesController extends Controller
     public function store(Request $request)
     {
 
-        dd($request->role_id, 2);
         \users::insert([
             'role_id'   => $request->role_id,
             'name'      => $request->name,
             'email'     => $request->email,
             'password'  => $request->password
         ]);
+
+        $user = [
+            'role_id'   => $request->role_id,
+            'name'      => $request->name,
+            'email'     => $request->email,
+            'password'  => $request->password
+        ];
+// hoort te werken, gebeurd niks
+        return ( new \App\Mail\LoginData($user) )->render();
     }
 
     /**
