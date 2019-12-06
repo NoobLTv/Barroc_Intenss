@@ -44,27 +44,38 @@
     </div>
 @endif
 <br>
+
+
+@if ( $user->lease == null)
 <br>
 
-<div class="card text-center">
-    <div class="card-body">
-        <h5 class="card-title">Leasecontract inzien</h5>
-        <p class="card-text">Zie hier lease contract gegevens.</p>
-        <a href="" class="btn btn-primary">Klik hier</a>
+@else
+
+    <div class="card text-center">
+        <div class="card-body">
+            <h5 class="card-title">Leasecontract inzien</h5>
+            <p class="card-text">Zie hier lease contract gegevens.</p>
+            <a href="" class="btn btn-primary">Klik hier</a>
+        </div>
     </div>
-</div>
+
 <br>
+@endif
 <br>
-<div class="card text-center">
-    <div class="card-body">
-        <h5 class="card-title">Factuurgegevens inzien</h5>
-        <p class="card-text">Bekijk hier al uw facturen en zie welke nog open staan ja of nee.</p>
-        <a href="" class="btn btn-primary">Klik hier</a>
-    </div>
-</div>
 
+@if ( $user->Invoices == null)
+    <br>
 
+@else
 
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Factuurgegevens inzien</h5>
+                <p class="card-text">Bekijk hier al uw facturen en zie welke nog open staan ja of nee.</p>
+                <a href="" class="btn btn-primary">Klik hier</a>
+            </div>
+        </div>
+@endif
 </body>
 </html>
 

@@ -82,7 +82,7 @@ class LeaseController extends Controller
      */
     public function show(lease $lease)
     {
-        //
+        // Hier moet de show komen staan voor de contracten. Alleen hebben wij er nog geen...
     }
 
     /**

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\CustomerDetail;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -49,8 +50,18 @@ class customerdetailController extends Controller
             'postalcode'                => $request->postalCode,
             'city'                      => $request->city,
         ]);
+        $customer_detail = \App\CustomerDetail::where('contactperson_email', $request->contactPersonEmail)->first();
 
-        return redirect('home');
+        // De volgende gegevens kunnen opgehaald worden maar de rest is een raadsel
+//        dd($customer_detail->id);
+//        dd(\App\User::find(Auth()->user()->id));
+
+
+        \App\User::find(Auth()->user()->id)->update([
+            'customer_detail_id' => $customer_detail->id
+        ]);
+
+       return redirect('home');
     }
 
     /**
