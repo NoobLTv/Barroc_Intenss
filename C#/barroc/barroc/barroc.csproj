@@ -60,6 +60,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="factureninzien.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -70,6 +74,9 @@
     </Compile>
     <Compile Include="facturenAanmaken.xaml.cs">
       <DependentUpon>facturenAanmaken.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="factureninzien.xaml.cs">
+      <DependentUpon>factureninzien.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Companyname;
+use App\Companydetail;
 use App\Workorder;
 use Illuminate\Http\Request;
 
@@ -38,13 +38,8 @@ class BkrCheckController extends Controller
     {
         if ($request->input ('approvedcheckbox'))
         {
-            $this->validate($request, [
-                'companyname' => 'required|max:150'
-            ]);
-
-            Companyname::insert([
+            Companydetail::insert([
                 'user_id' => $request-> user_id,
-                'companyname' => $request-> companyname,
                 'must_still_approve' => 1,
                 'approved' => 1
             ]);
@@ -53,13 +48,8 @@ class BkrCheckController extends Controller
         }
         else if ($request->input ('disapprovedcheckbox'))
         {
-            $this->validate($request, [
-                'companyname' => 'required|max:150'
-            ]);
-
-            Companyname::insert([
+            Companydetail::insert([
                 'user_id' => $request-> user_id,
-                'companyname' => $request-> companyname,
                 'must_still_approve' => 1,
                 'approved' => 0
             ]);
@@ -71,10 +61,10 @@ class BkrCheckController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Companyname  $companyname
+     * @param  \App\Companydetail  $companyname
      * @return \Illuminate\Http\Response
      */
-    public function show(Companyname $companyname)
+    public function show(Companydetail $companyname)
     {
         //
     }
@@ -82,10 +72,10 @@ class BkrCheckController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Companyname  $companyname
+     * @param  \App\Companydetail  $companyname
      * @return \Illuminate\Http\Response
      */
-    public function edit(Companyname $companyname)
+    public function edit(Companydetail $companyname)
     {
         //
     }
@@ -94,10 +84,10 @@ class BkrCheckController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Companyname  $companyname
+     * @param  \App\Companydetail  $companyname
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Companyname $companyname)
+    public function update(Request $request, Companydetail $companyname)
     {
         //
     }
@@ -105,10 +95,10 @@ class BkrCheckController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Companyname  $companyname
+     * @param  \App\Companydetail  $companyname
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Companyname $companyname)
+    public function destroy(Companydetail $companyname)
     {
         //
     }

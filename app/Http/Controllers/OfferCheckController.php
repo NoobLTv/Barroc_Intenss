@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Companyname;
+use App\Companydetail;
 use App\Quotation;
 use App\OfferCheck;
 use Illuminate\Http\Request;

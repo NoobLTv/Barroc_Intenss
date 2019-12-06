@@ -65,7 +65,7 @@
                                 <label for="role_id" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
 
                                 <div class="col-md-6">
-                                    <p>Customer</p>
+                                    <p class="customerlabelregister">Customer</p>
                                     <input type="hidden" name="role_id" value="5">
                                 </div>
                             </div>
@@ -82,7 +82,6 @@
                                 </div>
                             </div>
                         @endif
-
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

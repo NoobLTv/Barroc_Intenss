@@ -13,7 +13,8 @@
             <TextBox x:Name="nameTextBox" Margin="10,0,128,0"></TextBox>
             <Label>Prijs</Label>
             <TextBox x:Name="priceTextBox" Margin="10,0,128,0" PreviewTextInput="priceTextBox_PreviewTextInput"/>
-            <Label></Label>
+            <Button x:Name="sendDataBaseButton" Content="Button" Margin="10,0,129,0" Height="38" Click="sendDataBaseButton_Click"/>
+            <DataGrid x:Name="dataGrid" Height="100"/>
         </StackPanel>
     </StackPanel>
 </Window>

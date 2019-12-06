@@ -11,7 +11,7 @@ class CompanyTableSeeder extends Seeder
      */
     public function run()
     {
-        \App\Companyname::insert([
+        \App\Companydetail::insert([
             'companyname' => 'progamesapps',
             'address' => 'terheijdenseweg 350',
             'city' => 'Breda',
@@ -22,7 +22,7 @@ class CompanyTableSeeder extends Seeder
             'approved' => 0,
         ]);
 
-        \App\Companyname::insert([
+        \App\Companydetail::insert([
             'companyname' => 'gamesapps',
             'address' => 'terheijdenseweg 350',
             'city' => 'Breda',
@@ -33,7 +33,7 @@ class CompanyTableSeeder extends Seeder
             'approved' => 0,
         ]);
 
-        \App\Companyname::insert([
+        \App\Companydetail::insert([
             'companyname' => 'appgames',
             'address' => 'terheijdenseweg 350',
             'city' => 'Breda',
@@ -45,7 +45,7 @@ class CompanyTableSeeder extends Seeder
         ]);
 
 
-        \App\Companyname::insert([
+        \App\Companydetail::insert([
             'companyname' => 'gamesstudio',
             'address' => 'terheijdenseweg 350',
             'city' => 'Breda',

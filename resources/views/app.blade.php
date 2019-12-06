@@ -68,14 +68,10 @@
 {{--            Finance                    --}}
                             @elseif(Auth::user()->role_id == 4)
                                 <li><a class="nav-link" href="{{ route('offercheck.create') }}">Prijsopgave omzetten naar offerte</a></li>
-<<<<<<< Updated upstream
                                 <li><a class="nav-link" href="{{ route ('bkrcheck.create') }}">BKR Pagina</a></li>
                                 <li><a class="nav-link" href="{{ route ('lease.create') }}">Contract aanmaken</a></li>
-
-
-=======
-                                <li><a class="nav-link" href="https://www.bkr.nl/">BKR Pagina</a></li>
->>>>>>> Stashed changes
+                                <li><a class="nav-link"href="{{route('lease.index')}}">Contract bekijken</a></li>
+                                <li><a class="nav-link" href="https://www.bkr.nl/">BKR Document</a></li>
 
 {{--            CEO                    --}}
                             @elseif(Auth::user()->role_id == 5)
