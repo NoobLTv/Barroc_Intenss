@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Companyname;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -70,11 +71,31 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'role_id' => $data['role_id']
-        ]);
+        if (User::create) {
+
+            return User::create([
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'password' => Hash::make($data['password']),
+                'role_id' => $data['role_id']
+            ]);
+        }
+        elseif (User::Createwith(role_id, 5))
+        {
+            return Companyname::insert([
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'password' => Hash::make($data['password']),
+                'role_id' => $data['role_id'],
+                'companyname' => $data['companyname'],
+                'address' => $data['address'],
+                'city' => $data['city'],
+                'postalcode' => $data['postalcode'],
+                'telephonenumber' => $data['telephonenumber'],
+                'mail'=> $data['mail'],
+            ]);
+        }
+
+
     }
 }

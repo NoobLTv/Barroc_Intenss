@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Companyname;
 use App\lease;
 use App\LeaseRules;
+use App\Malfunction;
 use Illuminate\Http\Request;
 
 class LeaseController extends Controller
@@ -16,7 +17,8 @@ class LeaseController extends Controller
      */
     public function index()
     {
-        //
+        $leases = lease::all();
+        return view('Finance/leasesindex', ['leases' => $leases]);
     }
 
     /**
@@ -80,9 +82,11 @@ class LeaseController extends Controller
      * @param  \App\lease  $lease
      * @return \Illuminate\Http\Response
      */
-    public function show(lease $lease)
+    public function show($id)
     {
-        //
+        $leases = lease::find($id);
+
+        return view('Finance/leasesshow', ['leases' => $leases]);
     }
 
     /**

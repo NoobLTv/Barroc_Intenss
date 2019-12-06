@@ -70,6 +70,7 @@
                                 <li><a class="nav-link" href="{{ route('offercheck.create') }}">Prijsopgave omzetten naar offerte</a></li>
                                 <li><a class="nav-link" href="{{ route ('bkrcheck.create') }}">BKR Pagina</a></li>
                                 <li><a class="nav-link" href="{{ route ('lease.create') }}">Contract aanmaken</a></li>
+                                <li><a class="nav-link"href="{{route('lease.index')}}">Contract bekijken</a></li>
                                 <li><a class="nav-link" href="https://www.bkr.nl/">BKR Document</a></li>
 
 {{--            CEO                    --}}

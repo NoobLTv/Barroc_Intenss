@@ -239,6 +239,25 @@ input.checkboxsupplies {
     padding-top: 10px;
 }
 
+.leasesshow {
+    padding-top: 50px;
+    padding-left: 20px;
+}
+
+.leaseslink {
+    color: black;
+}
+
+.leaselist {
+    list-style-type: decimal;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.customerlabelregister {
+    padding-top: 7px;
+}
+
 .listsupplies {
     padding: 0;
     margin: 0;
