@@ -80,7 +80,7 @@ class RegisterController extends Controller
                 'role_id' => $data['role_id']
             ]);
         }
-        elseif (User::Createwith(role_id, 5))
+        else if (User::Createwith(role_id, 5))
         {
             return Companyname::insert([
                 'name' => $data['name'],
