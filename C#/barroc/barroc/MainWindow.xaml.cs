@@ -30,5 +30,11 @@ namespace barroc
             facturenAanmaken factuur = new facturenAanmaken();
             factuur.Show();
         }
+
+        private void Factureninzien_Click(object sender, RoutedEventArgs e)
+        {
+            factureninzien inzien = new factureninzien();
+            inzien.Show();
+        }
     }
 }
