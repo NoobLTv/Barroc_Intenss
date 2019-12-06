@@ -16,15 +16,14 @@ class CreateCompanydetailsTable extends Migration
         Schema::create('companydetails', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
-            $table->string('companyname');
-            $table->string('address');
-            $table->string('city');
-            $table->string("postalcode");
-            $table->string('telephonenumber');
-            $table->string('mail');
             $table->boolean('must_still_approve');
             $table->boolean('approved');
             $table->timestamps();
+
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users');
+
         });
     }
 

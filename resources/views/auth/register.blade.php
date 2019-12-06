@@ -69,42 +69,6 @@
                                     <input type="hidden" name="role_id" value="5">
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label for="role_id" class="col-md-4 col-form-label text-md-right">Bedrijfnaam</label>
-                                <div class="col-md-6">
-                                    <input id="password-confirm" type="text" class="form-control" name="companyname">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="role_id" class="col-md-4 col-form-label text-md-right">Bedrijfsadres</label>
-                                <div class="col-md-6">
-                                    <input id="password-confirm" type="text" class="form-control" name="address">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="role_id" class="col-md-4 col-form-label text-md-right">Bedrijfsplaats</label>
-                                <div class="col-md-6">
-                                    <input id="password-confirm" type="text" class="form-control" name="city">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="role_id" class="col-md-4 col-form-label text-md-right">Bedrijf-postcode</label>
-                                <div class="col-md-6">
-                                    <input id="password-confirm" type="text" class="form-control" name="postalcode">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="role_id" class="col-md-4 col-form-label text-md-right">Bedrijfstelefoonnummer</label>
-                                <div class="col-md-6">
-                                    <input id="password-confirm" type="text" class="form-control" name="telephonenumber">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="role_id" class="col-md-4 col-form-label text-md-right">Bedrijfsmail</label>
-                                <div class="col-md-6">
-                                    <input id="password-confirm" type="text" class="form-control" name="mail">
-                                </div>
-                            </div>
                         @else
                             <div class="form-group row">
                                 <label for="role_id" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>

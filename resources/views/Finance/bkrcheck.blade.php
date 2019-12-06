@@ -43,7 +43,7 @@
     </div>
     <div>
         <select class="companynameselect" name="companyname">
-            @foreach(\App\Companyname::select('companyname', 'id')->get() as $name)
+            @foreach(\App\CustomerDetail::select('companyname', 'id')->get() as $name)
                 <option value="{{ $name->id }}">{{ $name->companyname }}</option>
             @endforeach
         </select>
