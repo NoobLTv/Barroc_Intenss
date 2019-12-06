@@ -14,3 +14,11 @@ C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\barroc.Properti
 C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\barroc.csproj.GenerateResource.cache
 C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\barroc.exe
 C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\barroc.pdb
+C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\bin\Debug\MySql.Data.dll
+C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\bin\Debug\Google.Protobuf.dll
+C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\bin\Debug\BouncyCastle.Crypto.dll
+C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\bin\Debug\Renci.SshNet.dll
+C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\bin\Debug\MySql.Data.xml
+C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\barroc.csproj.CopyComplete
+C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\factureninzien.g.cs
+C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\factureninzien.baml
