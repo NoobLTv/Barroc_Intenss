@@ -71,7 +71,7 @@ class WorkorderController extends Controller
                 //echo $WorkProductSupplyId . "is " . $WorkProductSuppliesAmount . "x besteld. <br>";
 
                 if ($WorkProductSuppliesAmount != null ) {
-
+                    
                     workproduct::insert ([
                         'workorder_id' => $workerorderId,
                         'supply_id' => $WorkProductSupplyId,
