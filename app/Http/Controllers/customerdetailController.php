@@ -16,9 +16,10 @@ class customerdetailController extends Controller
      */
     public function index()
     {
+        $leases = \App\lease::where('customer_id', Auth::user()->id)->get();
         $user = Auth::user();
         //$customerDetail = \App\CustomerDetail::where('user_id', auth()->user()->id)->get();
-        return view('Customer/index', ['user' => $user]);
+        return view('Customer/index', ['user' => $user,'leases' => $leases]);
     }
 
     /**
@@ -72,7 +73,7 @@ class customerdetailController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('Customer.show');
     }
 
     /**
