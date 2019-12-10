@@ -46,5 +46,7 @@ Route::resource('scheduleafault', 'ScheduleafaultController');
 Route::resource('scheduleafaultshow', 'ScheduleafaultshowController');
 Route::resource('bkrcheck', 'BkrCheckController');
 Route::resource('lease', 'LeaseController');
+Route::resource('offermail', 'offermailController');
+Route::resource('offershow', 'offermailController');
 
 

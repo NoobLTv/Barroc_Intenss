@@ -1,14 +1,15 @@
 @component('mail::message')
-# Introduction
+    # Introduction
 
-Uw offerten is aangevraagd bij afdeling sales
+    Uw offerte is aangevraagd bij afdeling sales.
 
-Er wordt spoedig contact met u opgenomen.
+    Er wordt spoedig contact met u opgenomen.
 
-@component('mail::button', ['url' => ''])
-Button Text
-@endcomponent
+    @component('mail::button', ['url' => ''])
+        Button Text
+    @endcomponent
 
-Thanks,<br>
-{{ config('app.name') }}
+    Thanks,<br>
+    {{ config('app.name') }}
+
 @endcomponent

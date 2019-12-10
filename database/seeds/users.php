@@ -40,8 +40,8 @@ class users extends Seeder
         ]);
 
         \App\User::insert([
-            'email'=> 'maintenance@barroc.nl',
-            'name'=> 'maintenance',
+            'email'=> 'headmaintenancemail@barroc.nl',
+            'name'=> 'headmaintenancemail',
             'password'=> Hash::make('barroc123'),
             'role_id'    => 3
         ]);

@@ -57,6 +57,7 @@
                             @elseif(Auth::user()->role_id == 2)
                                 <li><a class="nav-link"href="{{route('register')}}">Registreer Klant</a></li>
                                 <li><a class="nav-link"href="{{route('offer.create')}}">Prijsopgave aanmaken</a></li>
+                                <li><a class="nav-link"href="{{route('offermail.create')}}">Offerte mailen naar de klant</a></li>
 
 {{--            Maintenance                    --}}
                             @elseif(Auth::user()->role_id == 3)

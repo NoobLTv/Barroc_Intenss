@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class maintenance extends Mailable
+class headmaintenancemail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -28,6 +28,6 @@ class maintenance extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.maintenance');
+        return $this->view('emails.headmaintenance');
     }
 }

@@ -14,14 +14,13 @@
 @section('content')
 
     <div>
-        <p class="infodetail">Dit is de detail page</p>
-        <h1> Quotations_id: {{ $quotations->id }} </h1>
-        <p class="infopricelabel"> Sales_id: {{ $quotations->sales_id }} </p>
-        <p> customer_id: {{ $quotations->customer_id}} </p>
-        <p> price: {{ $quotations->price}} </p>
-        <p> remarks: {{ $quotations->remarks}} </p>
-        <p> must_still_approve: {{ $quotations->must_still_approve}} </p>
-        <p> approved: {{ $quotations->approved}} </p>
+        <p class="infodetail">Dit is uw offertegegevens</p>
+        <h1> Offernummer: {{ $quotations->id }} </h1>
+        <p class="infopricelabel"> Salesmedewerker: {{ $quotations->sales_id }} </p>
+        <p> klantnummer: {{ $quotations->customer_id}} </p>
+        <p> Prijs: {{ $quotations->price}} </p>
+        <p> Opmerkingen: {{ $quotations->remarks}} </p>
+        <p> Is die goedgekeuren of niet(1 is goedgekeuren en 0 is afgekeuren.): {{ $quotations->approved}} </p>
     </div>
 
 @endsection
