@@ -5,35 +5,29 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link rel="stylesheet" href="{{asset('css/custom.css')}}">
     <script src="{{ asset('js/app.js') }}" defer></script>
-
     <title>Barroc Intense</title>
     <!-- Scripts -->
-{{--<script src="{{ asset('js/app.js') }}" defer></script>--}}
-<!-- Fonts -->
+    {{--<script src="{{ asset('js/app.js') }}" defer></script>--}}
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
 </head>
 <body>
 <br>
-<h1 class="text-center">Klantgegevens doorgeven</h1>
+<h1 class="text-center">Klantgegevens</h1>
 <br>
-
 @if ( $user->CustomerDetail == null)
-
-<div class="card text-center">
-    <div class="card-body">
-        <h5 class="card-title">Gegevens doorgeven</h5>
-        <p class="card-text">Geef hier uw gegevens door zodat wij u altijd kunnen blijven bereiken.</p>
-        <a href="{{route('Customerdetail.create')}}" class="btn btn-primary">Klik hier</a>
+    <div class="card text-center">
+        <div class="card-body">
+            <h5 class="card-title">Gegevens doorgeven</h5>
+            <p class="card-text">Geef hier uw gegevens door zodat wij u altijd kunnen blijven bereiken.</p>
+            <a href="{{route('Customerdetail.create')}}" class="btn btn-primary">Klik hier</a>
+        </div>
     </div>
-</div>
 @else
-    <br>
     <br>
     <div class="card text-center">
         <div class="card-body">
@@ -44,39 +38,31 @@
     </div>
 @endif
 <br>
-
-
-@if ( $user->lease == null)
 <br>
-
-@else
-
+@if ($leases != null)
     <div class="card text-center">
         <div class="card-body">
             <h5 class="card-title">Leasecontract inzien</h5>
-            <p class="card-text">Zie hier lease contract gegevens.</p>
+            <p class="card-text">Zie hier uw lease contract gegevens.</p>
+            @foreach ($leases as $lease)
+                <a href="{{ route('Customerdetail.show', $lease->id) }}" class="btn btn-primary">Lease - {{ $lease->id }}</a>
+            @endforeach
+        </div>
+    </div>
+@endif
+<br>
+<br>
+@if ( $user->Invoices == null)
+    <br>
+@else
+    <div class="card text-center">
+        <div class="card-body">
+            <h5 class="card-title">Factuurgegevens inzien</h5>
+            <p class="card-text">Bekijk hier al uw facturen en zie welke nog open staan ja of nee.</p>
             <a href="" class="btn btn-primary">Klik hier</a>
         </div>
     </div>
-
-<br>
-@endif
-<br>
-
-@if ( $user->Invoices == null)
-    <br>
-
-@else
-
-        <div class="card text-center">
-            <div class="card-body">
-                <h5 class="card-title">Factuurgegevens inzien</h5>
-                <p class="card-text">Bekijk hier al uw facturen en zie welke nog open staan ja of nee.</p>
-                <a href="" class="btn btn-primary">Klik hier</a>
-            </div>
-        </div>
 @endif
 </body>
 </html>
-
 @endsection
