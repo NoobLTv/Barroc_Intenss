@@ -215,6 +215,36 @@ input.checkboxsupplies {
     margin-bottom: 20px;
 }
 
+.infodetail {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.offerlabelshow {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.infopricelabel {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.offershow {
+    background: white;
+}
+
+.offershowlogo {
+    width: 100px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.offershowheader {
+    background: #ffd700;
+    padding-bottom: 20px;
+}
+
 .bkrinput {
     margin-top: 20px;
     margin-left: 20px;

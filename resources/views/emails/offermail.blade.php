@@ -6,7 +6,9 @@ Als uw de gegevens wilt bekijken dan kunt uw op de knop klikken om uw offertegeg
 Als uw nog vragen hebt, dan kun u die via de mail stellen.
 Ik hoop dat ik uw voldoende heb geïnformeerd.
 
-@component('mail::button', ['url' => ''])
+Offertenummer: {{ $quotation_id }}
+
+@component('mail::button', ['url' => route('offermail.show', $quotation_id) ] )
 Uw offertegegevens bekijken
 @endcomponent
 
