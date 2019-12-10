@@ -62,9 +62,8 @@
 {{--            Maintenance                    --}}
                             @elseif(Auth::user()->role_id == 3)
                                 <li><a class="nav-link" href="{{ route('workorder.create') }}">Werkbonnen invullen</a></li>
-                                <li><a class="nav-link" href="{{ route('scheduleafault.create') }}">Storingsaanvragen inplannen</a></li>
-                                <li><a class="nav-link" href="{{ route('scheduleafaultshow.index') }}">Ingeplande storingsaanvragen bekijken</a></li>
                                 <li><a class="nav-link"href="{{route('MalfunctionView.index')}}">Storingen bekijken</a></li>
+                                <li><a class="nav-link"href="{{route('workordermail.create')}}">Werkbonnen mailen naar de Hoofdmaintenance</a></li>
 
 {{--            Finance                    --}}
                             @elseif(Auth::user()->role_id == 4)
@@ -72,7 +71,7 @@
                                 <li><a class="nav-link" href="{{ route ('bkrcheck.create') }}">BKR Pagina</a></li>
                                 <li><a class="nav-link" href="{{ route ('lease.create') }}">Contract aanmaken</a></li>
                                 <li><a class="nav-link"href="{{route('lease.index')}}">Contract bekijken</a></li>
-                                <li><a class="nav-link" href="https://www.bkr.nl/">BKR Document</a></li>
+                                <li><a class="nav-link"href="{{route('entriesandexpenses.create')}}">Overzichten aanmaken</a></li>
 
 {{--            CEO                    --}}
                             @elseif(Auth::user()->role_id == 5)

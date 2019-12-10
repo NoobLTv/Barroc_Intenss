@@ -245,9 +245,42 @@ input.checkboxsupplies {
     padding-bottom: 20px;
 }
 
+.bkrdoc {
+    font-weight: bold;
+    margin-left: 20px;
+    background: #ffd700;
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 .bkrinput {
+    font-weight: bold;
+    background: #ffd700;
+    color: black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 33px;
+    padding-right: 33px;
     margin-top: 20px;
     margin-left: 20px;
+    margin-bottom: 30px;
+    border: 2px solid #ffd700;
+}
+
+.leasebutton {
+    font-weight: bold;
+    background: #ffd700;
+    color: black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 33px;
+    padding-right: 33px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border: 2px solid #ffd700;
 }
 
 .customerselect {
