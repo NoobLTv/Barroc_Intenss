@@ -154,49 +154,6 @@
         </div>
     </div>
 
-
-
-    <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-6">
-                    <h6 class="white mt-2">Wie wij zijn</h6>
-                    <p class="text-justify white">BarrocIntens.com <i>CODE WANTS TO BE SIMPLE </i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores dicta fuga laboriosam non recusandae reprehenderit. Animi enim eveniet facere iste nemo odio omnis optio perferendis reiciendis repellat reprehenderit, similique?.</p>
-                </div>
-
-                <div class="col-xs-6 col-md-3">
-                    <h6 class="white mt-2">Pagina's</h6>
-                    <ul class="footer-links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sales</a></li>
-                        <li><a href="#">Maintenance</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-xs-6 col-md-3">
-                    <h6 class="white mt-2">Meer</h6>
-                    <ul class="footer-links">
-                        <li><a href="#">Over ons</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Bijdragen</a></li>
-                        <li><a href="#">Extra Info</a></li>
-                        <li><a href="#">Home Pagina</a></li>
-                    </ul>
-                </div>
-            </div>
-            <hr class="white-line">
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-sm-6 col-xs-12">
-                    <p class="copyright-text white">Copyright &copy; 2019 All Rights Reserved by
-                        <a href="#">Barroc Intense</a>.
-                    </p>
-                </div>
-        </div>
-    </footer>
-
 </body>
 </html>
-
 @endsection

@@ -73,7 +73,9 @@ class customerdetailController extends Controller
      */
     public function show($id)
     {
+        $lease = \App\lease::find('id');
         return view('Customer.show');
+
     }
 
     /**

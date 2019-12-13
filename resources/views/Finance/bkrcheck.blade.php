@@ -61,7 +61,8 @@
         <input name="bkrbutton" class="bkrinput" type="submit" value="Verzenden">
     </div>
 </form>
-
+<br>
+    <br>
 @endsection
 
 </body>

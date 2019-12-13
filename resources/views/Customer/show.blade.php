@@ -21,9 +21,12 @@
 <body>
 <br>
 <h1 class="text-center">Leasecontracten</h1>
+{{--<p> Name: {{ $leases->id}} </p>--}}
+
 <br>
 
 </body>
 </html>
+<br>
 
 @endsection
