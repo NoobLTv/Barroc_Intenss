@@ -8,23 +8,21 @@
     <link rel="stylesheet" href="{{asset('css/custom.css')}}">
     <title>Lavavelwebshop</title>
 </head>
-<body>
+<body class="offershow">
 
-@extends('app')
-@section('content')
+    <header class="offershowheader">
+        <img class="offershowlogo" src="{{ asset('storage/img/barroc_logo.png') }}" alt="logo_klein">
+    </header>
 
-    <div>
-        <p class="infodetail">Dit is de detail page</p>
-        <h1> Quotations_id: {{ $quotations->id }} </h1>
-        <p class="infopricelabel"> Sales_id: {{ $quotations->sales_id }} </p>
-        <p> customer_id: {{ $quotations->customer_id}} </p>
-        <p> price: {{ $quotations->price}} </p>
-        <p> remarks: {{ $quotations->remarks}} </p>
-        <p> must_still_approve: {{ $quotations->must_still_approve}} </p>
-        <p> approved: {{ $quotations->approved}} </p>
-    </div>
-
-@endsection
+    <main>
+        <h1 class="infodetail">Dit uw offertegegevens</h1>
+        <p class="offerlabelshow"> Offertenummer: {{ $quotation->id }} </p>
+        <p class="infopricelabel"> Salesmedewerker: {{ $quotation->sales_id }} </p>
+        <p class="infopricelabel"> Klantnummer: {{ $quotation->customer_id}} </p>
+        <p class="infopricelabel"> Prijs: {{ $quotation->price}} </p>
+        <p class="infopricelabel"> Opmerkingen: {{ $quotation->remarks}} </p>
+        <p class="infopricelabel"> Is die goedgekeurd of niet(Als er een 1 staat is die goedgekeurd en als er een 0 staat is die afgekeurd.): {{ $quotation->approved}} </p>
+    </main>
 
 </body>
 </html>

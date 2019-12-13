@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Malfunction;
+use App\Workorder;
+use App\workordermail;
+use App\workproduct;
 use Illuminate\Http\Request;
 
-class ScheduleafaultshowController extends Controller
+class WorkordermailController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +16,7 @@ class ScheduleafaultshowController extends Controller
      */
     public function index()
     {
-        $malfunctions = Malfunction::all();
-        return view('Maintenance.scheduleafaultshow', ['malfunctions' => $malfunctions ]);
+        //
     }
 
     /**
@@ -25,7 +26,7 @@ class ScheduleafaultshowController extends Controller
      */
     public function create()
     {
-        //
+        return view('Maintenance.workordermail');
     }
 
     /**
@@ -36,27 +37,36 @@ class ScheduleafaultshowController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $workorder_id = $request->get('workorder_id');
+        //echo '$workorder_id: ' . $workorder_id;
+        //dd($request);
+
+
+        // in de request staat een quotation_id;
+
+        return (new \App\Mail\workordermail($request, $workorder_id) );
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\scheduleafaultshow  $scheduleafaultshow
+     * @param  \App\workordermail  $workordermail
      * @return \Illuminate\Http\Response
      */
-    public function show(scheduleafaultshow $scheduleafaultshow)
+    public function show( $id)
     {
+        $workorder_id = Workorder::find($id);
+        $workordersproduct_id = workproduct::find($id);
 
+        return view('Maintenance.workordershow', ['workorder' => $workorder_id], ['workproduct' => $workordersproduct_id]);
     }
-
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\scheduleafaultshow  $scheduleafaultshow
+     * @param  \App\workordermail  $workordermail
      * @return \Illuminate\Http\Response
      */
-    public function edit(scheduleafaultshow $scheduleafaultshow)
+    public function edit(workordermail $workordermail)
     {
         //
     }
@@ -65,10 +75,10 @@ class ScheduleafaultshowController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\scheduleafaultshow  $scheduleafaultshow
+     * @param  \App\workordermail  $workordermail
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, scheduleafaultshow $scheduleafaultshow)
+    public function update(Request $request, workordermail $workordermail)
     {
         //
     }
@@ -76,10 +86,10 @@ class ScheduleafaultshowController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\scheduleafaultshow  $scheduleafaultshow
+     * @param  \App\workordermail  $workordermail
      * @return \Illuminate\Http\Response
      */
-    public function destroy(scheduleafaultshow $scheduleafaultshow)
+    public function destroy(workordermail $workordermail)
     {
         //
     }

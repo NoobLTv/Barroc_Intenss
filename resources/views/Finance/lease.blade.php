@@ -96,7 +96,7 @@
                 <input class="priceinput" type="date" name="noticeperiod">
             </div>
             <div>
-                <input name="leasebutton" class="workorderinput" type="submit" value="Verzenden">
+                <input name="leasebutton" class="leasebutton" type="submit" value="Verzenden">
             </div>
         </form>
 

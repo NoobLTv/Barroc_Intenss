@@ -1,4 +1,4 @@
-@extends('app')
+    @extends('app')
 @section('content')
     <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -52,17 +52,21 @@
 @endif
 <br>
 <br>
-@if ( $user->Invoices == null)
-    <br>
-@else
+{{--@if ( $invoices != null)--}}
     <div class="card text-center">
         <div class="card-body">
             <h5 class="card-title">Factuurgegevens inzien</h5>
             <p class="card-text">Bekijk hier al uw facturen en zie welke nog open staan ja of nee.</p>
             <a href="" class="btn btn-primary">Klik hier</a>
+{{--            @foreach ($invoices as $invoice)--}}
+{{--                <a href="{{ route('Customerdetail.show', $invoice->id) }}" class="btn btn-primary">Invoice - {{ $invoice->id }}</a>--}}
+{{--            @endforeach--}}
         </div>
     </div>
-@endif
+{{--@else--}}
+
+{{--@endif--}}
+<br>
 </body>
 </html>
 @endsection

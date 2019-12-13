@@ -17,24 +17,27 @@
 <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
-</head>
-<body>
+    </head>
+    <body>
 
-<header>
+    <header>
 
-</header>
+    </header>
 
-    <p>Naam: {{$malfunctions->name}}</p>
-    <p>Bedrijf: {{$malfunctions->company_name}}</p>
-    <p>Beschrijving: {{$malfunctions->description}}</p>
-
-
-<main>
+        <p>Naam: {{$malfunctions->name}}</p>
+        <p>Bedrijf: {{$malfunctions->company_name}}</p>
+        <p>Beschrijving: {{$malfunctions->description}}</p>
 
 
-</main>
+    <main>
+
+
+    </main>
 
 </body>
 </html>
+
+
+
 
 @endsection

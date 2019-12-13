@@ -37,8 +37,15 @@ class OffermailController extends Controller
      */
     public function store(Request $request)
     {
+        $quotation_id = $request->get('quotation_id');
 
-        return ( new \App\Mail\OfferMail($request) )-> render();
+        //dd($quotation_id);
+        // dd($request);
+
+        // in de request staat een quotation_id;
+
+        return (new \App\Mail\OfferMail($request, $quotation_id) ); // stuur e-mail, maar geef quotation_id mee
+
 
         //return redirect()->route('offermail.create');
     }
@@ -49,11 +56,11 @@ class OffermailController extends Controller
      * @param  \App\offermail  $offermail
      * @return \Illuminate\Http\Response
      */
-    public function show(offermail $id)
+    public function show( $id )
     {
-        $quotations = Quotation::find($id);
+        $quotation = Quotation::find($id);
 
-        return view('Sales/offermail', ['quotations' => $quotations]);
+        return view('Sales.offershow', ['quotation' => $quotation]);
     }
 
     /**

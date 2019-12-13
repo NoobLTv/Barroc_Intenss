@@ -1,4 +1,4 @@
-@extends('app')
+    @extends('app')
 
 @section('content')
 
@@ -152,4 +152,5 @@
             </div>
         </div>
     </div>
+    <br>
 @endsection

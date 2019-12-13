@@ -42,11 +42,9 @@ Route::resource('password', 'RegisterController');
 Route::resource('Customerdetail', 'customerdetailController');
 Route::resource('workorder', 'WorkorderController');
 Route::resource('Supplies', 'suppliesController');
-Route::resource('scheduleafault', 'ScheduleafaultController');
-Route::resource('scheduleafaultshow', 'ScheduleafaultshowController');
 Route::resource('bkrcheck', 'BkrCheckController');
 Route::resource('lease', 'LeaseController');
 Route::resource('offermail', 'offermailController');
-Route::resource('offershow', 'offermailController');
+Route::resource('workordermail', 'WorkordermailController');
 
 
