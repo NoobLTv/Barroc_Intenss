@@ -38,7 +38,7 @@ Route::resource('Supplies', 'suppliesController');
 Route::resource('Malfunction', 'malfunctionController');
 Route::resource('Customer', 'customerController');
 Route::resource('offercheck', 'OfferCheckController');
-//Route::resource('password', 'RegisterController'); <------------------ Geeft error! TODO: oplossen
+Route::resource('password', 'RegisterController');
 Route::resource('Customerdetail', 'customerdetailController');
 Route::resource('workorder', 'WorkorderController');
 Route::resource('Supplies', 'suppliesController');
@@ -48,6 +48,5 @@ Route::resource('bkrcheck', 'BkrCheckController');
 Route::resource('lease', 'LeaseController');
 Route::resource('offermail', 'offermailController');
 Route::resource('workordermail', 'WorkordermailController');
-Route::resource('entriesandexpenses', 'EntriesandexpensesController');
 
 
