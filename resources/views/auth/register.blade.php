@@ -60,6 +60,14 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
+
+                        <div class="form-group row">
+                            <label for="notes" class="col-md-4 col-form-label text-md-right">{{ __('Notes') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="notes" type="text" class="form-control" name="notes">
+                            </div>
+                        </div>
                         @if (Auth::user()->role_id == 2)
                             <div class="form-group row">
                                 <label for="role_id" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>

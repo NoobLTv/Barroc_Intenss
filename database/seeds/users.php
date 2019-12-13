@@ -15,6 +15,7 @@ class users extends Seeder
             'email'=> 'ceo@barroc.nl',
             'name'=> 'ceo',
             'password'=> Hash::make('barroc123'),
+            'notes' => '',
             'role_id'    => 6
         ]);
 
@@ -22,6 +23,7 @@ class users extends Seeder
             'email'=> 'sales@barroc.nl',
             'name'=> 'sales',
             'password'=> Hash::make('barroc123'),
+            'notes' => '',
             'role_id'    => 2
         ]);
 
@@ -29,6 +31,7 @@ class users extends Seeder
             'email'=> 'finance@barroc.nl',
             'name'=> 'finance',
             'password'=> Hash::make('barroc123'),
+            'notes' => '',
             'role_id'    => 4
         ]);
 
@@ -36,6 +39,7 @@ class users extends Seeder
             'email'=> 'supplies@barroc.nl',
             'name'=> 'supplies',
             'password'=> Hash::make('barroc123'),
+            'notes' => '',
             'role_id'    => 1
         ]);
 
@@ -43,6 +47,7 @@ class users extends Seeder
             'email'=> 'headmaintenancemail@barroc.nl',
             'name'=> 'headmaintenancemail',
             'password'=> Hash::make('barroc123'),
+            'notes' => '',
             'role_id'    => 3
         ]);
 

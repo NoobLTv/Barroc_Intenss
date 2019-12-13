@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('contactPersonNumber')->nullable();
 
             $table->string('password');
-
+            $table->string('notes');
             $table->rememberToken();
             $table->timestamps();
 
