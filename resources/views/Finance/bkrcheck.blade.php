@@ -60,6 +60,9 @@
     <div>
         <input name="bkrbutton" class="bkrinput" type="submit" value="Verzenden">
     </div>
+    <div>
+        <a class="bkrdoc" href="https://www.bkr.nl/">BKR Document</a>
+    </div>
 </form>
 <br>
     <br>

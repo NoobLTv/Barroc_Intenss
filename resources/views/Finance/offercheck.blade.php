@@ -74,7 +74,7 @@
     <div>
         <select class="remarkselect" name="remarks">
             @foreach(\App\Quotation::select('remarks', 'id')->get() as $name)
-                <option value="{{ $name->id }}"> {{ $name->remarks }}</option>
+                <option value="{{ $name->remarks }}"> {{ $name->remarks }}</option>
             @endforeach
         </select>
     </div>

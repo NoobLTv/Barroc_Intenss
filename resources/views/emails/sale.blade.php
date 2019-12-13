@@ -1,7 +1,7 @@
 @component('mail::message')
 # Introduction
 
-Uw offerten is aangevraagd bij afdeling sales
+Uw offerte is aangevraagd bij afdeling sales.
 
 Er wordt spoedig contact met u opgenomen.
 
