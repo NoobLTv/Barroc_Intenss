@@ -52,13 +52,22 @@ class users extends Seeder
         ]);
 
 
+        \App\User::insert([
+            'email'=> 'customer@gmail.com',
+            'name'=> 'headmaintenancemail',
+            'password'=> Hash::make('customer123'),
+            'notes' => '',
+            'role_id'    => 5
+        ]);
+
+
         for( $i =0; $i < 150; $i++){
             \App\User::insert([
                 'email' => \Illuminate\Support\Str::random(10).'@gmail.com',
                 'name' => \Illuminate\Support\Str::random(10),
                 'password'=> Hash::make('barroc123'),
                 'notes' => '',
-                'role_id' => 6
+                'role_id' => 5
             ]);
         }
 
