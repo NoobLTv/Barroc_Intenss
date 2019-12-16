@@ -479,7 +479,8 @@ input.checkboxsupplies {
 
 .leaseinfo {
     font-family: Roboto;
-    font-size: 15px;
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
 .leaseslabel {
@@ -487,6 +488,34 @@ input.checkboxsupplies {
     font-weight: bold;
     padding-bottom: 20px;
     color: black;
+}
+
+.errortext {
+    margin-top: 50px;
+    font-family: "Big Shoulders Display";
+    font-weight: bold;
+    color: black;
+}
+
+.leaseerrormain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    padding-top: 30px;
+}
+
+.infoerror {
+    font-family: Roboto;
+    font-size: 20px;
+    margin-bottom: 50px;
+    color: black;
+    width: 50%;
+    height: 20%;
+    border: 2px solid #000000;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .leaselist {

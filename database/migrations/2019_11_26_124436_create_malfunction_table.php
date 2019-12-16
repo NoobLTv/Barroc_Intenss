@@ -21,10 +21,6 @@ class CreateMalfunctionTable extends Migration
             $table->string('description');
             $table->rememberToken();
             $table->timestamps();
-
-
-
-
         });
     }
 

@@ -28,7 +28,9 @@ class LeaseController extends Controller
      */
     public function create()
     {
+
         return view('Finance.lease');
+
     }
 
     /**
@@ -48,22 +50,37 @@ class LeaseController extends Controller
 
         // dd($request->amount);
 
+        //$companydetail = companydetail::where('customer_id',$request->customer_id);
+        //dd($companydetail);
+
+        $details = \App\companydetail::select('id', 'must_still_approve', 'approved')->where('must_still_approve', '1')->where('approved', '0')->get();
+        $detailsfirst = \App\companydetail::select('id', 'must_still_approve', 'approved')->where('must_still_approve', '1')->where('approved', '1')->get();
+
+        dd($details);
+
+        if($details = 0)  {
+
+            return view('Finance/error');
+
+        }
+        else if ($detailsfirst = 1){
+
         $leaseId = lease::insertGetId([
-            'lease_type_id' => $request-> lease_type_id,
-            'customer_id' => $request-> customer_id,
-            'finance_id' => $request-> finance_id,
-            'startdate' => $request-> startdate,
-            'enddate' => $request-> enddate,
-            'connectioncosts' => $request-> connectioncosts,
-            'noticeperiod' => $request-> noticeperiod,
+            'lease_type_id' => $request->lease_type_id,
+            'customer_id' => $request->customer_id,
+            'finance_id' => $request->finance_id,
+            'startdate' => $request->startdate,
+            'enddate' => $request->enddate,
+            'connectioncosts' => $request->connectioncosts,
+            'noticeperiod' => $request->noticeperiod,
         ]);
 
-        foreach($request->amount as $leaseSupplyId => $amountOrdered ) {
+        foreach ($request->amount as $leaseSupplyId => $amountOrdered) {
 
             //echo $leaseSupplyId . "is " . $amountOrdered . "x besteld. <br>";
 
-            if ($amountOrdered != null ) {
-                LeaseRules::insert ([
+            if ($amountOrdered != null) {
+                LeaseRules::insert([
                     'lease_id' => $leaseId,
                     'leasesupplies_id' => $leaseSupplyId,
                     'amount' => $amountOrdered,
@@ -71,10 +88,14 @@ class LeaseController extends Controller
             }
         }
 
+
         //dd();
 
-        return redirect()->route('lease.create');
+            return redirect()->route('lease.create');
+
+        }
     }
+
 
     /**
      * Display the specified resource.
@@ -82,11 +103,13 @@ class LeaseController extends Controller
      * @param  \App\lease  $lease
      * @return \Illuminate\Http\Response
      */
+
     public function show($id)
     {
         $leases = lease::find($id);
 
         return view('Finance/leasesshow', ['leases' => $leases]);
+
     }
 
     /**
@@ -97,7 +120,7 @@ class LeaseController extends Controller
      */
     public function edit(lease $lease)
     {
-        //
+
     }
 
     /**
