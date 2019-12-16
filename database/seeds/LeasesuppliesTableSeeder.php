@@ -38,5 +38,12 @@ class LeasesuppliesTableSeeder extends Seeder
             'leaseprice' => 999,
             'Installationcosts' => 375,
         ]);
-    }
-}
+        for( $i =0; $i < 50; $i++){
+            \App\LeaseSupplies::insert([
+                'name' => \Illuminate\Support\Str::random(10),
+                'articlecode' => 'S234MMPLA',
+                'leaseprice' => 877,
+                'Installationcosts' => 375
+            ]);
+        }
+}}

@@ -51,5 +51,16 @@ class users extends Seeder
             'role_id'    => 3
         ]);
 
+
+        for( $i =0; $i < 150; $i++){
+            \App\User::insert([
+                'email' => \Illuminate\Support\Str::random(10).'@gmail.com',
+                'name' => \Illuminate\Support\Str::random(10),
+                'password'=> Hash::make('barroc123'),
+                'notes' => '',
+                'role_id' => 6
+            ]);
+        }
+
     }
 }
