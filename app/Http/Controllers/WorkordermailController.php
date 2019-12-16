@@ -38,13 +38,14 @@ class WorkordermailController extends Controller
     public function store(Request $request)
     {
         $workorder_id = $request->get('workorder_id');
+        $workorderproduct_id = $request->get('workorderproduct_id');
         //echo '$workorder_id: ' . $workorder_id;
         //dd($request);
 
 
         // in de request staat een quotation_id;
 
-        return (new \App\Mail\workordermail($request, $workorder_id) );
+        return (new \App\Mail\workordermail($request, $workorder_id, $workorderproduct_id  ) );
     }
 
     /**

@@ -341,16 +341,23 @@ input.checkboxsupplies {
 }
 
 .infodetail {
+    font-family: "Big Shoulders Display";
+    font-weight: bold;
+    color: black;
     padding-left: 20px;
     padding-top: 20px;
 }
 
 .offerlabelshow {
+    font-family: Roboto;
+    font-size: 18px;
     padding-left: 20px;
     padding-top: 20px;
 }
 
 .infopricelabel {
+    font-family: Roboto;
+    font-size: 18px;
     padding-left: 20px;
     padding-top: 20px;
 }
@@ -456,6 +463,14 @@ input.checkboxsupplies {
     font-weight: bold;
     background: #ffd700;
     border: 2px solid #ffd700;
+}
+
+.form-check-label {
+    font-family: Roboto;
+}
+
+.btn-link {
+    font-family: Roboto;
 }
 
 .tablesupplies {
