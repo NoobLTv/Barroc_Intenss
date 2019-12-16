@@ -24,9 +24,9 @@
 
     </header>
 
-        <p>Naam: {{$malfunctions->name}}</p>
-        <p>Bedrijf: {{$malfunctions->company_name}}</p>
-        <p>Beschrijving: {{$malfunctions->description}}</p>
+        <p class="malfunctionlabelshowzero">Naam: {{$malfunctions->name}}</p>
+        <p class="malfunctionlabelshowfirst">Bedrijf: {{$malfunctions->company_name}}</p>
+        <p class="malfunctionlabelshowtwo">Beschrijving: {{$malfunctions->description}}</p>
 
 
     <main>

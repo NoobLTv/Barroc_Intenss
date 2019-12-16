@@ -23,15 +23,15 @@
 
 <header class="leasesshow">
 
-    <h1>Contractnummer: {{$leases->id}}</h1>
+    <h1 class="leaseslabel">Contractnummer: {{$leases->id}}</h1>
 
-    <p>Contracttypen: {{$leases->lease_type_id}}</p>
-    <p>Klantnummer: {{$leases->customer_id}}</p>
-    <p>Financiënnummer: {{$leases->finance_id}}</p>
-    <p>Startdatum: {{$leases->startdate}}</p>
-    <p>Einddatum: {{$leases->enddate}}</p>
-    <p>Aansluitkosten: {{$leases->connectioncosts}}</p>
-    <p>Opzegtermijn: {{$leases->noticeperiod}}</p>
+    <p class="leaseinfo">Contracttypen: {{$leases->lease_type_id}}</p>
+    <p class="leaseinfo">Klantnummer: {{$leases->customer_id}}</p>
+    <p class="leaseinfo">Financiënnummer: {{$leases->finance_id}}</p>
+    <p class="leaseinfo">Startdatum: {{$leases->startdate}}</p>
+    <p class="leaseinfo">Einddatum: {{$leases->enddate}}</p>
+    <p class="leaseinfo">Aansluitkosten: {{$leases->connectioncosts}}</p>
+    <p class="leaseinfo">Opzegtermijn: {{$leases->noticeperiod}}</p>
 
 </header>
 

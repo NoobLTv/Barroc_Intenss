@@ -128,20 +128,20 @@
                 <div class="col-xs-6 col-md-3">
                     <h6 class="white mt-2">Pagina's</h6>
                     <ul class="footer-links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sales</a></li>
-                        <li><a href="#">Maintenance</a></li>
+                        <li><a class="footerlink" href="#">Home</a></li>
+                        <li><a class="footerlink" href="#">Sales</a></li>
+                        <li><a class="footerlink" href="#">Maintenance</a></li>
                     </ul>
                 </div>
 
                 <div class="col-xs-6 col-md-3">
                     <h6 class="white mt-2">Meer</h6>
                     <ul class="footer-links">
-                        <li><a href="#">Over ons</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Bijdragen</a></li>
-                        <li><a href="#">Extra Info</a></li>
-                        <li><a href="#">Home Pagina</a></li>
+                        <li><a class="footerlink" href="#">Over ons</a></li>
+                        <li><a class="footerlink" href="#">Contact</a></li>
+                        <li><a class="footerlink" href="#">Bijdragen</a></li>
+                        <li><a class="footerlink" href="#">Extra Info</a></li>
+                        <li><a class="footerlink" href="#">Home Pagina</a></li>
                     </ul>
                 </div>
             </div>

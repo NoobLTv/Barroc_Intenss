@@ -27,7 +27,7 @@
         <ul>
         @foreach($malfunctions as $malfunction)
 
-                <li><a href="{{route('MalfunctionView.show', $malfunction ->id)}}"> {{$malfunction->name}}</a> </li>
+                <li><a class="malfunctionlabel" href="{{route('MalfunctionView.show', $malfunction ->id)}}"> {{$malfunction->name}}</a> </li>
         @endforeach
         </ul>
     </div>

@@ -24,7 +24,7 @@
     <div>
         <h1 class="maintenance">Contracten bekijken</h1>
 
-        <ul>
+        <ul class="theleaselist">
             @foreach($leases as $lease)
                 <li class="leaselist"><a href="{{route('lease.show', $lease ->id)}}" class="leaseslink">Contractnummer: {{$lease->id}}</a> </li>
             @endforeach
