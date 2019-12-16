@@ -21,7 +21,7 @@
 
 
     <div class="first-page masthead">
-        <h1 class="text-center mt-em">WELCOME BY BARROC INTENSE</h1>
+        <h1 class="text-center mt-em">WELKOM BIJ BARROC INTENSE</h1>
     </div>
 
     <div class="second-page">
