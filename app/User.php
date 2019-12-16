@@ -41,4 +41,8 @@ class User extends Authenticatable
        return $this->belongsTo('App\CustomerDetail', 'customer_detail_id');
     }
 
+    public function CompanyDetail(){
+        return $this->belongsTo('App\Companydetail', 'user_id');
+    }
+
 }

@@ -8,7 +8,7 @@ class Companydetail extends Model
 {
     public $table = "companydetails";
 
-    protected $fillable = [
-        'companyname', 'address', 'city', 'postalcode', 'telephonenumber', 'mail'
-    ];
+    public function user(){
+        return $this->belongsTo('App\User', 'user_id');
+    }
 }

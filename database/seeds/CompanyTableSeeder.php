@@ -9,4 +9,5 @@ class CompanyTableSeeder extends Seeder
      *
      * @return void
      */
+
 }

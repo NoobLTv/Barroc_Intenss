@@ -44,8 +44,8 @@
         </div>
         <div>
             <select name="customer_id">
-                @foreach(\App\User::select('name', 'id')->where('role_id', '5')->get() as $name)
-                    <option value="{{ $name->id }}">{{ $name->name }}</option>
+                @foreach(\App\companydetail::select('id', 'user_id', 'approved')->where('approved' , '1')->get() as $detail )
+                    <option value="{{ $detail->user->name }}">{{ $detail->user->name }} </option>
                 @endforeach
             </select>
         </div>

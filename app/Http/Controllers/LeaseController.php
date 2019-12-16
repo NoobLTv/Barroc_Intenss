@@ -41,36 +41,23 @@ class LeaseController extends Controller
      */
     public function store(Request $request)
     {
-
-        // dd($request);
-        //$this->validate($request, [
-            //'connectioncosts' => 'required|numeric',
-            //'noticeperiod' => 'required|numeric'
-        //]);
-
-        // dd($request->amount);
-
-        //$companydetail = companydetail::where('customer_id',$request->customer_id);
-        //dd($companydetail);
+        //dd($request->all());
+        //$customer = \App\companydetail::where('user_id', $request->customer_id)->first();
 
         $details = \App\companydetail::select('id', 'must_still_approve', 'approved')->where('must_still_approve', '1')->where('approved', '0')->get();
         $detailsfirst = \App\companydetail::select('id', 'must_still_approve', 'approved')->where('must_still_approve', '1')->where('approved', '1')->get();
+//        dd($customer);
+        //if ($customer->must_still_approve == 1 && $customer->approved == 0 || $customer->must_still_approve == 0 and $customer->approved == 0  ) {
+            //return view('Finance/error');
+        //}
+       //else if ($customer->must_still_approve == 1 && $customer->approved == 1 ){
 
-        dd($details);
-
-        if($details = 0)  {
-
-            return view('Finance/error');
-
-        }
-        else if ($detailsfirst = 1){
-
-        $leaseId = lease::insertGetId([
-            'lease_type_id' => $request->lease_type_id,
-            'customer_id' => $request->customer_id,
+            $leaseId = lease::insertGetId([
+           'lease_type_id' => $request->lease_type_id,
+           'customer_id' => $request->customer_id,
             'finance_id' => $request->finance_id,
             'startdate' => $request->startdate,
-            'enddate' => $request->enddate,
+           'enddate' => $request->enddate,
             'connectioncosts' => $request->connectioncosts,
             'noticeperiod' => $request->noticeperiod,
         ]);
@@ -93,7 +80,21 @@ class LeaseController extends Controller
 
             return redirect()->route('lease.create');
 
-        }
+       //}
+
+                // dd($request);
+                //$this->validate($request, [
+                //'connectioncosts' => 'required|numeric',
+                //'noticeperiod' => 'required|numeric'
+                //]);
+
+                // dd($request->amount);
+
+                //$companydetail = companydetail::where('customer_id',$request->customer_id);
+                //dd($companydetail);
+
+        //
+
     }
 
 
