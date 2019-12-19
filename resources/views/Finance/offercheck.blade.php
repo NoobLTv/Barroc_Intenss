@@ -53,8 +53,8 @@
     </div>
     <div>
         <select class="offerselect" name="qutations">
-            @foreach(\App\Quotation::select('price', 'id', 'remarks')->get() as $name)
-                <option value="{{ $name->id }}">{{ $name->id }}, € {{ $name->price }} en {{ $name->remarks }}</option>
+            @foreach(\App\Quotation::select('price', 'id', 'remarks')->where('must_still_approve','0')->where('approved', '0')->get() as $quotation)
+                <option value="{{ $quotation->id }}">{{$quotation->id }}, € {{ $quotation->price }} en {{ $quotation->remarks }}</option>
             @endforeach
         </select>
     </div>

@@ -27,20 +27,34 @@
     <form class="offerform" action="{{ route('offermail.store') }}" method="POST">
         @csrf
         <div>
-            <label class="saleslabel">Offertes:</label>
+            <label class="saleslabel"> De offertes die goedgekeurd zijn.</label>
         </div>
         <div>
             <select name="quotation_id">
-                @foreach(\App\Quotation::select('id')->get() as $name)
-                    <option value="{{ $name->id }}">{{ $name->id }}</option>
-                @endforeach
+                @foreach(\App\Quotation::select('id')->where('must_still_approve','1')->where('approved', '1')->get() as $quotation)
+                        <option value="{{ $quotation->id }}"> {{ $quotation->id }} </option>
+                    @endforeach
             </select>
         </div>
         <div>
             <input class="offerinput" type="submit" value="Verzenden">
         </div>
     </form>
-
+    <form class="offerform" action="{{ route('offermail.store') }}" method="POST">
+        @csrf
+        <div>
+            <label class="saleslabel"> De offertes die afgekeurd zijn.</label>
+        </div>
+        <div>
+            <select name="quotation_id">
+                @foreach(\App\Quotation::select('id')->where('must_still_approve','1')->where('approved', '0')->get() as $quotation)
+                    <option value="{{ $quotation->id }}"> {{ $quotation->id }} </option>
+                @endforeach
+            </select>
+        </div>
+        <div>
+            <input class="offerinput" type="submit" value="Verzenden">
+        </div>
 @endsection
 
 </body>
