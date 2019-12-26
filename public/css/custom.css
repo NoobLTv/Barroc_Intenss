@@ -274,6 +274,18 @@ html, body {
     padding-top: 20px;
 }
 
+.footer-fix{
+    height: 43vh;
+}
+
+.footer-fixe{
+    height: 62vh;
+}
+
+.footer-fixes{
+    height: 67vh;
+}
+
 .salesselect {
     margin-left: 20px;
     margin-bottom: 20px;

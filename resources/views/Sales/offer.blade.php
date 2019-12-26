@@ -18,17 +18,14 @@
 @extends('app')
 @section('content')
 
-<header>
-    <div>
-        <h2 class="offerlabel">Prijsopgave aanmaken</h2>
-    </div>
-</header>
-
+<div class="container footer-fixes">
+    <h2 class="offerlabel">Prijsopgave aanmaken</h2>
         <form class="offerform" action="{{ route('offer.store') }}" method="POST">
-            @csrf
+        @csrf
             <div>
-                <label class="saleslabel">Salesmedewerker:</label>
+            <label class="saleslabel">Salesmedewerker:</label>
             </div>
+
             <div>
                 <select name="sales_id">
                     @foreach(\App\User::select('name' ,'id')->where('role_id', '2')->get() as $name)
@@ -36,9 +33,11 @@
                     @endforeach
                 </select>
             </div>
+
             <div>
                 <label class="customerlabel">Klant:</label>
             </div>
+
             <div>
                 <select name="customer_id">
                     @foreach(\App\User::select('name', 'id')->where('role_id', '5')->get() as $name)
@@ -46,24 +45,19 @@
                     @endforeach
                 </select>
             </div>
-            <div>
-                <label class="pricelabel">Prijs:</label>
-            </div>
-            <div>
-                <input class="priceinput" type="text" name="price">
-            </div>
-            <div>
-                <label class="remarkslabel">Opmerkingen:</label>
-            </div>
-            <div>
-                <textarea class="remarkstextarea" name="remarks"></textarea>
-            </div>
-            <div>
-                <input class="offerinput" type="submit" value="Verzenden">
-            </div>
-        </form>
 
-    <br>
+                <label class="pricelabel">Prijs:</label>
+                <input class="priceinput form-control" type="text" name="price">
+
+
+                <label class="remarkslabel">Opmerkingen:</label>
+                <textarea class=" form-control" name="remarks"></textarea>
+
+            <div>
+                <input class="offerinput btn btn-primary mt-3" type="submit" value="Verzenden">
+            </div>
+    </form>
+</div>
 
 @endsection
 
