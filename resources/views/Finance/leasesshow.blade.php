@@ -25,7 +25,7 @@
 
     <h1 class="leaseslabel">Contractnummer: {{$leases->id}}</h1>
 
-    <p class="leaseinfo">Contracttypen: {{$leases->lease_type_id}}</p>
+    <p class="leaseinfo">Contracttypennummer: {{$leases->lease_type_id}}</p>
     <p class="leaseinfo">Klantnummer: {{$leases->customer_id}}</p>
     <p class="leaseinfo">Financiënnummer: {{$leases->finance_id}}</p>
     <p class="leaseinfo">Startdatum: {{$leases->startdate}}</p>

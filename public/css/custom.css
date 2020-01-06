@@ -491,8 +491,10 @@ input.checkboxsupplies {
 
 .leaseinfo {
     font-family: Roboto;
-    font-size: 18px;
+    font-size: 20px;
+    padding-left: 20px;
     margin-bottom: 20px;
+    color: black;
 }
 
 .leaseslabel {
@@ -567,8 +569,34 @@ input.checkboxsupplies {
     padding-left: 20px;
 }
 
+.leaseslabelcustomer {
+    padding-left: 20px;
+    font-family: Roboto;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+}
+
+.leaseinfocustomer {
+    font-family: Roboto;
+    font-size: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    color: black;
+    text-align: center;
+}
+
 .malfunctionlabel {
     font-family: Roboto;
+}
+
+.headtextlease {
+    padding-top: 20px;
+    font-family: "Big Shoulders Display";
+    font-weight: bold;
+    padding-left: 20px;
+    color: black;
+    text-align: center;
 }
 
 .bkrchecktext {

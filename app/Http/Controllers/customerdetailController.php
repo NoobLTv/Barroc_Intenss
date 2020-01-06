@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\CustomerDetail;
+use App\lease;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -73,8 +74,9 @@ class customerdetailController extends Controller
      */
     public function show($id)
     {
-        $lease = \App\lease::find('id');
-        return view('Customer.show');
+        $leases = lease::find($id);
+
+        return view('Customer/show', ['leases' => $leases] );
 
     }
 

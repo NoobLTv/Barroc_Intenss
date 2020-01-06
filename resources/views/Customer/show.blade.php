@@ -19,14 +19,19 @@
 
 </head>
 <body>
-<br>
-<h1 class="text-center">Leasecontracten</h1>
+<h1 class="headtextlease">Uw Leasecontractengegevens</h1>
 {{--<p> Name: {{ $leases->id}} </p>--}}
 
-<br>
+<p class="leaseslabelcustomer"> Contractnummer: {{$leases->id}}</p>
+<p class="leaseinfocustomer"> Contracttypennummer: {{$leases->lease_type_id}}</p>
+<p class="leaseinfocustomer"> Klantnummer: {{$leases->customer_id}}</p>
+<p class="leaseinfocustomer"> Financiënnummer: {{$leases->finance_id}}</p>
+<p class="leaseinfocustomer"> Startdatum: {{$leases->startdate}}</p>
+<p class="leaseinfocustomer"> Einddatum: {{$leases->enddate}}</p>
+<p class="leaseinfocustomer"> Aansluitkosten: {{$leases->connectioncosts}}</p>
+<p class="leaseinfocustomer"> Opzegtermijn: {{$leases->noticeperiod}}</p>
 
 </body>
 </html>
-<br>
 
 @endsection
