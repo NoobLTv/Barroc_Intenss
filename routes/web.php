@@ -29,21 +29,20 @@ Route::post('supplies.filter', 'suppliesController@filter')->name('supplies.filt
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('privacy', 'privacyController');
-Route::resource('offer', 'QuotationsController')-> middleware(\App\Http\Middleware\CheckRole::class);
+Route::resource('offer', 'QuotationsController');
 Route::resource('Sales', 'salesController')-> middleware(\App\Http\Middleware\CheckRole::class);
 Route::resource('Finance', 'financeController')-> middleware(\App\Http\Middleware\CheckRole::class);
 Route::resource('Maintenance', 'maintenanceController')-> middleware(\App\Http\Middleware\CheckRole::class);
-Route::resource('MalfunctionView', 'malfunctionviewController')-> middleware(\App\Http\Middleware\CheckRole::class);
+Route::resource('MalfunctionView', 'malfunctionviewController');
 Route::resource('Supplies', 'suppliesController')-> middleware(\App\Http\Middleware\CheckRole::class);
-Route::resource('Malfunction', 'malfunctionController')-> middleware(\App\Http\Middleware\CheckRole::class);
+Route::resource('Malfunction', 'malfunctionController');
 Route::resource('Customer', 'customerController')-> middleware(\App\Http\Middleware\CheckRole::class);
-Route::resource('offercheck', 'OfferCheckController')-> middleware(\App\Http\Middleware\CheckRole::class);
+Route::resource('offercheck', 'OfferCheckController');
 Route::resource('Customerdetail', 'customerdetailController');
-Route::resource('workorder', 'WorkorderController')-> middleware(\App\Http\Middleware\CheckRole::class);
-Route::resource('Supplies', 'suppliesController')-> middleware(\App\Http\Middleware\CheckRole::class);
-Route::resource('bkrcheck', 'BkrCheckController')-> middleware(\App\Http\Middleware\CheckRole::class);
-Route::resource('lease', 'LeaseController'); //middleware(\App\Http\Middleware\CheckRole::class)
-Route::resource('offermail', 'offermailController')-> middleware(\App\Http\Middleware\CheckRole::class);
-Route::resource('workordermail', 'WorkordermailController')-> middleware(\App\Http\Middleware\CheckRole::class);
+Route::resource('workorder', 'WorkorderController');
+Route::resource('bkrcheck', 'BkrCheckController');
+Route::resource('lease', 'LeaseController');
+Route::resource('offermail', 'offermailController');
+Route::resource('workordermail', 'WorkordermailController');
 
 
