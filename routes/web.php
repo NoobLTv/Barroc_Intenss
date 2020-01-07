@@ -38,11 +38,11 @@ Route::resource('Supplies', 'suppliesController')-> middleware(\App\Http\Middlew
 Route::resource('Malfunction', 'malfunctionController')-> middleware(\App\Http\Middleware\CheckRole::class);
 Route::resource('Customer', 'customerController')-> middleware(\App\Http\Middleware\CheckRole::class);
 Route::resource('offercheck', 'OfferCheckController')-> middleware(\App\Http\Middleware\CheckRole::class);
-Route::resource('Customerdetail', 'customerdetailController')-> middleware(\App\Http\Middleware\CheckRole::class);
+Route::resource('Customerdetail', 'customerdetailController');
 Route::resource('workorder', 'WorkorderController')-> middleware(\App\Http\Middleware\CheckRole::class);
 Route::resource('Supplies', 'suppliesController')-> middleware(\App\Http\Middleware\CheckRole::class);
 Route::resource('bkrcheck', 'BkrCheckController')-> middleware(\App\Http\Middleware\CheckRole::class);
-Route::resource('lease', 'LeaseController')-> middleware(\App\Http\Middleware\CheckRole::class);
+Route::resource('lease', 'LeaseController'); //middleware(\App\Http\Middleware\CheckRole::class)
 Route::resource('offermail', 'offermailController')-> middleware(\App\Http\Middleware\CheckRole::class);
 Route::resource('workordermail', 'WorkordermailController')-> middleware(\App\Http\Middleware\CheckRole::class);
 

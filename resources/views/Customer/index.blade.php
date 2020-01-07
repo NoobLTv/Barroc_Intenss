@@ -38,14 +38,24 @@
     </div>
 @endif
 <br>
+<br>@if ($customerdetails != null)
+    <div class="card text-center">
+        <div class="card-body">
+            <h5 class="card-title">Persoonlijke gegevens inzien</h5>
+            <p class="card-text">Hier kun uw persoonlijke gegevens inzien.</p>
+            <a href="{{ route('Customerdetail.show', $customerdetails->id) }}" class="btn btn-primary">Gegevens - {{ $customerdetails->id }}</a>
+        </div>
+    </div>
+@endif
+<br>
 <br>
 @if ($leases != null)
     <div class="card text-center">
         <div class="card-body">
             <h5 class="card-title">Leasecontract inzien</h5>
-            <p class="card-text">Zie hier uw lease contract gegevens.</p>
+            <p class="card-text">Hier kun uw lease contract gegevens inzien.</p>
             @foreach ($leases as $lease)
-                <a href="{{ route('Customerdetail.show', $lease->id) }}" class="btn btn-primary">Lease - {{ $lease->id }}</a>
+                <a href="{{ route('lease.show', $lease->id) }}" class="btn btn-primary">Lease - {{ $lease->id }}</a>
             @endforeach
         </div>
     </div>

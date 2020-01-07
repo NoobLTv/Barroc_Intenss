@@ -18,9 +18,15 @@ class customerdetailController extends Controller
     public function index()
     {
         $leases = \App\lease::where('customer_id', Auth::user()->id)->get();
+        $customerdetails = \App\CustomerDetail::where('id', Auth::user()->customer_detail_id)->first();
+/*        echo Auth::user()->id;
+        dd($customerdetails);*/
+
+        //echo $customerdetails->id;
+        //dd($customerdetails);
         $user = Auth::user();
         //$customerDetail = \App\CustomerDetail::where('user_id', auth()->user()->id)->get();
-        return view('Customer/index', ['user' => $user,'leases' => $leases]);
+        return view('Customer/index', ['user' => $user,'leases' => $leases, 'customerdetails' => $customerdetails]);
     }
 
     /**
@@ -74,11 +80,22 @@ class customerdetailController extends Controller
      */
     public function show($id)
     {
-        $leases = lease::find($id);
+/*        $leases = lease::find($id);
 
-        return view('Customer/show', ['leases' => $leases] );
+        if ($leases != null)
+        {
+            return view('Customer/show', ['leases' => $leases]);
+        }*/
+
+        $customerdetails = CustomerDetail::find($id);
+
+        if ($customerdetails != null)
+        {
+            return view('Customer/usershow', ['customerdetails' => $customerdetails] );
+        }
 
     }
+
 
     /**
      * Show the form for editing the specified resource.

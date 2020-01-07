@@ -25,8 +25,6 @@ class CustomerdetailsTable extends Migration
            $table->string('postalcode');
            $table->string('city');
            $table->timestamps();
-
-
         });
     }
 

@@ -7,6 +7,8 @@ use App\lease;
 use App\LeaseRules;
 use App\Malfunction;
 use Illuminate\Http\Request;
+Use Illuminate\Support\Facades\Auth;
+
 
 class LeaseController extends Controller
 {
@@ -107,9 +109,20 @@ class LeaseController extends Controller
 
     public function show($id)
     {
-        $leases = lease::find($id);
 
-        return view('Finance/leasesshow', ['leases' => $leases]);
+        $user = Auth::user();
+
+        // Als gebruiker is geautoriseerd voor het inzien van ALLE leases (gebruiker is Finance medewerker)
+        // laat dan de Finance/leasesshow zien.
+        //dd ( "Hier");
+
+
+            $leases = lease::find($id);
+
+            return view('Finance/leasesshow', ['leases' => $leases]);
+
+
+        // Als de gebruiker niet is ingelogd, laat dan een "simpel" leaseoverzicht zien.
 
     }
 
