@@ -5,16 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:barroc"
         mc:Ignorable="d"
-        Title="facturenAanmaken" Height="450" Width="330.382">
+        Title="facturenAanmaken" Height="280" Width="300.382">
     <StackPanel>
         <StackPanel>
-            <Label HorizontalAlignment="Center" FontWeight="Bold">Factuur Aanmaken</Label>
-            <Label>Naam:</Label>
-            <TextBox x:Name="nameTextBox" Margin="10,0,128,0"></TextBox>
-            <Label>Prijs</Label>
-            <TextBox x:Name="priceTextBox" Margin="10,0,128,0" PreviewTextInput="priceTextBox_PreviewTextInput"/>
-            <Button x:Name="sendDataBaseButton" Content="Button" Margin="10,0,129,0" Height="38" Click="sendDataBaseButton_Click"/>
-            <DataGrid x:Name="dataGrid" Height="100"/>
+            <Label HorizontalAlignment="Center" FontWeight="Bold" Content="Factuur Aanmaken" FontSize="15"/>
+            <Label Content="Lease_Id:"/>
+            <TextBox x:Name="leaseTextbox" FontSize="15" Margin="10,0,80,0" TextChanged="leaseTextbox_TextChanged"></TextBox>
+            <Label Content="Klant_Id:"/>
+            <TextBox x:Name="customerTextBox" FontSize="15" Margin="10,0,80,0"></TextBox>
+            <Label Content="Prijs"/>
+            <TextBox x:Name="priceTextBox" FontSize="15" Margin="10,0,80,10"/>
+            <Button x:Name="sendDataButton" Content="Aanmaken" FontSize="15" Margin="10,0,80,0" Height="38" Click="sendDataButton_Click"/>
         </StackPanel>
+        <Label Content="" x:Name="messageLabel"/>
     </StackPanel>
 </Window>

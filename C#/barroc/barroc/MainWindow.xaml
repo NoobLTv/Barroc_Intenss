@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:barroc"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="149" Width="800">
     <StackPanel>
         <StackPanel>
             <Button x:Name="facturenAanmaken" Height="59" Click="facturenAanmaken_Click">Facturen Aanmaken</Button>

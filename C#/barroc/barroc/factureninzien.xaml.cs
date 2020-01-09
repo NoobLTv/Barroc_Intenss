@@ -36,5 +36,10 @@ namespace barroc
 
             dataGrid.ItemsSource = dr;
         }
+
+        private void backButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

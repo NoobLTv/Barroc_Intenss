@@ -8,7 +8,10 @@
         Title="factureninzien" Height="450" Width="800">
     <StackPanel>
         <StackPanel>
-            <Button x:Name="facturenInzienButton" Click="facturenInzienButton_Click">Inzien</Button>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="facturenInzienButton" Click="facturenInzienButton_Click" Content="&#x9;Inzien" Width="395" FontSize="15"/>
+                <Button x:Name="backButton" Click="backButton_Click" Content="&#x9;Terug" Width="395"   FontSize="15"/>
+            </StackPanel>
             <DataGrid x:Name="dataGrid" Height="400"/>
         </StackPanel>
     </StackPanel>

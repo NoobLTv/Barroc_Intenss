@@ -1,6 +1,8 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -21,9 +23,11 @@ namespace barroc
     /// </summary>
     public partial class facturenAanmaken : Window
     {
+        MySqlConnection connection = new MySqlConnection("server=localhost;user=root;database=barroc_intense;port=3306;password=");
         public facturenAanmaken()
         {
             InitializeComponent();
+
         }
 
         public void nummeronly(TextCompositionEventArgs e)
@@ -36,17 +40,38 @@ namespace barroc
             nummeronly(e);
         }
 
-        private void sendDataBaseButton_Click(object sender, RoutedEventArgs e)
+        private void sendDataButton_Click(object sender, RoutedEventArgs e)
         {
-            string connStr = "server=localhost;user=root;database=barroc_intense;port=3306;password=";
-            MySqlConnection conn = new MySqlConnection(connStr);
-            conn.Open();
+            int lease = int.Parse(leaseTextbox.Text);
+            string name = string.Format(customerTextBox.Text);
+            int price = int.Parse(priceTextBox.Text);
 
-            MySqlCommand cmd = new MySqlCommand("select * from users",conn);
-            MySqlDataReader dr = cmd.ExecuteReader();
+            string query = "INSERT into invoices (lease_id, name, price) VALUES ('" + lease +"','"+ name + "','"+ price +"')";
+            connection.Open();
+            MySqlCommand command = new MySqlCommand(query, connection);
 
-            dataGrid.ItemsSource = dr;
+            try
+            {
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    messageLabel.Content = "Opgeslagen";
+                }
+                else
+                {
+                    messageLabel.Content = "Error tijdens opslaan";
+                }
+            }
+            catch (Exception)
+            {
+                messageLabel.Content = "Corrigeer de gegevens";
+            }
+           
+            connection.Close(); 
         }
 
+        private void leaseTextbox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

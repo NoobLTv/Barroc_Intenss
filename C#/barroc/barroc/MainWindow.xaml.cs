@@ -20,7 +20,6 @@ namespace barroc
     /// </summary>
     public partial class MainWindow : Window
     {
-        CompanyDetail customerDetail = new CustomerDetail();
         public MainWindow()
         {
             InitializeComponent();

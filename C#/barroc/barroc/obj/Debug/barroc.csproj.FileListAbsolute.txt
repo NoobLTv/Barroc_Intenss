@@ -14,7 +14,6 @@ C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\barroc.Properti
 C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\barroc.csproj.GenerateResource.cache
 C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\barroc.exe
 C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\barroc.pdb
-C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\bin\Debug\MySql.Data.dll
 C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\bin\Debug\Google.Protobuf.dll
 C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\bin\Debug\BouncyCastle.Crypto.dll
 C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\bin\Debug\Renci.SshNet.dll
@@ -22,3 +21,52 @@ C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\bin\Debug\MySql.Data.xml
 C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\barroc.csproj.CopyComplete
 C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\factureninzien.g.cs
 C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\factureninzien.baml
+C:\Users\Gebruiker\Documents\RC 02\barroc_c#\barroc\barroc\obj\Debug\barroc.exe
+C:\Users\Gebruiker\Documents\RC 02\barroc_c#\barroc\barroc\obj\Debug\barroc.pdb
+C:\Users\Gebruiker\Documents\RC 02\barroc_c#\barroc\barroc\bin\Debug\barroc.exe.config
+C:\Users\Gebruiker\Documents\RC 02\barroc_c#\barroc\barroc\bin\Debug\barroc.exe
+C:\Users\Gebruiker\Documents\RC 02\barroc_c#\barroc\barroc\bin\Debug\barroc.pdb
+C:\Users\Gebruiker\Documents\RC 02\barroc_c#\barroc\barroc\bin\Debug\MySql.Data.dll
+C:\Users\Gebruiker\Documents\RC 02\barroc_c#\barroc\barroc\bin\Debug\Google.Protobuf.dll
+C:\Users\Gebruiker\Documents\RC 02\barroc_c#\barroc\barroc\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Gebruiker\Documents\RC 02\barroc_c#\barroc\barroc\bin\Debug\Renci.SshNet.dll
+C:\Users\Gebruiker\Documents\RC 02\barroc_c#\barroc\barroc\bin\Debug\MySql.Data.xml
+C:\Users\Gebruiker\Documents\RC 02\barroc_c#\barroc\barroc\obj\Debug\barroc.csprojAssemblyReference.cache
+C:\Users\Gebruiker\Documents\RC 02\barroc_c#\barroc\barroc\obj\Debug\facturenAanmaken.g.cs
+C:\Users\Gebruiker\Documents\RC 02\barroc_c#\barroc\barroc\obj\Debug\factureninzien.g.cs
+C:\Users\Gebruiker\Documents\RC 02\barroc_c#\barroc\barroc\obj\Debug\MainWindow.g.cs
+C:\Users\Gebruiker\Documents\RC 02\barroc_c#\barroc\barroc\obj\Debug\App.g.cs
+C:\Users\Gebruiker\Documents\RC 02\barroc_c#\barroc\barroc\obj\Debug\barroc_MarkupCompile.cache
+C:\Users\Gebruiker\Documents\RC 02\barroc_c#\barroc\barroc\obj\Debug\barroc_MarkupCompile.lref
+C:\Users\Gebruiker\Documents\RC 02\barroc_c#\barroc\barroc\obj\Debug\facturenAanmaken.baml
+C:\Users\Gebruiker\Documents\RC 02\barroc_c#\barroc\barroc\obj\Debug\factureninzien.baml
+C:\Users\Gebruiker\Documents\RC 02\barroc_c#\barroc\barroc\obj\Debug\MainWindow.baml
+C:\Users\Gebruiker\Documents\RC 02\barroc_c#\barroc\barroc\obj\Debug\barroc.g.resources
+C:\Users\Gebruiker\Documents\RC 02\barroc_c#\barroc\barroc\obj\Debug\barroc.Properties.Resources.resources
+C:\Users\Gebruiker\Documents\RC 02\barroc_c#\barroc\barroc\obj\Debug\barroc.csproj.GenerateResource.cache
+C:\Users\Gebruiker\Documents\RC 02\barroc_c#\barroc\barroc\obj\Debug\barroc.csproj.CopyComplete
+C:\Users\Dhr. Simsek\Desktop\barroc\barroc\bin\Debug\barroc.exe.config
+C:\Users\Dhr. Simsek\Desktop\barroc\barroc\bin\Debug\barroc.exe
+C:\Users\Dhr. Simsek\Desktop\barroc\barroc\bin\Debug\barroc.pdb
+C:\Users\Dhr. Simsek\Desktop\barroc\barroc\bin\Debug\Google.Protobuf.dll
+C:\Users\Dhr. Simsek\Desktop\barroc\barroc\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Dhr. Simsek\Desktop\barroc\barroc\bin\Debug\Renci.SshNet.dll
+C:\Users\Dhr. Simsek\Desktop\barroc\barroc\bin\Debug\MySql.Data.xml
+C:\Users\Dhr. Simsek\Desktop\barroc\barroc\obj\Debug\barroc.csprojAssemblyReference.cache
+C:\Users\Dhr. Simsek\Desktop\barroc\barroc\obj\Debug\facturenAanmaken.g.cs
+C:\Users\Dhr. Simsek\Desktop\barroc\barroc\obj\Debug\factureninzien.g.cs
+C:\Users\Dhr. Simsek\Desktop\barroc\barroc\obj\Debug\MainWindow.g.cs
+C:\Users\Dhr. Simsek\Desktop\barroc\barroc\obj\Debug\App.g.cs
+C:\Users\Dhr. Simsek\Desktop\barroc\barroc\obj\Debug\barroc_MarkupCompile.cache
+C:\Users\Dhr. Simsek\Desktop\barroc\barroc\obj\Debug\barroc_MarkupCompile.lref
+C:\Users\Dhr. Simsek\Desktop\barroc\barroc\obj\Debug\facturenAanmaken.baml
+C:\Users\Dhr. Simsek\Desktop\barroc\barroc\obj\Debug\factureninzien.baml
+C:\Users\Dhr. Simsek\Desktop\barroc\barroc\obj\Debug\MainWindow.baml
+C:\Users\Dhr. Simsek\Desktop\barroc\barroc\obj\Debug\barroc.g.resources
+C:\Users\Dhr. Simsek\Desktop\barroc\barroc\obj\Debug\barroc.Properties.Resources.resources
+C:\Users\Dhr. Simsek\Desktop\barroc\barroc\obj\Debug\barroc.csproj.GenerateResource.cache
+C:\Users\Dhr. Simsek\Desktop\barroc\barroc\obj\Debug\barroc.csproj.CoreCompileInputs.cache
+C:\Users\Dhr. Simsek\Desktop\barroc\barroc\obj\Debug\barroc.csproj.CopyComplete
+C:\Users\Dhr. Simsek\Desktop\barroc\barroc\obj\Debug\barroc.exe
+C:\Users\Dhr. Simsek\Desktop\barroc\barroc\obj\Debug\barroc.pdb
+C:\xampp\htdocs\barroc\Barroc_Intenss\C#\barroc\barroc\obj\Debug\barroc.csproj.CoreCompileInputs.cache
